@@ -381,7 +381,7 @@ export function ResearchStory() {
         </li>
         <li>
           <strong>Primary sources:</strong> official syllabus and fee pages, university partner pages
-          (IIIT-B, UT Austin McCombs, iHUB IIT Roorkee, Purdue), and market reports (Deloitte–NASSCOM,
+          (UT Austin McCombs, iHUB IIT Roorkee, Purdue), and market reports (Deloitte–NASSCOM,
           NASSCOM–Indeed 2026).
         </li>
       </ul>
