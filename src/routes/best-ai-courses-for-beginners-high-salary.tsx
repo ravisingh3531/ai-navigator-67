@@ -1,6 +1,16 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { CourseFinder } from "@/components/CourseFinder";
+import { CourseQuiz } from "@/components/CourseQuiz";
+import { BeginnerDeepDive } from "@/components/BeginnerDeepDive";
+import {
+  ProblemAndCost,
+  ExperienceSolution,
+  ResearchStory,
+  ChooseAndBeyondMarketing,
+  FaqCards,
+} from "@/components/InsightSections";
+
 
 export const Route = createFileRoute("/best-ai-courses-for-beginners-high-salary")({
   head: () => ({
