@@ -581,7 +581,7 @@ const toc = [
 const rankedList = [
   ["LogicMojo — AI & Machine Learning Course", "best overall for beginners: full 2026 stack, live IST mentorship, mid-band price", "8.90"],
   ["Newton School — Advanced AI & ML Program (with Agentic AI)", "best placement infrastructure; demands aptitude and hours", "8.05"],
-  ["DataCamp — Executive PG Programme in ML & AI (IIIT-Bangalore)", "best university-linked credential with a beginner bridge", "7.60"],
+  ["DataCamp — Data Scientist & AI Engineer Career Tracks", "cheapest structured skill-building for absolute beginners", "7.60"],
   ["Great Learning — PGP-AIML (UT Austin McCombs / Great Lakes)", "best weekend mentor-led format for professionals with no coding background", "7.55"],
   ["Intellipaat — AI & ML with iHUB IIT Roorkee", "best IIT-linked tag at mid-tier pricing", "7.05"],
   ["Simplilearn — PG Program in AI & ML (Purdue / IBM)", "best when your employer pays and HR values the credential", "6.38"],
@@ -670,9 +670,9 @@ function Article() {
             (classical ML through RAG, fine-tuning and agents), live weekend IST classes with 1:1
             mentorship, human code review on the capstone, and mid-band pricing.{" "}
             <strong>Newton School</strong> is my pick if premium placement infrastructure matters most and you
-            can genuinely commit 15+ hours a week; <strong>DataCamp</strong> and{" "}
-            <strong>Great Learning (UT Austin)</strong> if a university-linked credential matters to
-            your employer; <strong>DeepLearning.AI on Coursera</strong> for the best near-free
+            can genuinely commit 15+ hours a week; <strong>Great Learning (UT Austin)</strong> if a university-linked credential matters to
+            your employer; <strong>DataCamp</strong> if you want a ₹12K–₹25K way to build fundamentals
+            before committing lakhs; <strong>DeepLearning.AI on Coursera</strong> for the best near-free
             foundation; <strong>PW Skills</strong> and <strong>HCL GUVI</strong> as the lowest-risk
             structured starts under ₹30,000. From the offers I have seen land, realistic first-role
             salaries after a good beginner course are ₹5–9 LPA in IT services and ₹8–15 LPA at product
@@ -874,7 +874,7 @@ function Article() {
           <p>
             A different weighting produces a different winner, so here is mine in full. If you weight
             brand and placement partners most, Newton School wins. If you weight academic credential most,
-            DataCamp or Great Learning wins. If you weight cost alone, DeepLearning.AI wins. I weighted
+            Great Learning or Simplilearn wins. If you weight cost per skill hour, DataCamp wins. If you weight cost alone, DeepLearning.AI wins. I weighted
             what my hiring experience says actually determines a beginner&apos;s outcome: whether you
             finish, what you can build, and whether what you built maps to roles that pay.
           </p>
@@ -1088,8 +1088,8 @@ function Article() {
             You need to be able to write a Python loop, a function and a dictionary lookup without
             looking them up — roughly 20–40 hours of practice — but you do not need to be a software
             engineer. The courses ranked highest for beginner suitability (LogicMojo, DataCamp, Great
-            Learning, GUVI, PW Skills) either include an onboarding module or, in DataCamp&apos;s case, a
-            complimentary two-month prerequisite bootcamp. Newton School and IBM&apos;s certificate assume
+            Learning, GUVI, PW Skills) either include an onboarding module or, in DataCamp&apos;s case, an
+            entire browser-based Python track that assumes nothing at all. Newton School and IBM&apos;s certificate assume
             programming aptitude or working Python, which is why they score lower on beginner
             suitability despite strong content. If you are starting from zero, spend three weeks on
             free Python and pandas basics and push one notebook to GitHub before any paid course
@@ -1111,8 +1111,7 @@ function Article() {
             For most AI roles in India in 2026, no — employers increasingly hire on demonstrable
             projects, and several 2026 salary reports note explicitly that a CS degree is not required
             for well-paid AI engineering roles. Where a degree still matters: some university-affiliated
-            programs require a bachelor&apos;s with 50% or higher (Simplilearn lists this;
-            DataCamp&apos;s Executive PG has similar eligibility), and some GCC roles filter on a
+            programs require a bachelor&apos;s with 50% or higher (Simplilearn and Great Learning list this), and some GCC roles filter on a
             technical degree for compliance reasons. A non-CS graduate with a deployed RAG project beats
             a CS graduate with a certificate and no GitHub in almost every interview described to us.
           </p>
@@ -1198,8 +1197,8 @@ function Article() {
             AI, RAG systems, fine-tuning, agents and MLOps deployment. It ranks #1 here because, on the
             composite of curriculum depth, beginner onboarding, project rigour, live mentorship, 2026
             currency and mid-band pricing, it scored highest — not because it wins every individual
-            pillar. Newton School beats it on placement infrastructure; DataCamp and Great Learning beat it on
-            credential; Coursera beats it on price.
+            pillar. Newton School beats it on placement infrastructure; Great Learning beats it on
+            credential; DataCamp and Coursera beat it on price.
           </p>
           <p>
             <strong>Curriculum and tools.</strong> The published progression runs in fifteen stages,
@@ -1310,8 +1309,8 @@ function Article() {
             who can commit weekends for seven months.
           </p>
           <p>
-            <strong>Avoid it if:</strong> you need a university credential above all (DataCamp or Great
-            Learning); your budget is under ₹20,000 (PW Skills or GUVI first); you cannot attend live
+            <strong>Avoid it if:</strong> you need a university credential above all (Great Learning or
+            Simplilearn); your budget is under ₹20,000 (PW Skills or GUVI first); you cannot attend live
             weekend sessions or watch recordings within the week; you want AI literacy rather than
             engineering capability (DeepLearning.AI short courses); you are on a research or PhD pathway
             (NPTEL/IIT routes or a university MS); or you already have solid ML foundations and only
@@ -1321,7 +1320,7 @@ function Article() {
             <strong>Honest limitations.</strong> Not the cheapest. No university credential. Not the
             largest placement machine — Newton School&apos;s partner network and published outcomes are
             stronger. Not fully self-paced, so rotating-shift and heavy-travel professionals may complete
-            a self-paced program more reliably. A smaller brand than Newton School, DataCamp, Great Learning or
+            a self-paced program more reliably. A smaller brand than Newton School, Great Learning, Simplilearn or
             Coursera, which matters in HR screens even when skill depth wins the technical round. Demands
             10–15 hours a week for seven months. Not a research pathway. And, as with any live program,
             quality is only as good as the instructor on your batch — ask for the name.
