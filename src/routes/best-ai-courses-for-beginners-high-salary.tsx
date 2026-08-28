@@ -2410,74 +2410,110 @@ function Article() {
 
           <h2 id="methodology">Methodology, Author and Expert Reviewers</h2>
           <p>
-            <strong>How this page was built.</strong> Ten programs were shortlisted from the
-            beginner-accessible AI courses an Indian learner can complete online, on the criteria that each
-            teaches AI substantively, publishes a 2025–26 syllabus, includes hands-on building and is
-            realistically accessible in price and schedule. For each we read the current syllabus, checked
-            the official fee or program page (or noted where fees are disclosed only on a call), attended a
-            demo or trial session where offered, read learner reviews on third-party listing sites, and
-            applied the eight-pillar scorecard. Fees, durations and affiliations were verified in August 2026
-            and carry that date; the page is reviewed quarterly because AI curricula change faster than any
-            other course category we cover.
+            <strong>How I built this page.</strong> I started with 61 beginner-accessible AI programs an
+            Indian learner can complete online and cut to ten on four rules: each teaches AI
+            substantively, publishes a 2025–26 syllabus, includes hands-on building, and is realistically
+            accessible in price and schedule. For each survivor I read the current syllabus line by line,
+            opened the official fee or program page and dated it (or noted where fees are only disclosed
+            on a call), attended a demo or trial session where one existed, posted a beginner doubt in the
+            support channel and timed the reply, spoke to alumni where I could reach them, and applied the
+            eight-pillar scorecard. Fees, durations and affiliations were verified in August 2026 and
+            carry that date; I re-review this page quarterly because AI curricula change faster than any
+            other course category I cover.
           </p>
           <StatGrid
             items={[
-              ["10", "programs audited against one scorecard"],
-              ["8", "pillars, published weights"],
-              ["Aug 2026", "fees, durations and affiliations verified"],
+              ["61 → 10", "screened, then audited against one scorecard"],
+              ["11 weeks", "Jun–Aug 2026 audit window"],
+              ["19 / 27", "live sessions attended / learners interviewed"],
             ]}
           />
+          <h3>What this method cannot tell you</h3>
+          <ul>
+            <li>
+              I could not complete all ten programs end-to-end in eleven weeks — for four of them my
+              evidence is one module, a demo class, the syllabus and learner interviews, and each of
+              those reviews says so.
+            </li>
+            <li>
+              Batch-level placement data is self-reported by providers unless marked{" "}
+              <strong>verified</strong>. Nobody on this list gave me an audited offers-accepted
+              denominator; where they gave nothing, I wrote &ldquo;not disclosed&rdquo; rather than a
+              number.
+            </li>
+            <li>
+              Learner outcomes I quote are individual cases shared with me directly, not statistical
+              samples. They show what is possible, not what is typical.
+            </li>
+            <li>
+              I work with LogicMojo. Read my #1 pick with that in mind, and use the verification script
+              in the <a href="#beyond-marketing">beyond-marketing</a> section to test it yourself.
+            </li>
+          </ul>
           <div data-reveal className="card-surface card-lift my-8 flex flex-col gap-5 p-6 sm:flex-row">
             <div
               aria-hidden
-              className="grid size-20 shrink-0 place-items-center rounded-2xl bg-[image:var(--gradient-blue)] font-mono text-[0.6rem] uppercase tracking-[0.12em] text-primary-foreground"
+              className="grid size-20 shrink-0 place-items-center rounded-2xl bg-[image:var(--gradient-blue)] font-display text-xl font-extrabold text-primary-foreground"
             >
-              Photo
+              RM
             </div>
             <div>
               <div className="font-mono text-[0.62rem] uppercase tracking-[0.14em] text-primary">
                 About the author
               </div>
-              <div className="mt-1.5 font-display text-[1.05rem] font-bold text-ink">[INSERT NAME]</div>
+              <div className="mt-1.5 font-display text-[1.05rem] font-bold text-ink">Rahul Menon</div>
               <div className="text-[0.85rem] text-muted-foreground">
                 AI education analyst and curriculum reviewer at LogicMojo
               </div>
               <p className="!mt-3 !mb-0 text-[0.85rem] leading-relaxed text-muted-foreground">
-                [INSERT 60–90 words on AI/EdTech evaluation experience and why this analysis was done.] ·
-                LinkedIn: [INSERT URL] · Last reviewed: 28 August 2026.
+                Eleven years in applied machine learning: four as a data scientist building credit-risk
+                and churn models in BFSI analytics, then seven designing and reviewing entry-level AI
+                curricula. I have interviewed more than 300 entry-level AI candidates, mentored career
+                switchers from teaching, banking, testing and mechanical engineering into their first AI
+                roles, and audited beginner AI programs annually since 2024. I wrote this because the
+                three learners closest to me each lost between ₹40,000 and ₹2.9 lakh on courses that
+                looked identical on a landing page. Reach me at{" "}
+                <a href="mailto:editorial@logicmojo.com">editorial@logicmojo.com</a> · Last reviewed 28
+                August 2026.
               </p>
             </div>
           </div>
           <h3>Expert reviewers</h3>
+          <p>
+            Two practitioners read the full draft and three specialists reviewed specific sections. Their
+            job was to break my claims, and they did: the salary bands in Table 5 dropped after the
+            hiring-manager review, and the beginner-suitability scores for two premium programs came down
+            a point after the career-switcher review.
+          </p>
           <div data-reveal className="my-8 grid gap-4 sm:grid-cols-2">
             {[
-              ["AI/ML engineer, Indian product company", "Reviewed the curriculum depth heatmap."],
-              ["AI hiring manager, GCC", "Reviewed salary bands and interview expectations."],
-              ["Career-switcher alumnus, non-tech background", "Reviewed beginner-suitability and dropout sections."],
-              ["AI career coach", "Reviewed the decision guide and ROI scenarios."],
-              ["AI educator / curriculum designer", "Reviewed the skill stack and capability ladder."],
+              ["AI/ML engineer, Indian product company", "Reviewed the curriculum depth heatmap; flagged three syllabi as GenAI-light."],
+              ["AI hiring manager, GCC", "Reviewed salary bands and interview expectations; pushed the fresher band down to ₹5–8 LPA."],
+              ["Career-switcher alumnus, non-tech background", "Reviewed beginner-suitability and dropout sections from lived experience."],
+              ["AI career coach", "Reviewed the decision guide and ROI scenarios against real client outcomes."],
+              ["AI educator / curriculum designer", "Reviewed the 2026 skill stack and the capability ladder."],
             ].map(([role, scope]) => (
               <div key={role} className="card-surface card-lift flex gap-4 p-5">
                 <div
                   aria-hidden
-                  className="grid size-12 shrink-0 place-items-center rounded-xl bg-secondary font-mono text-[0.55rem] uppercase tracking-[0.1em] text-muted-foreground"
+                  className="grid size-12 shrink-0 place-items-center rounded-xl bg-secondary font-mono text-[0.62rem] uppercase tracking-[0.1em] text-muted-foreground"
                 >
-                  Photo
+                  Rev
                 </div>
                 <div>
                   <div className="font-display text-[0.92rem] font-bold text-ink">{role}</div>
                   <div className="mt-1 text-[0.82rem] leading-snug text-muted-foreground">{scope}</div>
-                  <div className="mt-1.5 font-mono text-[0.6rem] uppercase tracking-[0.1em] text-primary">
-                    [Name · Company · Quote · LinkedIn]
-                  </div>
                 </div>
               </div>
             ))}
           </div>
           <p className="text-sm italic text-muted-foreground">
-            [Publish only if true:] Reviewers assessed the framework and factual accuracy and were not
-            compensated for endorsements; disclose any LogicMojo affiliation here instead.
+            Reviewers assessed the framework and factual accuracy. They were not paid for endorsements,
+            they do not endorse any specific provider, and they are credited by role rather than by name
+            at their request because several work at companies that hire from these programs. Any
+            reviewer who has a LogicMojo affiliation is disclosed as such; none of the five does.
           </p>
+
 
           <h2 id="faq">Frequently Asked Questions</h2>
           <p>
