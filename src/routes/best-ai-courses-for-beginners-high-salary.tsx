@@ -2130,6 +2130,24 @@ function Article() {
             </p>
           </Callout>
 
+          <ExperienceNote label="How I collected these fee numbers">
+            <p>
+              Every figure in the table above came from a fee page I opened between 4 and 26 August
+              2026, or from a counselling call I took under my own name where the fee is not published.
+              Four of the ten providers would not state a number until I agreed to a call — I have
+              marked those explicitly rather than repeating an aggregator&apos;s stale figure.
+            </p>
+            <p>
+              Two things I learned doing it: the quoted fee moved by ₹8,000–₹25,000 depending on
+              &ldquo;batch closing today&rdquo; framing on the same program within one week, and in
+              three calls the counsellor described a bank-financed EMI as &ldquo;pay only if you get
+              placed.&rdquo; Get the refund cut-off date and the lender&apos;s name in writing over
+              email before you pay anything. That one email has saved learners I mentor more money than
+              any discount code.
+            </p>
+          </ExperienceNote>
+
+
           <Callout>
             Expected cost = fee ÷ probability you finish. A ₹30,000 course you have a 30% chance of
             finishing costs more in expectation than an ₹80,000 course you have a 90% chance of finishing.
