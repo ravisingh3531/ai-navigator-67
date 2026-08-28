@@ -2350,7 +2350,13 @@ function Article() {
           </p>
 
           <h2 id="faq">Frequently Asked Questions</h2>
+          <p>
+            The eight questions beginners ask me most, answered first as quick-read cards, then in depth
+            by theme below.
+          </p>
+          <FaqCards />
           {faqGroups.map(([group, items]) => (
+
             <div key={group}>
               <h3>{group}</h3>
               {items.map(([q, a]) => (
