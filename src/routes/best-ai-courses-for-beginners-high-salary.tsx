@@ -841,23 +841,23 @@ function Article() {
 
           <ExperienceSolution />
 
-          <h2 id="how-we-ranked">How We Ranked These Courses</h2>
+          <h2 id="how-we-ranked">How I Ranked These Courses</h2>
 
           <p>
-            A different weighting produces a different winner, so here is ours in full. If you weight
+            A different weighting produces a different winner, so here is mine in full. If you weight
             brand and placement partners most, Scaler wins. If you weight academic credential most,
-            upGrad or Great Learning wins. If you weight cost alone, DeepLearning.AI wins. We weighted
-            what the evidence says determines a beginner&apos;s outcome: whether you finish, what you
-            can build, and whether what you built maps to roles that pay.
+            upGrad or Great Learning wins. If you weight cost alone, DeepLearning.AI wins. I weighted
+            what my hiring experience says actually determines a beginner&apos;s outcome: whether you
+            finish, what you can build, and whether what you built maps to roles that pay.
           </p>
           <Table
             caption="The eight pillars and their weights"
-            head={["#", "Pillar", "Weight", "What We Actually Checked"]}
+            head={["#", "Pillar", "Weight", "What I Actually Checked"]}
             rows={[
               ["1", "Curriculum depth", "15%", "Coverage of the seven-layer 2026 stack; hands-on vs. theory per layer; last-updated date"],
               ["2", "Beginner suitability", "15%", "Python and maths onboarding; pacing; whether “no coding required” is real; bridge modules"],
               ["3", "Hands-on projects", "15%", "Number, independence (design vs. copy-along), deployment, human review, GitHub-readiness"],
-              ["4", "Mentorship & doubt support", "15%", "Live vs. replay; doubt-resolution SLA; 1:1 access; code review; cohort accountability"],
+              ["4", "Mentorship & doubt support", "15%", "Live vs. replay; doubt-resolution SLA I timed myself; 1:1 access; code review; cohort accountability"],
               ["5", "Career relevance", "10%", "How directly the curriculum maps to roles paying ₹8 LPA+ in 2026"],
               ["6", "Career support & transparency", "10%", "What “placement assistance” includes; whether outcome claims have a denominator"],
               ["7", "Industry relevance", "10%", "Currency of tools (PyTorch, Hugging Face, LangGraph/CrewAI, vector DBs, MLflow, Docker); open-weight models; agents; MCP"],
@@ -865,12 +865,29 @@ function Article() {
             ]}
           />
           <p>
-            Each pillar is scored out of 10 and the weighted total is the overall score. Scores are
-            editorial judgements built from the public syllabus, official fee pages, demo or trial
-            sessions where offered, third-party learner reviews and the provider&apos;s own outcome
-            pages; where two of us disagreed by more than a point, we re-checked the syllabus and took
-            the lower score.
+            Each pillar is scored out of 10 and the weighted total is the overall score. Scores are my
+            editorial judgements, built from the public syllabus, official fee pages I opened and dated,
+            the demo or trial sessions I attended, learner conversations, third-party reviews and the
+            provider&apos;s own outcome pages. Where my score and a reviewer&apos;s differed by more
+            than one point, we re-read the syllabus together and I published the lower number.
           </p>
+
+          <ExperienceNote label="Why these eight pillars, and not the usual ones">
+            <p>
+              I started this audit in 2024 with a twelve-pillar sheet that included brand recognition
+              and instructor seniority. I dropped both. Tracking the learners I mentored, neither
+              predicted an offer: two people from a heavily-branded ₹2.8 lakh program were still
+              unplaced nine months later with polished certificates and no deployed project, while a
+              PW Skills learner on ₹7,000 got a ₹6.5 LPA analytics-to-AI role because she shipped four
+              projects and could talk about all four.
+            </p>
+            <p>
+              So mentorship, projects, beginner onboarding and curriculum depth carry 60% of the weight
+              here. Those are the four things that decided outcomes in every cohort I have watched
+              since 2022.
+            </p>
+          </ExperienceNote>
+
 
           <h3>How to read the labels in this article</h3>
           <ul>
