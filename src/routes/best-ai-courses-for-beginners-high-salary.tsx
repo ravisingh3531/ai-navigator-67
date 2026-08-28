@@ -1536,3 +1536,295 @@ function ProsCons({ pros, cons }: { pros: string[]; cons: string[] }) {
     </div>
   );
 }
+
+/* ---------------------- data: fees, salaries, roadmap --------------------- */
+
+const feesRows: string[][] = [
+  ["LogicMojo", "₹XX,XXX [VERIFY]", "Yes", "[VERIFY]", "[VERIFY]", "Cloud/API credits (₹500–2,000/month in GenAI months)", "Very high"],
+  ["Scaler", "₹2.5–4L [VERIFY]; ~₹3.69L listed for a 12-month track", "Yes (long tenure)", "Partial", "[VERIFY]", "Loan continues if you stop; 12–18 months of hours", "Moderate"],
+  ["upGrad", "~₹2.99L; variants ₹1.5–3.35L [VERIFY]", "Yes", "Often", "[VERIFY]", "GST; late-fee policy; specialisation add-ons", "Moderate"],
+  ["Great Learning", "~₹2.4L + GST; USD 3,950 global [VERIFY]", "Yes", "Often", "[VERIFY]", "GST; optional immersion travel", "Moderate"],
+  ["Intellipaat", "₹80K–₹2L [VERIFY]", "Yes (third-party lender)", "Advertised 0%", "[VERIFY]", "Non-refundable registration fee; ID card/T-shirt add-on ₹500; loan terms", "Good"],
+  ["Simplilearn", "₹1.5–1.9L [VERIFY]", "Yes (~₹8,500/month listed)", "Often", "[VERIFY]", "Exam vouchers; promotional-price expiry", "Moderate (high if employer pays)"],
+  ["DeepLearning.AI", "₹2,099/mo or ₹13,999/yr; promos ~₹7K/yr", "N/A", "N/A", "Coursera: 14-day annual refund; monthly non-refundable", "Subscription creep", "Excellent"],
+  ["GUVI", "EMI from ₹11,585 listed; total [VERIFY]", "Yes", "Partial", "[VERIFY]", "Add-on modules; certification assessment fees", "Good"],
+  ["PW Skills", "₹5K–₹30K [VERIFY]", "Yes (higher tiers)", "Partial", "[VERIFY]", "Support add-ons; plan upgrades", "Very good"],
+  ["IBM (Coursera)", "Coursera pricing as above", "N/A", "N/A", "Coursera policy", "Subscription creep", "Excellent"],
+];
+
+const careerRows: string[][] = [
+  ["Data Analyst (AI-augmented)", "SQL, Python, statistics, visualisation, prompting", "Freshers welcome", "3.5–7", "6–14", "GUVI, PW Skills, IBM"],
+  ["Data Scientist", "ML, statistics, feature engineering, communication", "Portfolio + fundamentals", "6–12", "12–25", "LogicMojo, upGrad, Scaler, Great Learning"],
+  ["ML Engineer", "ML, DL, Python engineering, MLOps", "Strong portfolio; 1+ yr typical", "6–12", "15–30", "LogicMojo, Scaler"],
+  ["AI Engineer (GenAI / LLM)", "LLMs, RAG, APIs, deployment, evaluation", "Portfolio-driven — freshers with documented GenAI projects negotiate 8–15", "8–15", "20–45", "LogicMojo, Scaler (agentic track)"],
+  ["AI Agent Developer", "Agents, frameworks, MCP, orchestration", "Portfolio-driven; fastest-growing", "8–15", "20–45", "LogicMojo"],
+  ["NLP / Computer Vision Engineer", "Transformers, embeddings / CNNs, detection", "1–2 yrs typical", "6–12", "15–30", "LogicMojo, upGrad, Great Learning"],
+  ["MLOps Engineer", "Docker, CI/CD, cloud, monitoring", "DevOps background helps", "7–12", "18–35", "LogicMojo, Intellipaat"],
+];
+
+const roadmap: [string, string, string][] = [
+  ["01", "Python for AI, NumPy, pandas, Git", "Cleaned-dataset analysis on GitHub"],
+  ["02", "Statistics, probability, linear algebra intuition, SQL", "Statistical analysis with documented assumptions"],
+  ["03", "Core ML and evaluation", "End-to-end ML project with a written evaluation rationale"],
+  ["04", "Feature engineering, tuning, imbalanced data", "Model comparison study"],
+  ["05", "Deep learning and PyTorch", "Trained network with a debugging write-up"],
+  ["06", "CNNs, transfer learning", "Fine-tuned classifier on a custom dataset"],
+  ["07", "NLP, embeddings, transformers", "Transformer-based classifier"],
+  ["08", "LLM fundamentals, prompting, APIs, open-weight models", "LLM application with structured outputs"],
+  ["09", "Vector databases and RAG", "RAG system with an evaluation harness and citations"],
+  ["10", "Fine-tuning (LoRA/QLoRA)", "Fine-tuned model benchmarked against its base"],
+  ["11", "Agents, frameworks, MCP", "Tool-using agent that survives adversarial inputs"],
+  ["12", "MLOps, deployment, monitoring; applications", "Deployed capstone, polished portfolio, 30+ applications sent"],
+];
+
+const portfolioProjects: [string, string, string][] = [
+  [
+    "A messy-data prediction system",
+    "Entry",
+    "A real dataset (e-commerce returns, loan defaults, hospital readmissions), a correct validation split, a justified metric, and a README explaining what failed first.",
+  ],
+  [
+    "A fine-tuned image or text classifier",
+    "Entry+",
+    "Built on a dataset you assembled yourself, with a confusion matrix and an error-analysis section. Assembling the data is the point.",
+  ],
+  [
+    "A production-style RAG application",
+    "Intermediate",
+    "Over documents you care about (a college rulebook, company policies, Indian tax FAQs) with chunking choices explained, hybrid retrieval, re-ranking, citations and an evaluation harness showing retrieval quality before and after each change.",
+  ],
+  [
+    "A fine-tuned open-weight model",
+    "Advanced",
+    "LoRA/QLoRA for a narrow task, benchmarked against the base model and a prompting baseline, with a paragraph on when fine-tuning was not worth it.",
+  ],
+  [
+    "A deployed AI service",
+    "Advanced",
+    "FastAPI, Docker, a cloud deployment, basic monitoring, a cost per 1,000 requests, and an agent on top that handles a failed tool call gracefully.",
+  ],
+];
+
+const redFlags: string[] = [
+  "Guaranteed job or salary claims — usually conditional to the point of meaninglessness.",
+  "Refusal to share a module-level syllabus before payment.",
+  "“Live” that turns out to be recordings with a moderator.",
+  "No last-updated date on the curriculum; in AI, undated means outdated.",
+  "No RAG, agents, fine-tuning or MLOps in a 2026 syllabus.",
+  "“20+ projects” with no descriptions.",
+  "Manufactured scarcity — “price goes up tonight.”",
+  "Placement statistics with no denominator, or testimonials without full names and LinkedIn profiles.",
+  "No refund policy, an EMI through a lender whose terms you cannot see, or instructor names withheld until after enrolment.",
+  "No mechanism for human feedback on your code.",
+];
+
+const preEnrolQuestions: string[] = [
+  "Is the class live, and can I observe one?",
+  "Who teaches my batch, and what is their industry background?",
+  "What is the doubt-resolution SLA, and what happens if it is missed?",
+  "Does a human review my code?",
+  "When was the curriculum last updated, and which modules changed?",
+  "Does it include production RAG, fine-tuning, agents and MLOps?",
+  "Do I design projects or follow along?",
+  "Is anything deployed?",
+  "What is the refund policy in writing, with the exact cut-off date?",
+  "Is the EMI a loan that continues if I stop attending?",
+  "What does “placement assistance” include, item by item?",
+  "Can I speak to two alumni from the last six months you did not hand-pick?",
+];
+
+const faqGroups: [string, [string, ReactNode][]][] = [
+  [
+    "Choosing a course",
+    [
+      [
+        "Which is the best AI course for beginners with high salary in 2026?",
+        <>
+          For most beginners who can commit 10–15 hours a week, <strong>LogicMojo&apos;s AI &amp; ML
+          Course</strong> scores highest on our eight pillars because it covers the full 2026 stack with
+          live mentorship at a mid-band price. If placement infrastructure matters most and you clear an
+          aptitude test, Scaler; if a university credential matters, upGrad or Great Learning; if budget
+          is under ₹30,000, PW Skills or GUVI.
+        </>,
+      ],
+      [
+        "Are AI courses worth it for beginners?",
+        <>
+          Yes — if you finish and leave with a portfolio. NASSCOM-linked projections put India&apos;s AI
+          talent demand above a million professionals, and 2026 salary reports consistently show freshers
+          with documented GenAI projects negotiating ₹8–15 LPA at product companies. A course abandoned
+          in Month 3 is worth less than nothing, because the EMI continues.
+        </>,
+      ],
+      [
+        "Live or self-paced?",
+        <>
+          Live if you have ever abandoned a self-paced course, need code review, or have a job that will
+          eat your evenings without a fixed appointment. Self-paced if you are highly disciplined, have
+          unpredictable shifts, or are building foundations before a paid program.
+        </>,
+      ],
+      [
+        "How do I know a curriculum is current?",
+        <>
+          Look for a last-updated date, then check the bottom third of our depth heatmap: production RAG,
+          fine-tuning, agents, MCP, open-weight models, LLM evaluation, MLOps and deployment. Prompting
+          plus one API call is 2023.
+        </>,
+      ],
+    ],
+  ],
+  [
+    "Eligibility, prerequisites and fees",
+    [
+      [
+        "Can I learn AI without a coding background?",
+        <>
+          Yes. LogicMojo, upGrad, Great Learning, GUVI and PW Skills all onboard non-coders, and upGrad
+          includes a complimentary two-month prerequisite bootcamp. Spend three weeks on free Python
+          first and you will not be the person lost in Week 2.
+        </>,
+      ],
+      [
+        "Can a non-IT graduate get an AI job in India?",
+        <>
+          Yes, and it happens regularly, but it is slower than marketing suggests: expect the ₹5–8 LPA
+          services or analyst band first and the product-company band on the second move, driven by
+          portfolio quality.
+        </>,
+      ],
+      [
+        "Do I need a CS degree for a high-paying AI job?",
+        <>
+          No. Employers increasingly hire on demonstrable projects; the degree matters mainly where
+          university-linked programs set eligibility (a bachelor&apos;s with 50% is common) and in some
+          GCC roles that filter on technical qualifications.
+        </>,
+      ],
+      [
+        "How much does a beginner AI course cost in India?",
+        <>
+          From ₹0 (DeepLearning.AI previews, Hugging Face, Kaggle) through ₹5,000–₹30,000 (PW Skills,
+          GUVI self-paced), ₹40,000–₹1.2 lakh (mid-band live programs including LogicMojo) and ₹1.5–3.5
+          lakh (university-linked PG programs) to ₹2.5–4 lakh (Scaler).
+        </>,
+      ],
+      [
+        "What happens to my EMI if I stop attending?",
+        <>
+          Usually nothing changes: most course EMIs are bank or NBFC loans that continue regardless of
+          attendance. Get the refund window and cut-off date in writing before paying, and ask whether
+          “no-cost EMI” is a subsidised loan or a forfeited discount.
+        </>,
+      ],
+    ],
+  ],
+  [
+    "Careers, outcomes and skills",
+    [
+      [
+        "What salary can a beginner expect after an AI course?",
+        <>
+          Indicative 2026 ranges: ₹5–8 LPA in IT services and mid-tier firms; ₹8–15 LPA at product
+          companies, GCCs and funded startups for candidates with strong GenAI portfolios; ₹12–30 LPA
+          after two to four years. No course guarantees any of these.
+        </>,
+      ],
+      [
+        "How long does it take to get an AI job after finishing?",
+        <>
+          Typically three to nine months of active applications for freshers and switchers, faster for
+          engineers moving internally. Application effort after the course — 30+ targeted applications,
+          referrals, mock interviews — predicts this more than course choice.
+        </>,
+      ],
+      [
+        "Is GenAI enough, or do I need classical ML too?",
+        <>
+          You need both. Most production AI in Indian companies is still classical ML, and every GenAI
+          interview still probes evaluation fundamentals.
+        </>,
+      ],
+      [
+        "What are AI agents and why do they matter for jobs?",
+        <>
+          Agents are LLM-driven systems that plan, call tools and act over multiple steps — the 2026 layer
+          on top of RAG. Several 2026 reports identify agentic AI as India&apos;s fastest-growing AI
+          specialisation, with a real shortage of trained people.
+        </>,
+      ],
+    ],
+  ],
+];
+
+const sources: [string, string][] = [
+  ["LogicMojo AI & ML Course and comparison pages (duration, schedule, mentorship, projects; placement figures provider-reported)", "https://logicmojo.com/artificial-intelligence-course/"],
+  ["Scaler Advanced AI & ML program page and DS/ML listings (agentic track; MCQ entry; ~₹3.69L 12-month listing on Shiksha)", "https://www.scaler.com/ai-machine-learning-course/"],
+  ["IIIT-Bangalore Executive PG page; upGrad program page (prerequisite bootcamp); Collegedunia fee listing (~₹2.99L, Jan 2026)", "https://www.iiitb.ac.in/testiiitb/executive-post-graduate-programme-in-machine-learning-artificial-intelligence"],
+  ["UT Austin McCombs / Great Learning PGP-AIML page (no prior programming; USD 3,950; CEUs); Careers360 India fee review", "https://onlineexeced.mccombs.utexas.edu/online-ai-machine-learning-course"],
+  ["Careers360 listings for Simplilearn's Purdue PGP (11 months; ₹1.5–1.9L); Purdue bootcamp portal (6-month cohorts, 2026)", "https://bootcamp-sl.discover.online.purdue.edu"],
+  ["iHUB DivyaSampark IIT Roorkee course page; Intellipaat AI certification page (“not a job guarantee program”)", "https://tih.iitr.ac.in/training-courseDetails/60"],
+  ["Coursera India pricing (Plus ₹2,099/month, ₹13,999/year; free first-module preview) — BW Education, Sept 2025", "https://www.bweducation.com/article/coursera-introduces-course-preview-localised-pricing-in-india-570774"],
+  ["HCL GUVI AI & ML pages (four languages; no prior coding; 120+ live hours; EMI from ₹11,585)", "https://www.guvi.in/mlp/artificial-intelligence-and-machine-learning"],
+  ["PW Skills Data Science with Generative AI launch post (17 Jan 2026; 8 months; hybrid; 20+ projects; PwC certificate)", "https://pwskills.com/blog/data-science/data-science-course-with-generative-ai-pw-skills-program-17th-jan-2026"],
+  ["Deloitte–NASSCOM, Advancing India's AI Skills (600–650K in 2022 to 1.25M+ by 2027; 25–35% CAGR)", "https://www.deloitte.com/in/en/about/press-room/bridging-the-ai-talent-gap-to-boost-indias-tech-and-economic-impact-deloitte-nasscom-report.html"],
+  ["NASSCOM–Indeed, India's AI Talent Inflection Point (May 2026)", "https://community.nasscom.in/communities/nasscom-insights/indias-ai-talent-inflection-point-skill-gaps-competitive-advantage"],
+];
+
+/* ------------------------- components: new sections ---------------------- */
+
+function StatGrid({ items }: { items: [string, string][] }) {
+  return (
+    <div data-reveal className="my-8 grid gap-3 sm:grid-cols-3">
+      {items.map(([stat, label]) => (
+        <div key={label} className="card-surface card-lift p-4">
+          <div className="gradient-text font-display text-2xl font-extrabold">{stat}</div>
+          <div className="mt-1 text-[0.78rem] leading-snug text-muted-foreground">{label}</div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function Faq({ q, a }: { q: string; a: ReactNode }) {
+  return (
+    <details data-reveal className="card-surface card-lift group my-3 p-0">
+      <summary className="flex cursor-pointer list-none items-center gap-3 p-5 font-display text-[1rem] font-bold text-ink">
+        <span className="grid size-6 shrink-0 place-items-center rounded-md bg-[image:var(--gradient-blue)] font-mono text-[0.7rem] font-bold text-primary-foreground transition-transform duration-300 group-open:rotate-45">
+          +
+        </span>
+        <span>{q}</span>
+      </summary>
+      <div className="border-t border-border px-5 pb-5 pt-4 text-[0.92rem] leading-relaxed text-muted-foreground">
+        {a}
+      </div>
+    </details>
+  );
+}
+
+function Timeline() {
+  return (
+    <ol data-reveal className="!my-9 !list-none !gap-0 !pl-0">
+      {roadmap.map(([month, focus, deliverable], i) => (
+        <li key={month} className="!m-0 relative pl-14 pb-6 last:pb-0">
+          <span
+            aria-hidden
+            className={`absolute left-[1.05rem] top-9 w-px ${i === roadmap.length - 1 ? "hidden" : "bottom-0"} bg-border`}
+          />
+          <span className="absolute left-0 top-1 grid size-9 place-items-center rounded-xl bg-[image:var(--gradient-blue)] font-mono text-[0.72rem] font-bold text-primary-foreground">
+            {month}
+          </span>
+          <div className="card-surface card-lift p-4">
+            <div className="font-display text-[0.98rem] font-bold text-ink">{focus}</div>
+            <div className="mt-1.5 flex items-start gap-2 text-[0.85rem] text-muted-foreground">
+              <span className="font-mono text-[0.6rem] uppercase tracking-[0.12em] text-primary">
+                Ship
+              </span>
+              <span>{deliverable}</span>
+            </div>
+          </div>
+        </li>
+      ))}
+    </ol>
+  );
+}
