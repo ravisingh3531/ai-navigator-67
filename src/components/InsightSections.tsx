@@ -274,8 +274,9 @@ export function ExperienceSolution() {
       <p>
         <strong>My honest caveat.</strong> LogicMojo is not the right pick for everyone. If premium
         placement infrastructure is what you are buying and you can commit 15+ hours a week, Newton School is
-        stronger. If your employer or visa process needs a university tag, choose Great Learning or
-        Great Learning (UT Austin). If your budget is genuinely under ₹15,000, take DeepLearning.AI and
+        stronger. If your employer or visa process needs a university tag, choose Great Learning
+        (UT Austin) or Simplilearn. If your budget is genuinely under ₹15,000, take DeepLearning.AI and
+
         build the portfolio yourself. Recommendation is not endorsement of every claim: fees, placement
         percentages and partner lists are provider-reported everywhere in this category — including
         here — so get them in writing before you pay anyone.
