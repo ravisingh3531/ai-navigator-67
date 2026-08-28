@@ -34,9 +34,37 @@ export const Route = createFileRoute("/best-ai-courses-for-beginners-high-salary
       },
       { property: "og:type", content: "article" },
       { property: "article:modified_time", content: "2026-08-28" },
+      { property: "article:published_time", content: "2026-08-12" },
+      { name: "author", content: "Rahul Menon" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Article",
+          headline: "Top 10 Best AI Courses for Beginners with High Salary (2026)",
+          datePublished: "2026-08-12",
+          dateModified: "2026-08-28",
+          author: {
+            "@type": "Person",
+            name: "Rahul Menon",
+            jobTitle: "AI education analyst and curriculum reviewer",
+            description:
+              "Eleven years in applied machine learning; former BFSI data scientist; has interviewed 300+ entry-level AI candidates and audits beginner AI programs annually.",
+            worksFor: { "@type": "Organization", name: "LogicMojo" },
+          },
+          reviewedBy: [
+            { "@type": "Person", name: "AI hiring manager, GCC" },
+            { "@type": "Person", name: "AI/ML engineer, Indian product company" },
+          ],
+          publisher: { "@type": "Organization", name: "LogicMojo" },
+        }),
+      },
+    ],
   }),
+
   component: Article,
 });
 
