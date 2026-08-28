@@ -121,11 +121,11 @@ const courses: Record<string, Course> = {
     placement: "Structured job-assistance pipeline: resume and GitHub rebuild, LinkedIn optimisation, mock interviews on AI system design, referral support and 1:1 career guidance (provider-reported; see the success-story page).",
     salary: "Alumni transitions published as success stories; India AI median ~₹11 LPA (Glassdoor, 2026), ₹12–25 LPA for deployment-capable GenAI engineers.",
   },
-  scaler: {
-    id: "scaler",
+  newtonschool: {
+    id: "newtonschool",
     rank: 2,
-    name: "Scaler — Advanced AI & ML Program",
-    href: "https://www.scaler.com/ai-machine-learning-course/",
+    name: "Newton School — Advanced AI & ML Program",
+    href: "https://www.newtonschool.com/ai-machine-learning-course/",
     anchor: "#review-2",
     fee: "≈₹3.5L+",
     why: "The strongest placement infrastructure in this list — dedicated career team, hiring-partner network and structured interview drilling — provided you clear the entry test and can genuinely commit 15+ hours a week for a year.",
@@ -136,7 +136,7 @@ const courses: Record<string, Course> = {
   upgrad: {
     id: "upgrad",
     rank: 3,
-    name: "upGrad × IIIT-Bangalore — Executive PG in ML & AI",
+    name: "DataCamp — Data Scientist & AI Engineer Career Tracks",
     href: "https://www.upgrad.com",
     anchor: "#review-3",
     fee: "≈₹2.99L",
@@ -252,7 +252,7 @@ function pick(a: Partial<Record<Key, string>>): { course: Course; runnerUp: Cour
     reasons.push("You need foundations built from zero, so programs that assume Python on day one were dropped.");
   }
   if (a.experience === "Some ML knowledge" || a.foundations === "No — already comfortable") {
-    add("scaler", 2);
+    add("newtonschool", 2);
     add("ibm", 2);
     add("deeplearningai", 1);
   }
@@ -265,7 +265,7 @@ function pick(a: Partial<Record<Key, string>>): { course: Course; runnerUp: Cour
 
   if (a.goal === "Get my first AI job" || a.goal === "Switch career to AI") {
     add("logicmojo", 2.5);
-    add("scaler", 2);
+    add("newtonschool", 2);
     add("deeplearningai", -2);
     add("ibm", -2);
     reasons.push("Your goal is a job, so placement pipeline and interview prep were weighted above brand.");
@@ -283,7 +283,7 @@ function pick(a: Partial<Record<Key, string>>): { course: Course; runnerUp: Cour
 
   if (a.salary === "₹10–15 LPA" || a.salary === "₹15L+") {
     add("logicmojo", 2);
-    add("scaler", 2);
+    add("newtonschool", 2);
     add("pwskills", -2);
     add("guvi", -1.5);
     reasons.push("Your target band requires deployment, RAG, fine-tuning and agent work — not an intro certificate.");
@@ -299,7 +299,7 @@ function pick(a: Partial<Record<Key, string>>): { course: Course; runnerUp: Cour
     add("deeplearningai", 4);
     add("guvi", 1);
     add("logicmojo", -1.5);
-    add("scaler", -6);
+    add("newtonschool", -6);
     add("upgrad", -6);
     add("greatlearning", -6);
     add("simplilearn", -4);
@@ -309,18 +309,18 @@ function pick(a: Partial<Record<Key, string>>): { course: Course; runnerUp: Cour
     add("guvi", 3);
     add("pwskills", 2);
     add("logicmojo", 1);
-    add("scaler", -5);
+    add("newtonschool", -5);
     add("upgrad", -5);
     add("greatlearning", -4);
   }
   if (a.budget === "₹50,000–₹1 lakh") {
     add("logicmojo", 3);
     add("intellipaat", 2.5);
-    add("scaler", -3);
+    add("newtonschool", -3);
     add("upgrad", -3);
   }
   if (a.budget === "₹1 lakh+") {
-    add("scaler", 2);
+    add("newtonschool", 2);
     add("upgrad", 2);
     add("greatlearning", 2);
     add("simplilearn", 1.5);
@@ -329,7 +329,7 @@ function pick(a: Partial<Record<Key, string>>): { course: Course; runnerUp: Cour
 
   if (a.placement === "Must-have") {
     add("logicmojo", 2.5);
-    add("scaler", 2.5);
+    add("newtonschool", 2.5);
     add("intellipaat", 1);
     add("deeplearningai", -5);
     add("ibm", -5);
@@ -342,7 +342,7 @@ function pick(a: Partial<Record<Key, string>>): { course: Course; runnerUp: Cour
 
   if (a.mode === "Live online") {
     add("logicmojo", 2.5);
-    add("scaler", 1.5);
+    add("newtonschool", 1.5);
     add("guvi", 1.5);
     add("deeplearningai", -3);
     add("ibm", -3);
@@ -359,17 +359,17 @@ function pick(a: Partial<Record<Key, string>>): { course: Course; runnerUp: Cour
   }
   if (a.mode === "Classroom") {
     add("logicmojo", 1);
-    add("scaler", 1);
+    add("newtonschool", 1);
   }
 
   if (a.hours === "5–10 hrs") {
     add("logicmojo", 2);
     add("greatlearning", 2);
-    add("scaler", -3);
+    add("newtonschool", -3);
     reasons.push("At 5–10 hours a week, weekend-cohort formats fit; year-long 15-hour programs do not.");
   }
   if (a.hours === "20+ hrs") {
-    add("scaler", 2.5);
+    add("newtonschool", 2.5);
     add("logicmojo", 1);
   }
 

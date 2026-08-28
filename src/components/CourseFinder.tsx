@@ -41,7 +41,7 @@ const courses: Course[] = [
   {
     rank: 2,
     name: "Advanced AI & ML Program",
-    provider: "Scaler",
+    provider: "Newton School",
     score: 8.05,
     fee: "₹2.5–4L",
     feeFrom: 250000,
@@ -59,7 +59,7 @@ const courses: Course[] = [
   {
     rank: 3,
     name: "Executive PG in ML & AI (IIIT-B)",
-    provider: "upGrad",
+    provider: "DataCamp",
     score: 7.6,
     fee: "~₹2.99L",
     feeFrom: 150000,

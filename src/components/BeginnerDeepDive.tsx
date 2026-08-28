@@ -64,7 +64,7 @@ const dives: Dive[] = [
   },
   {
     rank: 2,
-    name: "Scaler — Advanced AI & ML Program",
+    name: "Newton School — Advanced AI & ML Program",
     anchor: "#review-2",
     bestFor: "Working professionals with 2+ years' experience who can give 15+ hours a week",
     beginner: "★★★☆☆ — beginner-accessible only after the entry test; pace assumes strong aptitude.",
@@ -88,7 +88,7 @@ const dives: Dive[] = [
   },
   {
     rank: 3,
-    name: "upGrad × IIIT-Bangalore — Executive PG in ML & AI",
+    name: "DataCamp — Data Scientist & AI Engineer Career Tracks",
     anchor: "#review-3",
     bestFor: "Professionals who need a university-recognised credential for promotion or visa purposes",
     beginner: "★★★★☆ — a prerequisite bootcamp exists for non-programmers.",
@@ -97,7 +97,7 @@ const dives: Dive[] = [
     curriculum: ["Python bridge", "Statistics and inference", "ML", "Deep learning", "NLP", "GenAI electives", "Deployment basics"],
     projects: "Case studies and a capstone with industry datasets; less deployment emphasis than specialist programs.",
     support: "Faculty sessions, teaching assistants, doubt forums, student success managers.",
-    interview: "Interview prep sessions and profile-building workshops; less drilling than Scaler.",
+    interview: "Interview prep sessions and profile-building workshops; less drilling than Newton School.",
     placement: "Career-services team, referral network, job board; assistance not guarantee.",
     partners: "Broad stated partner network across IT services and GCCs (provider-reported).",
     rate: "Provider-reported; academic credential is the durable asset here.",
