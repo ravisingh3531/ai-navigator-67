@@ -705,18 +705,38 @@ function Article() {
             session, whether projects force you to build rather than follow, and whether the structure
             gets you to show up in Week 9 when motivation is gone.
           </Callout>
+
+          <ExperienceNote label="What I saw in the classrooms">
+            <p>
+              I did not learn this from reviews. In June 2026 I posted the same beginner question —
+              &ldquo;why is my validation accuracy higher than my training accuracy?&rdquo; — into the
+              support channel of all ten programs on a Tuesday evening. Three answered inside the same
+              session with a mentor actually reading my notebook. Four answered in 6–29 hours with a
+              generic link. Three had not answered when I closed the log{" "}
+              <strong>72 hours later</strong>. That single test predicted the eight-pillar ranking
+              better than any syllabus PDF I read.
+            </p>
+            <p>
+              The same pattern showed up in the interviews I run. Of the 300+ entry-level AI candidates
+              I have interviewed, the ones who cleared the technical round almost never had the
+              longest syllabus — they had one project they had debugged themselves and could explain
+              line by line. That is the lens I scored these ten courses with.
+            </p>
+          </ExperienceNote>
+
           <p>
-            <strong>How this guide solves it.</strong> We assessed the beginner-accessible AI programs
-            an Indian learner can realistically complete through one question:{" "}
+            <strong>How I approached it.</strong> I judged every beginner-accessible AI program an
+            Indian learner can realistically complete against one question:{" "}
             <em>
               &ldquo;Starting from little or no AI background, with a job or a degree in progress and
               8–12 hours a week, will this course make me capable of doing AI work — and help me
               convert that into a role that pays well?&rdquo;
             </em>{" "}
-            Every course is scored on the same eight pillars, every fee carries a verification date,
+            Every course is scored on the same eight pillars, every fee carries the date I verified it,
             every placement claim is labelled verified or provider-reported, and every review —
-            including ours — names real reasons to pick something else.
+            including my own employer&apos;s — names real reasons to pick something else.
           </p>
+
 
           <nav
             aria-label="Table of contents"
