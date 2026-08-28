@@ -1998,7 +1998,22 @@ function Article() {
           </p>
           <ScoreRow scores={[7.0, 5.5, 7.0, 2.5, 6.5, 1.5, 6.5, 9.5]} total="5.70" />
 
+          <h2 id="beginner-deep-dive">
+            Beginner &amp; Placement Deep Dive — All 10 Courses Side by Side
+          </h2>
+          <p>
+            The reviews above judge each program on its merits. This section answers one narrower
+            question for all ten at once: <strong>why is this course a fit (or not) for a beginner aiming
+            at a high-paying AI career in India?</strong> Each card covers prerequisites, foundational
+            support, curriculum depth across the 2026 stack, projects, mentorship, interview preparation,
+            placement infrastructure, hiring partners, post-course services and reported learner outcomes
+            with background, role, company type and salary band. Placement percentages and partner lists
+            are provider-reported everywhere in this category — ask for the denominator in writing.
+          </p>
+          <BeginnerDeepDive />
+
           <h2 id="fees">Fees, EMI and How to Read Placement Claims</h2>
+
           <Table
             caption="Table 4 — Fees, EMI and total cost of ownership"
             head={[
