@@ -505,9 +505,15 @@ const depthTone: Record<string, string> = {
 
 const toc = [
   ["What “beginner” and “high salary” actually mean", "definitions"],
+  ["The problem: why most courses fail beginners", "the-problem"],
+  ["The cost of getting it wrong", "cost-of-wrong"],
+  ["My experience-based solution & recommendation", "my-solution"],
   ["How we ranked — the eight-pillar scorecard", "how-we-ranked"],
+  ["How I researched & ranked these 10 courses", "research-story"],
   ["Top 10 at a glance", "at-a-glance"],
   ["Interactive course finder", "finder"],
+  ["Find your best-fit course — quiz", "quiz"],
+
   ["What beginners need before starting", "before-starting"],
   ["The 2026 AI skill stack", "skill-stack"],
   ["#1 LogicMojo — full review", "review-1"],
