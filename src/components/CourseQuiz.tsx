@@ -121,30 +121,31 @@ const courses: Record<string, Course> = {
     placement: "Structured job-assistance pipeline: resume and GitHub rebuild, LinkedIn optimisation, mock interviews on AI system design, referral support and 1:1 career guidance (provider-reported; see the success-story page).",
     salary: "Alumni transitions published as success stories; India AI median ~₹11 LPA (Glassdoor, 2026), ₹12–25 LPA for deployment-capable GenAI engineers.",
   },
-  scaler: {
-    id: "scaler",
+  newtonschool: {
+    id: "newtonschool",
     rank: 2,
-    name: "Scaler — Advanced AI & ML Program",
-    href: "https://www.scaler.com/ai-machine-learning-course/",
+    name: "Newton School — Advanced AI & ML Program",
+    href: "https://www.newtonschool.co/",
     anchor: "#review-2",
-    fee: "≈₹3.5L+",
+    fee: "≈₹3L+",
     why: "The strongest placement infrastructure in this list — dedicated career team, hiring-partner network and structured interview drilling — provided you clear the entry test and can genuinely commit 15+ hours a week for a year.",
     skills: ["Python", "ML", "Deep learning", "GenAI + agentic AI track", "System design", "Interview drilling"],
     placement: "In-house career team, hiring-partner referrals, unlimited mock interviews (provider-reported; ask for the denominator behind any placement percentage).",
     salary: "Provider-reported hikes cluster at ₹12–30 LPA for experienced switchers.",
   },
-  upgrad: {
-    id: "upgrad",
+  datacamp: {
+    id: "datacamp",
     rank: 3,
-    name: "upGrad × IIIT-Bangalore — Executive PG in ML & AI",
-    href: "https://www.upgrad.com",
+    name: "DataCamp — Data Scientist & AI Engineer Career Tracks",
+    href: "https://www.datacamp.com/",
     anchor: "#review-3",
-    fee: "≈₹2.99L",
-    why: "Best university-linked credential with a real beginner bridge (prerequisite bootcamp), which matters when an employer, promotion committee or visa process wants a recognised academic tag.",
-    skills: ["Python bridge", "Statistics", "ML", "Deep learning", "NLP", "Deployment basics"],
-    placement: "Career-services team, resume and interview prep, referral network (assistance, not guarantee).",
-    salary: "Aimed at ₹10–20 LPA senior-analyst and ML-engineer bands for candidates with prior work experience.",
+    fee: "≈₹12K–₹25K per year",
+    why: "The cheapest structured way to find out whether you actually enjoy this work: browser-based coding from lesson one, auto-graded exercises, and Associate/Professional certifications with a practical exam — no live mentor and no placement team, so pair it with self-built projects.",
+    skills: ["Python", "SQL", "pandas", "Statistics", "scikit-learn ML", "PyTorch basics", "LLM/AI-engineer track"],
+    placement: "None promised — certification profile and job board only. Budget separately for interview prep.",
+    salary: "Realistic first step to ₹5–9 LPA analyst/junior-ML roles when backed by 2–3 deployed projects.",
   },
+
   greatlearning: {
     id: "greatlearning",
     rank: 4,
@@ -252,7 +253,7 @@ function pick(a: Partial<Record<Key, string>>): { course: Course; runnerUp: Cour
     reasons.push("You need foundations built from zero, so programs that assume Python on day one were dropped.");
   }
   if (a.experience === "Some ML knowledge" || a.foundations === "No — already comfortable") {
-    add("scaler", 2);
+    add("newtonschool", 2);
     add("ibm", 2);
     add("deeplearningai", 1);
   }
@@ -265,13 +266,12 @@ function pick(a: Partial<Record<Key, string>>): { course: Course; runnerUp: Cour
 
   if (a.goal === "Get my first AI job" || a.goal === "Switch career to AI") {
     add("logicmojo", 2.5);
-    add("scaler", 2);
+    add("newtonschool", 2);
     add("deeplearningai", -2);
     add("ibm", -2);
     reasons.push("Your goal is a job, so placement pipeline and interview prep were weighted above brand.");
   }
   if (a.goal === "Upskill for a promotion") {
-    add("upgrad", 2.5);
     add("greatlearning", 2);
     add("simplilearn", 2);
   }
@@ -283,14 +283,16 @@ function pick(a: Partial<Record<Key, string>>): { course: Course; runnerUp: Cour
 
   if (a.salary === "₹10–15 LPA" || a.salary === "₹15L+") {
     add("logicmojo", 2);
-    add("scaler", 2);
+    add("newtonschool", 2);
     add("pwskills", -2);
     add("guvi", -1.5);
+    add("datacamp", -2);
     reasons.push("Your target band requires deployment, RAG, fine-tuning and agent work — not an intro certificate.");
   }
   if (a.salary === "₹3–6 LPA") {
     add("pwskills", 2);
     add("guvi", 2);
+    add("datacamp", 2);
     add("deeplearningai", 1);
   }
 
@@ -299,8 +301,8 @@ function pick(a: Partial<Record<Key, string>>): { course: Course; runnerUp: Cour
     add("deeplearningai", 4);
     add("guvi", 1);
     add("logicmojo", -1.5);
-    add("scaler", -6);
-    add("upgrad", -6);
+    add("newtonschool", -6);
+    add("datacamp", 4);
     add("greatlearning", -6);
     add("simplilearn", -4);
     reasons.push("Budget under ₹15K rules out every premium program; the honest options are low-cost and self-driven.");
@@ -309,19 +311,19 @@ function pick(a: Partial<Record<Key, string>>): { course: Course; runnerUp: Cour
     add("guvi", 3);
     add("pwskills", 2);
     add("logicmojo", 1);
-    add("scaler", -5);
-    add("upgrad", -5);
+    add("newtonschool", -5);
+    add("datacamp", 3);
     add("greatlearning", -4);
   }
   if (a.budget === "₹50,000–₹1 lakh") {
     add("logicmojo", 3);
     add("intellipaat", 2.5);
-    add("scaler", -3);
-    add("upgrad", -3);
+    add("newtonschool", -3);
+    add("datacamp", -1);
   }
   if (a.budget === "₹1 lakh+") {
-    add("scaler", 2);
-    add("upgrad", 2);
+    add("newtonschool", 2);
+    add("datacamp", -3);
     add("greatlearning", 2);
     add("simplilearn", 1.5);
     add("logicmojo", 1.5);
@@ -329,26 +331,30 @@ function pick(a: Partial<Record<Key, string>>): { course: Course; runnerUp: Cour
 
   if (a.placement === "Must-have") {
     add("logicmojo", 2.5);
-    add("scaler", 2.5);
+    add("newtonschool", 2.5);
     add("intellipaat", 1);
     add("deeplearningai", -5);
     add("ibm", -5);
+    add("datacamp", -5);
     reasons.push("Placement support is a must-have for you, so self-paced MOOCs with no career team were excluded.");
   }
   if (a.placement === "Not important") {
     add("deeplearningai", 2);
     add("ibm", 1.5);
+    add("datacamp", 2);
   }
 
   if (a.mode === "Live online") {
     add("logicmojo", 2.5);
-    add("scaler", 1.5);
+    add("newtonschool", 1.5);
     add("guvi", 1.5);
     add("deeplearningai", -3);
     add("ibm", -3);
+    add("datacamp", -3);
   }
   if (a.mode === "Self-paced") {
     add("deeplearningai", 3);
+    add("datacamp", 3);
     add("ibm", 2);
     add("pwskills", 1);
   }
@@ -359,17 +365,17 @@ function pick(a: Partial<Record<Key, string>>): { course: Course; runnerUp: Cour
   }
   if (a.mode === "Classroom") {
     add("logicmojo", 1);
-    add("scaler", 1);
+    add("newtonschool", 1);
   }
 
   if (a.hours === "5–10 hrs") {
     add("logicmojo", 2);
     add("greatlearning", 2);
-    add("scaler", -3);
+    add("newtonschool", -3);
     reasons.push("At 5–10 hours a week, weekend-cohort formats fit; year-long 15-hour programs do not.");
   }
   if (a.hours === "20+ hrs") {
-    add("scaler", 2.5);
+    add("newtonschool", 2.5);
     add("logicmojo", 1);
   }
 

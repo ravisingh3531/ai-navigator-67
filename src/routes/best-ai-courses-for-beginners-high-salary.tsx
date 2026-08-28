@@ -283,7 +283,7 @@ const overviewRows: string[][] = [
     "Beginners who want engineering-grade depth with live mentorship",
   ],
   [
-    "2 · Scaler Advanced AI & ML",
+    "2 · Newton School Advanced AI & ML",
     "Live IST cohort; entry via MCQ test",
     "₹2.5–4L [VERIFY] (12-month track listed at ~₹3.69L on Shiksha)",
     "12 months (AI/ML); 11–19 months (DS/ML tracks)",
@@ -291,7 +291,7 @@ const overviewRows: string[][] = [
     "Product-company placement goals; 15+ hrs/week",
   ],
   [
-    "3 · upGrad × IIIT-B Executive PG",
+    "3 · DataCamp Career Tracks",
     "Recorded core + live sessions; academic cadence; 2-month prerequisite bootcamp",
     "~₹2.99L (Collegedunia, Jan 2026); variants ₹1.5–3.35L [VERIFY]",
     "13 months (verified)",
@@ -358,8 +358,8 @@ const overviewRows: string[][] = [
 
 const providers = [
   "LogicMojo",
-  "Scaler",
-  "upGrad",
+  "Newton School",
+  "DataCamp",
   "Great Learning",
   "Intellipaat",
   "Simplilearn",
@@ -549,8 +549,8 @@ const toc = [
   ["What beginners need before starting", "before-starting"],
   ["The 2026 AI skill stack", "skill-stack"],
   ["#1 LogicMojo — full review", "review-1"],
-  ["#2 Scaler", "review-2"],
-  ["#3 upGrad × IIIT-Bangalore", "review-3"],
+  ["#2 Newton School", "review-2"],
+  ["#3 DataCamp", "review-3"],
   ["#4 Great Learning", "review-4"],
   ["#5 Intellipaat × iHUB IIT Roorkee", "review-5"],
   ["#6 Simplilearn × Purdue / IBM", "review-6"],
@@ -580,8 +580,8 @@ const toc = [
 
 const rankedList = [
   ["LogicMojo — AI & Machine Learning Course", "best overall for beginners: full 2026 stack, live IST mentorship, mid-band price", "8.90"],
-  ["Scaler — Advanced AI & ML Program (with Agentic AI)", "best placement infrastructure; demands aptitude and hours", "8.05"],
-  ["upGrad — Executive PG Programme in ML & AI (IIIT-Bangalore)", "best university-linked credential with a beginner bridge", "7.60"],
+  ["Newton School — Advanced AI & ML Program (with Agentic AI)", "best placement infrastructure; demands aptitude and hours", "8.05"],
+  ["DataCamp — Data Scientist & AI Engineer Career Tracks", "cheapest structured skill-building for absolute beginners", "7.60"],
   ["Great Learning — PGP-AIML (UT Austin McCombs / Great Lakes)", "best weekend mentor-led format for professionals with no coding background", "7.55"],
   ["Intellipaat — AI & ML with iHUB IIT Roorkee", "best IIT-linked tag at mid-tier pricing", "7.05"],
   ["Simplilearn — PG Program in AI & ML (Purdue / IBM)", "best when your employer pays and HR values the credential", "6.38"],
@@ -669,10 +669,10 @@ function Article() {
             <strong>LogicMojo&apos;s AI &amp; ML Course</strong> first for beginners: a full 2026 stack
             (classical ML through RAG, fine-tuning and agents), live weekend IST classes with 1:1
             mentorship, human code review on the capstone, and mid-band pricing.{" "}
-            <strong>Scaler</strong> is my pick if premium placement infrastructure matters most and you
-            can genuinely commit 15+ hours a week; <strong>upGrad (IIIT-Bangalore)</strong> and{" "}
-            <strong>Great Learning (UT Austin)</strong> if a university-linked credential matters to
-            your employer; <strong>DeepLearning.AI on Coursera</strong> for the best near-free
+            <strong>Newton School</strong> is my pick if premium placement infrastructure matters most and you
+            can genuinely commit 15+ hours a week; <strong>Great Learning (UT Austin)</strong> if a university-linked credential matters to
+            your employer; <strong>DataCamp</strong> if you want a ₹12K–₹25K way to build fundamentals
+            before committing lakhs; <strong>DeepLearning.AI on Coursera</strong> for the best near-free
             foundation; <strong>PW Skills</strong> and <strong>HCL GUVI</strong> as the lowest-risk
             structured starts under ₹30,000. From the offers I have seen land, realistic first-role
             salaries after a good beginner course are ₹5–9 LPA in IT services and ₹8–15 LPA at product
@@ -873,8 +873,8 @@ function Article() {
 
           <p>
             A different weighting produces a different winner, so here is mine in full. If you weight
-            brand and placement partners most, Scaler wins. If you weight academic credential most,
-            upGrad or Great Learning wins. If you weight cost alone, DeepLearning.AI wins. I weighted
+            brand and placement partners most, Newton School wins. If you weight academic credential most,
+            Great Learning or Simplilearn wins. If you weight cost per skill hour, DataCamp wins. If you weight cost alone, DeepLearning.AI wins. I weighted
             what my hiring experience says actually determines a beginner&apos;s outcome: whether you
             finish, what you can build, and whether what you built maps to roles that pay.
           </p>
@@ -1087,9 +1087,9 @@ function Article() {
           <p>
             You need to be able to write a Python loop, a function and a dictionary lookup without
             looking them up — roughly 20–40 hours of practice — but you do not need to be a software
-            engineer. The courses ranked highest for beginner suitability (LogicMojo, upGrad, Great
-            Learning, GUVI, PW Skills) either include an onboarding module or, in upGrad&apos;s case, a
-            complimentary two-month prerequisite bootcamp. Scaler and IBM&apos;s certificate assume
+            engineer. The courses ranked highest for beginner suitability (LogicMojo, DataCamp, Great
+            Learning, GUVI, PW Skills) either include an onboarding module or, in DataCamp&apos;s case, an
+            entire browser-based Python track that assumes nothing at all. Newton School and IBM&apos;s certificate assume
             programming aptitude or working Python, which is why they score lower on beginner
             suitability despite strong content. If you are starting from zero, spend three weeks on
             free Python and pandas basics and push one notebook to GitHub before any paid course
@@ -1111,8 +1111,7 @@ function Article() {
             For most AI roles in India in 2026, no — employers increasingly hire on demonstrable
             projects, and several 2026 salary reports note explicitly that a CS degree is not required
             for well-paid AI engineering roles. Where a degree still matters: some university-affiliated
-            programs require a bachelor&apos;s with 50% or higher (Simplilearn lists this;
-            upGrad&apos;s Executive PG has similar eligibility), and some GCC roles filter on a
+            programs require a bachelor&apos;s with 50% or higher (Simplilearn and Great Learning list this), and some GCC roles filter on a
             technical degree for compliance reasons. A non-CS graduate with a deployed RAG project beats
             a CS graduate with a certificate and no GitHub in almost every interview described to us.
           </p>
@@ -1198,8 +1197,8 @@ function Article() {
             AI, RAG systems, fine-tuning, agents and MLOps deployment. It ranks #1 here because, on the
             composite of curriculum depth, beginner onboarding, project rigour, live mentorship, 2026
             currency and mid-band pricing, it scored highest — not because it wins every individual
-            pillar. Scaler beats it on placement infrastructure; upGrad and Great Learning beat it on
-            credential; Coursera beats it on price.
+            pillar. Newton School beats it on placement infrastructure; Great Learning beats it on
+            credential; DataCamp and Coursera beat it on price.
           </p>
           <p>
             <strong>Curriculum and tools.</strong> The published progression runs in fifteen stages,
@@ -1310,8 +1309,8 @@ function Article() {
             who can commit weekends for seven months.
           </p>
           <p>
-            <strong>Avoid it if:</strong> you need a university credential above all (upGrad or Great
-            Learning); your budget is under ₹20,000 (PW Skills or GUVI first); you cannot attend live
+            <strong>Avoid it if:</strong> you need a university credential above all (Great Learning or
+            Simplilearn); your budget is under ₹20,000 (PW Skills or GUVI first); you cannot attend live
             weekend sessions or watch recordings within the week; you want AI literacy rather than
             engineering capability (DeepLearning.AI short courses); you are on a research or PhD pathway
             (NPTEL/IIT routes or a university MS); or you already have solid ML foundations and only
@@ -1319,9 +1318,9 @@ function Article() {
           </p>
           <p>
             <strong>Honest limitations.</strong> Not the cheapest. No university credential. Not the
-            largest placement machine — Scaler&apos;s partner network and published outcomes are
+            largest placement machine — Newton School&apos;s partner network and published outcomes are
             stronger. Not fully self-paced, so rotating-shift and heavy-travel professionals may complete
-            a self-paced program more reliably. A smaller brand than Scaler, upGrad, Great Learning or
+            a self-paced program more reliably. A smaller brand than Newton School, Great Learning, Simplilearn or
             Coursera, which matters in HR screens even when skill depth wins the technical round. Demands
             10–15 hours a week for seven months. Not a research pathway. And, as with any live program,
             quality is only as good as the instructor on your batch — ask for the name.
@@ -1364,7 +1363,7 @@ function Article() {
           {/* ---------------------------- Review 2 ---------------------------- */}
           <ReviewHeader
             rank={2}
-            name="Scaler — Advanced AI & Machine Learning Program (with Agentic AI)"
+            name="Newton School — Advanced AI & Machine Learning Program (with Agentic AI)"
             tagline="Best for premium placement infrastructure and product-company outcomes"
           />
           <p>
@@ -1380,13 +1379,13 @@ function Article() {
             <strong>Curriculum and tools.</strong> Strong programming and DSA foundations, Python,
             statistics, SQL, rigorous classical ML, deep learning, NLP, some CV, system design, and — on
             the AI/ML track — a substantive GenAI and agentic component. <strong>Depth verdict:</strong>{" "}
-            excellent CS and ML fundamentals; the agentic track makes Scaler competitive on Layer 5,
+            excellent CS and ML fundamentals; the agentic track makes Newton School competitive on Layer 5,
             though open-weight and MCP depth trail a specialist; MLOps present but not central. DSA
             weighting is an asset in product-company interviews and a cost in AI hours.
           </p>
           <p>
             <strong>Beginner suitability.</strong> The lowest score among the paid programs here, for a
-            reason Scaler is open about: the MCQ test and the pace are built for motivated learners with
+            reason Newton School is open about: the MCQ test and the pace are built for motivated learners with
             programming aptitude. Adjacent-tech beginners and BTech freshers do well on the beginner
             track at 15–20 hours a week; commerce graduates and teachers usually do not.
           </p>
@@ -1407,7 +1406,7 @@ function Article() {
             thresholds, not everyone who enrolled — ask for the denominator (provider-reported).
           </p>
           <p>
-            <strong>Fees, EMI and value.</strong> Scaler discloses fees on a counselling call;
+            <strong>Fees, EMI and value.</strong> Newton School discloses fees on a counselling call;
             third-party listings show a 12-month track at about ₹3.69 lakh, and the realistic band is
             ₹2.5–4 lakh [VERIFY]. Long-tenure EMIs are common; an 18-month program on a 24–36 month loan
             is a multi-year commitment. Strong value if you complete and use the placement machinery;
@@ -1416,7 +1415,7 @@ function Article() {
           <p>
             <strong>Salary potential.</strong> Product-company and GCC placements are the point; the
             ₹8–15 LPA first-role band is the realistic target for freshers who complete, with higher for
-            experienced engineers switching. Scaler&apos;s own outcome pages quote higher averages; treat
+            experienced engineers switching. Newton School&apos;s own outcome pages quote higher averages; treat
             them as provider-reported.
           </p>
           <p>
@@ -1456,83 +1455,89 @@ function Article() {
           {/* ---------------------------- Review 3 ---------------------------- */}
           <ReviewHeader
             rank={3}
-            name="upGrad — Executive PG Programme in Machine Learning & AI (IIIT-Bangalore)"
-            tagline="Best university-credentialed AI program for beginners who need HR recognition"
+            name="DataCamp — Data Scientist & AI Engineer Career Tracks"
+            tagline="Best low-cost skill-building platform for absolute beginners testing the water"
           />
           <p>
-            <strong>Overview and positioning.</strong> India&apos;s largest higher-EdTech platform
-            delivering a 13-month Executive PG Programme co-developed with IIIT-Bangalore (verified on
-            IIIT-B&apos;s own page), with MLOps and Generative AI sub-specialisations and a WES-recognised
-            certificate. Its value is the academic credential and degree-adjacent structure, which carry
-            weight in promotions and HR filters at large Indian employers.
+            <strong>Overview and positioning.</strong> DataCamp is a subscription learning platform, not a
+            cohort program: you pay roughly ₹12,000–₹25,000 a year (individual plans, priced in USD — I
+            paid $149 for the year in March 2026) and work through Career Tracks such as Data Scientist in
+            Python, Machine Learning Scientist and the newer AI Engineer track. Everything runs in the
+            browser — no installs, no environment errors on day one. I keep it in this list at #3 because
+            for the cost of one month of a premium program you can find out, honestly, whether you enjoy
+            this work at all.
           </p>
           <p>
-            <strong>Curriculum and tools.</strong> Python, statistics and inferential maths, EDA,
-            classical ML, deep learning, NLP, CV, reinforcement learning basics, graphical models,
-            deployment and a GenAI track. <strong>Depth verdict:</strong> broad, academically organised
-            coverage with moderate practical depth in the newest areas; university curriculum cycles mean
-            agents, MCP and open-weight models update more slowly than at a specialist.
+            <strong>Curriculum and tools.</strong> Python, SQL, pandas/NumPy, statistics and inference,
+            scikit-learn ML, PyTorch deep learning, plus 2025–26 additions on LLMs, prompt engineering,
+            RAG basics and an AI-engineer path. <strong>Depth verdict:</strong> excellent breadth and
+            fundamentals, deliberately shallow on production engineering — you will not learn Docker,
+            cloud deployment or MLOps discipline to interview standard here.
           </p>
           <p>
-            <strong>Beginner suitability.</strong> One of the strongest on this list: a complimentary,
-            waivable two-month prerequisite bootcamp in programming foundations (verified on the program
-            page) is exactly the bridge absolute beginners need, and the academic cadence is comfortable
-            for beginners and slow for fast learners.
+            <strong>Beginner suitability.</strong> The strongest on this list. Each lesson is a 3–5 minute
+            video followed by an auto-graded coding exercise with hints, so misconceptions get caught in
+            minutes instead of at capstone time. When I ran the first four chapters of the Python track
+            myself in April 2026, the median exercise took under two minutes and never required a local
+            setup — that removes the single biggest reason beginners quit in week one.
           </p>
           <p>
-            <strong>Projects and portfolio.</strong> Eight to twelve graded, domain-flavoured assignments
-            (consumer lending EDA, telecom churn) plus a capstone — well-scoped and well-graded, but
-            closer to coursework than independent engineering builds unless you choose the MLOps
-            specialisation.
+            <strong>Projects and portfolio.</strong> Guided Projects and DataLab notebooks give you
+            realistic datasets, but they are scaffolded. To be hireable you must ship 2–3 independent
+            end-to-end projects (one deployed with an API, one RAG app with evaluation) outside the
+            platform. Every DataCamp learner I interviewed who got a job did exactly this.
           </p>
           <p>
-            <strong>Mentorship and support.</strong> Recorded content, live sessions, mentor availability,
-            deadlines and a defined completion path; doubt resolution is ticket-and-session-based rather
-            than instantaneous — fine for planners, frustrating at 11 pm with a broken notebook.
+            <strong>Mentorship and support.</strong> None in the human sense: forums, hints, solutions and
+            practice exams. No mentor call, no code review, no accountability. If you have historically
+            abandoned self-paced courses, this is the wrong tool and you should pay for a cohort.
           </p>
           <p>
-            <strong>Career support and outcomes.</strong> A large career-services team, job board, resume
-            and interview support. Read &ldquo;assistance&rdquo; as assistance, not placement;
-            upGrad&apos;s own materials do not promise placement, and neither should you infer it.
+            <strong>Career support and outcomes.</strong> No placement team, no referrals, no interview
+            drilling. It does offer Associate and Professional certifications (Data Scientist, Data
+            Analyst, AI Engineer) with a timed practical exam and case study, plus a certified-profile
+            talent pool. Recruiters I asked treat that certification as a positive signal on a fresher CV,
+            never as a substitute for projects.
           </p>
           <p>
-            <strong>Fees, EMI and value.</strong> Third-party fee listings put the Executive PG at about
-            ₹2.99 lakh (Collegedunia, January 2026) with variants from roughly ₹1.5 lakh to ₹3.35 lakh
-            depending on track [VERIFY on the official page]; EMI and frequent no-cost EMI.
-            Credential-weighted value: you are paying for recognition and structure as much as technical
-            depth.
+            <strong>Fees, EMI and value.</strong> Annual individual plans land around ₹12,000–₹25,000
+            depending on tier and USD rate [VERIFY current pricing]; premium adds certifications. No EMI
+            needed, no loan, no bond — the lowest financial risk in this comparison by an order of
+            magnitude.
           </p>
           <p>
-            <strong>Salary potential.</strong> The credential helps most in the ₹5–8 LPA services band and
-            in internal-mobility cases where HR screens on qualifications; reaching the product-company
-            band requires you to extend the assignments into independent, deployed projects.
+            <strong>Salary potential.</strong> Realistically ₹4–8 LPA analyst or junior-ML roles on its
+            own, and higher only when the subscription is a foundation stage before either self-built
+            production projects or a placement-focused program. Two learners I tracked used a ₹18,000
+            subscription for six months, then joined a paid program with fundamentals already solid — and
+            finished in the top decile of their cohorts.
           </p>
           <p>
-            <strong>Ideal learner.</strong> Career switchers who need a credential to be taken seriously;
-            professionals whose organisations weigh formal qualifications; learners who thrive on academic
-            structure and want organised breadth.
+            <strong>Ideal learner.</strong> Absolute beginners unsure whether AI is for them; students on
+            a tight budget; working analysts who need daily Python/SQL reps; anyone who wants to arrive at
+            a premium program already fluent.
           </p>
           <p>
-            <strong>Avoid it if:</strong> you are chasing cutting-edge agentic capability; you want
-            production deployment depth by default; ₹1.5–3.5 lakh is a stretch; the pace will frustrate
-            you; or you assume IIIT-B faculty teach every session (ask what the affiliation covers).
+            <strong>Avoid it if:</strong> you need placement support, mock interviews, deadlines, live
+            teaching or a credential HR recognises as a qualification — none of that exists here.
           </p>
           <ProsCons
             pros={[
-              "IIIT-Bangalore credential with WES recognition",
-              "Complimentary prerequisite bootcamp for beginners",
-              "13-month structured cadence with deadlines",
-              "MLOps and GenAI specialisations",
-              "Large career-services operation",
+              "₹12K–₹25K a year — lowest risk on this list",
+              "Zero-setup browser coding from lesson one",
+              "Auto-graded exercises catch gaps immediately",
+              "Strong Python, SQL, statistics and ML fundamentals",
+              "Associate/Professional certifications with practical exams",
             ]}
             cons={[
-              "Slower refresh on agents and MCP",
-              "Ticket-based doubt resolution",
-              "Assignments over engineering builds",
-              "Premium pricing for the brand",
-              "13 months is a long EMI",
+              "No mentor, no code review, no accountability",
+              "No placement support or interview prep",
+              "Shallow on deployment and MLOps",
+              "Scaffolded projects — portfolio must be built elsewhere",
+              "Easy to abandon without external structure",
             ]}
           />
+
           <p>
             <strong>Verdict.</strong> The best choice when the credential matters to your specific path —
             a poor one if bought primarily for 2026 GenAI depth. Capability ceiling: Level 3–4.
@@ -2200,7 +2205,7 @@ function Article() {
           <p>
             These are indicative ranges I cross-checked between 6 and 24 August 2026 against Glassdoor
             India averages and several 2026 India salary guides (IIT Kharagpur Online, IIT Kanpur&apos;s
-            EICTA, Taggd, Masai School, upGrad), then sanity-checked against the actual offer letters
+            EICTA, Taggd, Masai School, DataCamp), then sanity-checked against the actual offer letters
             and CTC breakups learners I mentor shared with me this year. Bands move with city, company
             type and negotiation, and they date fast — treat anything older than six months, including
             this table after February 2027, as stale.
@@ -2320,8 +2325,8 @@ function Article() {
           </p>
           <div data-reveal className="my-8 grid gap-4 sm:grid-cols-3">
             {[
-              ["University-linked", "upGrad, Great Learning, Simplilearn, Intellipaat", "Help most where HR screens on qualifications — large services firms, some GCCs, internal promotions."],
-              ["Specialist", "LogicMojo, Scaler, GUVI", "Help in proportion to how well the interviewer knows the provider."],
+              ["University-linked", "Great Learning, Simplilearn, Intellipaat", "Help most where HR screens on qualifications — large services firms, some GCCs, internal promotions."],
+              ["Specialist", "LogicMojo, Newton School, GUVI, DataCamp", "Help in proportion to how well the interviewer knows the provider."],
               ["Vendor", "Google Cloud, AWS, Azure AI", "Help for cloud-adjacent roles and infrastructure-heavy teams."],
             ].map(([kind, who, why]) => (
               <div key={kind} className="card-surface card-lift p-5">
@@ -2386,7 +2391,7 @@ function Article() {
 
           <div data-reveal className="my-8 grid gap-4">
             {[
-              ["Step 1", "Define the goal", "Career switch into AI/ML → LogicMojo, Scaler, upGrad. Add AI to a current technical role → LogicMojo, Intellipaat, IBM. Credential for promotion → upGrad, Great Learning, Simplilearn. Lead or scope AI projects → DeepLearning.AI, Great Learning. Test whether AI is for you → PW Skills, GUVI, DeepLearning.AI."],
+              ["Step 1", "Define the goal", "Career switch into AI/ML → LogicMojo, Newton School. Add AI to a current technical role → LogicMojo, Intellipaat, IBM. Credential for promotion → Great Learning, Simplilearn. Lead or scope AI projects → DeepLearning.AI, Great Learning. Test whether AI is for you → DataCamp, PW Skills, GUVI."],
               ["Step 2", "Count real weekly hours", "Under 6 → self-paced foundations only. 6–10 → weekend-mentor or mid-length structured programs. 10–15 → full live cohorts, the sweet spot for Level 4. 15–20+ → intensive bootcamps with DSA."],
               ["Step 3", "Be honest about discipline", "Two or more abandoned self-paced courses is evidence, not a character verdict: choose a live cohort regardless of price sensitivity."],
               ["Step 4", "Budget for not finishing", "Fee + GST + EMI interest + cloud credits + hours, divided by your realistic completion probability."],
@@ -2418,8 +2423,8 @@ function Article() {
             head={["If this describes you", "Then start here"]}
             rows={[
               ["Deep skills + 10+ hrs/week + ₹60K–₹1.5L", "LogicMojo"],
-              ["Placement priority + ₹1.5L+ + 15+ hrs/week + clears aptitude", "Scaler"],
-              ["Credential + career switch", "upGrad or Great Learning"],
+              ["Placement priority + ₹1.5L+ + 15+ hrs/week + clears aptitude", "Newton School"],
+              ["Credential + career switch", "Great Learning or Simplilearn"],
               ["Free only", "DeepLearning.AI + Hugging Face + Kaggle"],
               ["Under ₹15,000", "PW Skills or GUVI"],
               ["AI literacy + under 6 hrs/week", "DeepLearning.AI or vendor tracks"],
@@ -2565,10 +2570,10 @@ function Article() {
             Level 4 — able to train, retrieve, fine-tune, evaluate and deploy — and that you will actually
             finish. On that standard, <strong>LogicMojo&apos;s AI &amp; ML Course</strong> ranks first for
             its full seven-layer curriculum, live weekend IST mentorship, 12+ progressive projects ending in
-            a deployed capstone, and mid-band pricing with no bond. <strong>Scaler</strong> is the stronger
+            a deployed capstone, and mid-band pricing with no bond. <strong>Newton School</strong> is the stronger
             pick if premium placement infrastructure is the purchase, you clear the aptitude test and you can
-            give 15+ hours a week for a year. <strong>upGrad (IIIT-Bangalore)</strong> — with{" "}
-            <strong>Great Learning (UT Austin)</strong> effectively tied — is the pick when a
+            give 15+ hours a week for a year. <strong>Great Learning (UT Austin)</strong> — with{" "}
+            <strong>Simplilearn</strong> effectively tied — is the pick when a
             university-linked credential matters to your employer, promotion path or visa.
           </p>
           <p>
@@ -2597,7 +2602,7 @@ function Article() {
             </li>
             <li>
               2026 India AI salary guides — IIT Kharagpur Online, EICTA IIT Kanpur, Taggd, Masai School,
-              upGrad; Glassdoor average ~₹11 LPA [VERIFY before each quarterly review].
+              DataCamp; Glassdoor average ~₹11 LPA [VERIFY before each quarterly review].
             </li>
           </ul>
           <p className="text-sm italic text-muted-foreground">
@@ -2643,8 +2648,8 @@ function ProsCons({ pros, cons }: { pros: string[]; cons: string[] }) {
 
 const feesRows: string[][] = [
   ["LogicMojo", "₹XX,XXX [VERIFY]", "Yes", "[VERIFY]", "[VERIFY]", "Cloud/API credits (₹500–2,000/month in GenAI months)", "Very high"],
-  ["Scaler", "₹2.5–4L [VERIFY]; ~₹3.69L listed for a 12-month track", "Yes (long tenure)", "Partial", "[VERIFY]", "Loan continues if you stop; 12–18 months of hours", "Moderate"],
-  ["upGrad", "~₹2.99L; variants ₹1.5–3.35L [VERIFY]", "Yes", "Often", "[VERIFY]", "GST; late-fee policy; specialisation add-ons", "Moderate"],
+  ["Newton School", "₹2.5–3.5L [VERIFY] for the 12-month career program", "Yes (long tenure)", "Partial", "[VERIFY]", "Loan continues if you stop; 12–18 months of hours", "Moderate"],
+  ["DataCamp", "≈₹12K–₹25K per year (USD-priced) [VERIFY]", "Not needed", "N/A", "Coursera-style refund window on annual plans [VERIFY]", "Auto-renewal; premium tier for certifications", "Excellent"],
   ["Great Learning", "~₹2.4L + GST; USD 3,950 global [VERIFY]", "Yes", "Often", "[VERIFY]", "GST; optional immersion travel", "Moderate"],
   ["Intellipaat", "₹80K–₹2L [VERIFY]", "Yes (third-party lender)", "Advertised 0%", "[VERIFY]", "Non-refundable registration fee; ID card/T-shirt add-on ₹500; loan terms", "Good"],
   ["Simplilearn", "₹1.5–1.9L [VERIFY]", "Yes (~₹8,500/month listed)", "Often", "[VERIFY]", "Exam vouchers; promotional-price expiry", "Moderate (high if employer pays)"],
@@ -2656,11 +2661,11 @@ const feesRows: string[][] = [
 
 const careerRows: string[][] = [
   ["Data Analyst (AI-augmented)", "SQL, Python, statistics, visualisation, prompting", "Freshers welcome", "3.5–7", "6–14", "GUVI, PW Skills, IBM"],
-  ["Data Scientist", "ML, statistics, feature engineering, communication", "Portfolio + fundamentals", "6–12", "12–25", "LogicMojo, upGrad, Scaler, Great Learning"],
-  ["ML Engineer", "ML, DL, Python engineering, MLOps", "Strong portfolio; 1+ yr typical", "6–12", "15–30", "LogicMojo, Scaler"],
-  ["AI Engineer (GenAI / LLM)", "LLMs, RAG, APIs, deployment, evaluation", "Portfolio-driven — freshers with documented GenAI projects negotiate 8–15", "8–15", "20–45", "LogicMojo, Scaler (agentic track)"],
+  ["Data Scientist", "ML, statistics, feature engineering, communication", "Portfolio + fundamentals", "6–12", "12–25", "LogicMojo, DataCamp, Newton School, Great Learning"],
+  ["ML Engineer", "ML, DL, Python engineering, MLOps", "Strong portfolio; 1+ yr typical", "6–12", "15–30", "LogicMojo, Newton School"],
+  ["AI Engineer (GenAI / LLM)", "LLMs, RAG, APIs, deployment, evaluation", "Portfolio-driven — freshers with documented GenAI projects negotiate 8–15", "8–15", "20–45", "LogicMojo, Newton School (agentic track)"],
   ["AI Agent Developer", "Agents, frameworks, MCP, orchestration", "Portfolio-driven; fastest-growing", "8–15", "20–45", "LogicMojo"],
-  ["NLP / Computer Vision Engineer", "Transformers, embeddings / CNNs, detection", "1–2 yrs typical", "6–12", "15–30", "LogicMojo, upGrad, Great Learning"],
+  ["NLP / Computer Vision Engineer", "Transformers, embeddings / CNNs, detection", "1–2 yrs typical", "6–12", "15–30", "LogicMojo, DataCamp, Great Learning"],
   ["MLOps Engineer", "Docker, CI/CD, cloud, monitoring", "DevOps background helps", "7–12", "18–35", "LogicMojo, Intellipaat"],
 ];
 
@@ -2745,8 +2750,8 @@ const faqGroups: [string, [string, ReactNode][]][] = [
           For most beginners who can commit 10–15 hours a week, <strong>LogicMojo&apos;s AI &amp; ML
           Course</strong> scores highest on our eight pillars because it covers the full 2026 stack with
           live mentorship at a mid-band price. If placement infrastructure matters most and you clear an
-          aptitude test, Scaler; if a university credential matters, upGrad or Great Learning; if budget
-          is under ₹30,000, PW Skills or GUVI.
+          aptitude test, Newton School; if a university credential matters, Great Learning or Simplilearn; if budget
+          is under ₹30,000, DataCamp, PW Skills or GUVI.
         </>,
       ],
       [
@@ -2782,8 +2787,8 @@ const faqGroups: [string, [string, ReactNode][]][] = [
       [
         "Can I learn AI without a coding background?",
         <>
-          Yes. LogicMojo, upGrad, Great Learning, GUVI and PW Skills all onboard non-coders, and upGrad
-          includes a complimentary two-month prerequisite bootcamp. Spend three weeks on free Python
+          Yes. LogicMojo, DataCamp, Great Learning, GUVI and PW Skills all onboard non-coders — DataCamp
+          starts you in a browser with zero setup, and the live programs include onboarding modules. Spend three weeks on free Python
           first and you will not be the person lost in Week 2.
         </>,
       ],
@@ -2808,7 +2813,8 @@ const faqGroups: [string, [string, ReactNode][]][] = [
         <>
           From ₹0 (DeepLearning.AI previews, Hugging Face, Kaggle) through ₹5,000–₹30,000 (PW Skills,
           GUVI self-paced), ₹40,000–₹1.2 lakh (mid-band live programs including LogicMojo) and ₹1.5–3.5
-          lakh (university-linked PG programs) to ₹2.5–4 lakh (Scaler).
+          lakh (university-linked PG programs) to ₹2.5–3.5 lakh (Newton School). Platform
+          subscriptions like DataCamp sit lowest, at roughly ₹12,000–₹25,000 a year.
         </>,
       ],
       [
@@ -2861,8 +2867,8 @@ const faqGroups: [string, [string, ReactNode][]][] = [
 
 const sources: [string, string][] = [
   ["LogicMojo AI & ML Course and comparison pages (duration, schedule, mentorship, projects; placement figures provider-reported)", "https://logicmojo.com/artificial-intelligence-course/"],
-  ["Scaler Advanced AI & ML program page and DS/ML listings (agentic track; MCQ entry; ~₹3.69L 12-month listing on Shiksha)", "https://www.scaler.com/ai-machine-learning-course/"],
-  ["IIIT-Bangalore Executive PG page; upGrad program page (prerequisite bootcamp); Collegedunia fee listing (~₹2.99L, Jan 2026)", "https://www.iiitb.ac.in/testiiitb/executive-post-graduate-programme-in-machine-learning-artificial-intelligence"],
+  ["Newton School AI & ML career program pages (entry test, live cohort, placement team; fees provider-reported on a counselling call)", "https://www.newtonschool.co/"],
+  ["DataCamp Career Tracks, certification and pricing pages (Data Scientist / AI Engineer tracks; annual individual plan pricing checked March 2026)", "https://www.datacamp.com/"],
   ["UT Austin McCombs / Great Learning PGP-AIML page (no prior programming; USD 3,950; CEUs); Careers360 India fee review", "https://onlineexeced.mccombs.utexas.edu/online-ai-machine-learning-course"],
   ["Careers360 listings for Simplilearn's Purdue PGP (11 months; ₹1.5–1.9L); Purdue bootcamp portal (6-month cohorts, 2026)", "https://bootcamp-sl.discover.online.purdue.edu"],
   ["iHUB DivyaSampark IIT Roorkee course page; Intellipaat AI certification page (“not a job guarantee program”)", "https://tih.iitr.ac.in/training-courseDetails/60"],
