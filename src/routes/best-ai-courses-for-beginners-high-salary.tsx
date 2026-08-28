@@ -517,33 +517,70 @@ const rankedList = [
 /* -------------------------------- article -------------------------------- */
 
 function Article() {
+  const revealRef = useReveal<HTMLDivElement>();
+
   return (
-    <div className="min-h-screen bg-background">
-      <div className="mx-auto max-w-3xl px-5 pb-24 pt-10 sm:px-8">
-        <nav className="flex flex-wrap items-center gap-x-3 gap-y-2 font-mono text-[0.68rem] uppercase tracking-[0.12em] text-muted-foreground">
-          <span className="text-accent">LogicMojo Guides</span>
-          <span aria-hidden>/</span>
-          <span>AI Careers</span>
-          <span aria-hidden>/</span>
-          <span>Course Research</span>
-        </nav>
+    <div ref={revealRef} className="min-h-screen bg-background">
+      <ProgressBar />
 
-        <header className="mt-8 border-b border-rule pb-8">
-          <h1 className="text-[2.1rem] leading-[1.12] sm:text-[2.9rem]">
-            Top 10 Best AI Courses for Beginners with High Salary (2026)
-          </h1>
-          <p className="mt-4 font-display text-lg italic leading-snug text-muted-foreground">
-            Curriculum, projects, fees, career support and realistic salary outcomes compared on one
-            eight-pillar scorecard.
-          </p>
-          <div className="mt-6 flex flex-wrap gap-2">
-            <Chip>Last updated 28 Aug 2026</Chip>
-            <Chip>≈ 45 min read</Chip>
-            <Chip>Fees verified Aug 2026</Chip>
-            <Chip>Next review Nov 2026</Chip>
-          </div>
-        </header>
+      {/* Hero */}
+      <div className="relative isolate overflow-hidden border-b border-border">
+        <div
+          aria-hidden
+          className="absolute inset-0 -z-10 bg-[radial-gradient(120%_100%_at_50%_-20%,color-mix(in_oklab,var(--primary)_16%,white),white_70%)]"
+        />
+        <div
+          aria-hidden
+          className="float-orb absolute -left-24 top-10 -z-10 size-72 rounded-full bg-[image:var(--gradient-blue)] opacity-20 blur-3xl"
+        />
+        <div
+          aria-hidden
+          className="float-orb absolute -right-20 top-40 -z-10 size-80 rounded-full bg-[image:var(--gradient-blue)] opacity-15 blur-3xl [animation-delay:-5s]"
+        />
+        <div className="mx-auto max-w-3xl px-5 pb-14 pt-12 sm:px-8">
+          <nav className="flex flex-wrap items-center gap-x-3 gap-y-2 font-mono text-[0.66rem] uppercase tracking-[0.14em] text-muted-foreground">
+            <span className="font-semibold text-primary">LogicMojo Guides</span>
+            <span aria-hidden>/</span>
+            <span>AI Careers</span>
+            <span aria-hidden>/</span>
+            <span>Course Research</span>
+          </nav>
 
+          <header className="mt-8">
+            <h1 className="text-[2.15rem] font-extrabold leading-[1.08] sm:text-[3rem]">
+              Top 10 Best <span className="gradient-text">AI Courses</span> for Beginners with High
+              Salary (2026)
+            </h1>
+            <p className="mt-5 max-w-2xl text-lg leading-snug text-muted-foreground">
+              Curriculum, projects, fees, career support and realistic salary outcomes compared on
+              one eight-pillar scorecard.
+            </p>
+            <div className="mt-7 flex flex-wrap gap-2">
+              <Chip>Last updated 28 Aug 2026</Chip>
+              <Chip>≈ 45 min read</Chip>
+              <Chip>Fees verified Aug 2026</Chip>
+              <Chip>Next review Nov 2026</Chip>
+            </div>
+
+            <div className="mt-9 grid gap-3 sm:grid-cols-3">
+              {[
+                ["10", "courses audited"],
+                ["8", "scoring pillars"],
+                ["₹0–4L", "fee range covered"],
+              ].map(([stat, label]) => (
+                <div key={label} className="card-surface card-lift p-4">
+                  <div className="gradient-text font-display text-2xl font-extrabold">{stat}</div>
+                  <div className="mt-1 font-mono text-[0.62rem] uppercase tracking-[0.12em] text-muted-foreground">
+                    {label}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </header>
+        </div>
+      </div>
+
+      <div className="mx-auto max-w-3xl px-5 pb-24 pt-4 sm:px-8">
         <article className="article-prose">
           <Callout>
             <strong>Quick Answer:</strong> The best AI course for a beginner who wants a high-salary
