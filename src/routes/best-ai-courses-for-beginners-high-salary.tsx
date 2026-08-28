@@ -504,7 +504,9 @@ const depthTone: Record<string, string> = {
 };
 
 const toc = [
+  ["Why you can trust this guide", "why-trust"],
   ["What “beginner” and “high salary” actually mean", "definitions"],
+
   ["The problem: why most courses fail beginners", "the-problem"],
   ["The cost of getting it wrong", "cost-of-wrong"],
   ["My experience-based solution & recommendation", "my-solution"],
