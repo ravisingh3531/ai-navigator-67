@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import type { ReactNode } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 
 export const Route = createFileRoute("/best-ai-courses-for-beginners-high-salary")({
   head: () => ({
@@ -33,15 +33,86 @@ function Chip({ children }: { children: ReactNode }) {
   return <span className="label-chip">{children}</span>;
 }
 
+/** Reading-progress bar pinned to the top of the viewport. */
+function ProgressBar() {
+  const [progress, setProgress] = useState(0);
+
+  useEffect(() => {
+    const onScroll = () => {
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      setProgress(max > 0 ? Math.min(1, window.scrollY / max) : 0);
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+    };
+  }, []);
+
+  return (
+    <div className="fixed inset-x-0 top-0 z-50 h-[3px] bg-transparent">
+      <div
+        className="h-full origin-left bg-[image:var(--gradient-blue)] transition-[width] duration-150 ease-out"
+        style={{ width: `${progress * 100}%` }}
+      />
+    </div>
+  );
+}
+
+/** Adds a fade-and-rise reveal to marked blocks once they enter the viewport. */
+function useReveal<T extends HTMLElement>() {
+  const ref = useRef<T | null>(null);
+
+  useEffect(() => {
+    const root = ref.current;
+    if (!root) return;
+    root.querySelectorAll<HTMLElement>("article h2").forEach((h) =>
+      h.setAttribute("data-reveal", ""),
+    );
+    root.classList.add("anim-ready");
+    const targets = Array.from(root.querySelectorAll<HTMLElement>("[data-reveal]"));
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            io.unobserve(entry.target);
+          }
+        });
+      },
+      { rootMargin: "0px 0px -8% 0px", threshold: 0.05 },
+    );
+    targets.forEach((t) => io.observe(t));
+    return () => io.disconnect();
+  }, []);
+
+  return ref;
+}
+
 function Callout({ children, kind = "quote" }: { children: ReactNode; kind?: "quote" | "note" }) {
   if (kind === "note") {
     return (
-      <aside className="my-8 rounded-md border border-border bg-card p-5">
+      <aside data-reveal className="card-surface card-lift my-8 p-6">
+        <div className="mb-3 flex items-center gap-2">
+          <span className="grid size-6 place-items-center rounded-md bg-[image:var(--gradient-blue)] font-mono text-[0.7rem] font-bold text-primary-foreground">
+            i
+          </span>
+          <span className="font-mono text-[0.66rem] uppercase tracking-[0.14em] text-primary">
+            Note
+          </span>
+        </div>
         {children}
       </aside>
     );
   }
-  return <blockquote className="pull-quote">{children}</blockquote>;
+  return (
+    <blockquote data-reveal className="pull-quote">
+      <span aria-hidden className="pull-quote-bar" />
+      {children}
+    </blockquote>
+  );
 }
 
 function Table({
@@ -56,33 +127,35 @@ function Table({
   firstColStrong?: boolean;
 }) {
   return (
-    <figure className="my-8 -mx-4 overflow-x-auto px-4 sm:mx-0 sm:px-0">
-      <table className="data-table min-w-[42rem]">
-        {caption ? <caption>{caption}</caption> : null}
-        <thead>
-          <tr>
-            {head.map((h) => (
-              <th key={h} scope="col">
-                {h}
-              </th>
-            ))}
-          </tr>
-        </thead>
-        <tbody>
-          {rows.map((row, i) => (
-            <tr key={i}>
-              {row.map((cell, j) => (
-                <td
-                  key={j}
-                  className={j === 0 && firstColStrong ? "font-bold text-ink" : undefined}
-                >
-                  {cell}
-                </td>
+    <figure data-reveal className="my-9 -mx-4 sm:mx-0">
+      <div className="card-surface card-lift overflow-x-auto p-3 sm:p-4">
+        <table className="data-table min-w-[42rem]">
+          {caption ? <caption>{caption}</caption> : null}
+          <thead>
+            <tr>
+              {head.map((h) => (
+                <th key={h} scope="col">
+                  {h}
+                </th>
               ))}
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {rows.map((row, i) => (
+              <tr key={i}>
+                {row.map((cell, j) => (
+                  <td
+                    key={j}
+                    className={j === 0 && firstColStrong ? "font-bold text-ink" : undefined}
+                  >
+                    {cell}
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </figure>
   );
 }
@@ -99,33 +172,33 @@ function ScoreRow({ scores, total }: { scores: number[]; total: string }) {
     "Value",
   ];
   return (
-    <div className="my-8 rounded-md border border-border bg-card p-5">
-      <div className="grid grid-cols-2 gap-x-6 gap-y-3 sm:grid-cols-4">
+    <div data-reveal className="card-surface card-lift my-9 p-6">
+      <div className="grid grid-cols-2 gap-x-6 gap-y-4 sm:grid-cols-4">
         {labels.map((l, i) => {
           const v = scores[i] ?? 0;
           return (
-          <div key={l}>
-            <div className="font-mono text-[0.62rem] uppercase tracking-[0.09em] text-muted-foreground">
-              {l}
+            <div key={l}>
+              <div className="font-mono text-[0.6rem] uppercase tracking-[0.1em] text-muted-foreground">
+                {l}
+              </div>
+              <div className="mt-1.5 flex items-center gap-2">
+                <span className="font-display text-lg font-bold text-primary">{v.toFixed(1)}</span>
+                <span className="h-1.5 flex-1 overflow-hidden rounded-full bg-secondary">
+                  <span
+                    className="block h-full rounded-full bg-[image:var(--gradient-blue)] transition-[width] duration-700 ease-out"
+                    style={{ width: `${v * 10}%` }}
+                  />
+                </span>
+              </div>
             </div>
-            <div className="mt-1 flex items-center gap-2">
-              <span className="font-display text-lg font-semibold">{v.toFixed(1)}</span>
-              <span className="h-1 flex-1 rounded-full bg-secondary">
-                <span
-                  className="block h-1 rounded-full bg-accent"
-                  style={{ width: `${v * 10}%` }}
-                />
-              </span>
-            </div>
-          </div>
           );
         })}
       </div>
-      <div className="mt-5 flex items-baseline justify-between border-t border-border pt-4">
-        <span className="font-mono text-[0.68rem] uppercase tracking-[0.09em] text-muted-foreground">
+      <div className="mt-6 flex items-baseline justify-between rounded-lg bg-[color-mix(in_oklab,var(--primary)_6%,white)] px-4 py-3">
+        <span className="font-mono text-[0.66rem] uppercase tracking-[0.12em] text-muted-foreground">
           Weighted overall
         </span>
-        <span className="font-display text-3xl font-bold text-accent">{total}</span>
+        <span className="gradient-text font-display text-3xl font-extrabold">{total}</span>
       </div>
     </div>
   );
@@ -141,16 +214,16 @@ function ReviewHeader({
   tagline: string;
 }) {
   return (
-    <header className="mt-14 border-t-2 border-ink pt-6">
-      <div className="flex items-start gap-4">
-        <span className="font-display text-5xl font-bold leading-none text-accent">
+    <header data-reveal className="card-surface card-lift mt-16 overflow-hidden p-6 sm:p-7">
+      <div className="flex items-start gap-5">
+        <span className="grid size-16 shrink-0 place-items-center rounded-2xl bg-[image:var(--gradient-blue)] font-display text-2xl font-extrabold text-primary-foreground shadow-[var(--shadow-card)]">
           {String(rank).padStart(2, "0")}
         </span>
         <div>
-          <h3 id={`review-${rank}`} className="!mt-0 text-[1.55rem] leading-tight">
+          <h3 id={`review-${rank}`} className="!mt-0 text-[1.5rem] leading-tight">
             {name}
           </h3>
-          <p className="mt-1 font-display text-base italic text-muted-foreground">{tagline}</p>
+          <p className="mt-1.5 text-[0.95rem] leading-snug text-muted-foreground">{tagline}</p>
         </div>
       </div>
     </header>
@@ -410,9 +483,9 @@ const heatmap: string[][] = [
 ];
 
 const depthTone: Record<string, string> = {
-  Deep: "bg-accent/15 font-semibold text-accent",
-  Good: "bg-accent/10",
-  Moderate: "bg-highlight/50",
+  Deep: "bg-primary/15 font-bold text-primary",
+  Good: "bg-primary/8 font-semibold text-primary",
+  Moderate: "bg-primary/4",
   Basic: "bg-transparent",
   Limited: "text-muted-foreground",
   "Not covered": "text-muted-foreground italic",
@@ -447,33 +520,70 @@ const rankedList = [
 /* -------------------------------- article -------------------------------- */
 
 function Article() {
+  const revealRef = useReveal<HTMLDivElement>();
+
   return (
-    <div className="min-h-screen bg-background">
-      <div className="mx-auto max-w-3xl px-5 pb-24 pt-10 sm:px-8">
-        <nav className="flex flex-wrap items-center gap-x-3 gap-y-2 font-mono text-[0.68rem] uppercase tracking-[0.12em] text-muted-foreground">
-          <span className="text-accent">LogicMojo Guides</span>
-          <span aria-hidden>/</span>
-          <span>AI Careers</span>
-          <span aria-hidden>/</span>
-          <span>Course Research</span>
-        </nav>
+    <div ref={revealRef} className="min-h-screen bg-background">
+      <ProgressBar />
 
-        <header className="mt-8 border-b border-rule pb-8">
-          <h1 className="text-[2.1rem] leading-[1.12] sm:text-[2.9rem]">
-            Top 10 Best AI Courses for Beginners with High Salary (2026)
-          </h1>
-          <p className="mt-4 font-display text-lg italic leading-snug text-muted-foreground">
-            Curriculum, projects, fees, career support and realistic salary outcomes compared on one
-            eight-pillar scorecard.
-          </p>
-          <div className="mt-6 flex flex-wrap gap-2">
-            <Chip>Last updated 28 Aug 2026</Chip>
-            <Chip>≈ 45 min read</Chip>
-            <Chip>Fees verified Aug 2026</Chip>
-            <Chip>Next review Nov 2026</Chip>
-          </div>
-        </header>
+      {/* Hero */}
+      <div className="relative isolate overflow-hidden border-b border-border">
+        <div
+          aria-hidden
+          className="absolute inset-0 -z-10 bg-[radial-gradient(120%_100%_at_50%_-20%,color-mix(in_oklab,var(--primary)_16%,white),white_70%)]"
+        />
+        <div
+          aria-hidden
+          className="float-orb absolute -left-24 top-10 -z-10 size-72 rounded-full bg-[image:var(--gradient-blue)] opacity-20 blur-3xl"
+        />
+        <div
+          aria-hidden
+          className="float-orb absolute -right-20 top-40 -z-10 size-80 rounded-full bg-[image:var(--gradient-blue)] opacity-15 blur-3xl [animation-delay:-5s]"
+        />
+        <div className="mx-auto max-w-3xl px-5 pb-14 pt-12 sm:px-8">
+          <nav className="flex flex-wrap items-center gap-x-3 gap-y-2 font-mono text-[0.66rem] uppercase tracking-[0.14em] text-muted-foreground">
+            <span className="font-semibold text-primary">LogicMojo Guides</span>
+            <span aria-hidden>/</span>
+            <span>AI Careers</span>
+            <span aria-hidden>/</span>
+            <span>Course Research</span>
+          </nav>
 
+          <header className="mt-8">
+            <h1 className="text-[2.15rem] font-extrabold leading-[1.08] sm:text-[3rem]">
+              Top 10 Best <span className="gradient-text">AI Courses</span> for Beginners with High
+              Salary (2026)
+            </h1>
+            <p className="mt-5 max-w-2xl text-lg leading-snug text-muted-foreground">
+              Curriculum, projects, fees, career support and realistic salary outcomes compared on
+              one eight-pillar scorecard.
+            </p>
+            <div className="mt-7 flex flex-wrap gap-2">
+              <Chip>Last updated 28 Aug 2026</Chip>
+              <Chip>≈ 45 min read</Chip>
+              <Chip>Fees verified Aug 2026</Chip>
+              <Chip>Next review Nov 2026</Chip>
+            </div>
+
+            <div className="mt-9 grid gap-3 sm:grid-cols-3">
+              {[
+                ["10", "courses audited"],
+                ["8", "scoring pillars"],
+                ["₹0–4L", "fee range covered"],
+              ].map(([stat, label]) => (
+                <div key={label} className="card-surface card-lift p-4">
+                  <div className="gradient-text font-display text-2xl font-extrabold">{stat}</div>
+                  <div className="mt-1 font-mono text-[0.62rem] uppercase tracking-[0.12em] text-muted-foreground">
+                    {label}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </header>
+        </div>
+      </div>
+
+      <div className="mx-auto max-w-3xl px-5 pb-24 pt-4 sm:px-8">
         <article className="article-prose">
           <Callout>
             <strong>Quick Answer:</strong> The best AI course for a beginner who wants a high-salary
@@ -554,15 +664,19 @@ function Article() {
 
           <nav
             aria-label="Table of contents"
-            className="my-10 rounded-md border border-border bg-card p-6"
+            data-reveal
+            className="card-surface card-lift my-10 p-6"
           >
             <h2 className="!mt-0 !border-t-0 !pt-0 !text-lg font-mono !font-normal uppercase tracking-[0.12em] text-muted-foreground">
               Contents
             </h2>
             <ol className="mt-4 grid gap-2 sm:grid-cols-2">
               {toc.map(([label, id], i) => (
-                <li key={id} className="flex gap-3 text-[0.92rem]">
-                  <span className="font-mono text-xs text-accent">
+                <li
+                  key={id}
+                  className="flex gap-3 rounded-lg px-2 py-1.5 text-[0.92rem] transition-colors hover:bg-[color-mix(in_oklab,var(--primary)_7%,white)]"
+                >
+                  <span className="font-mono text-xs font-semibold text-primary">
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <a href={`#${id}`} className="no-underline hover:underline">
@@ -711,18 +825,21 @@ function Article() {
             a &ldquo;Best For&rdquo; column and every review an &ldquo;Avoid if&rdquo; list.
           </p>
 
-          <ol className="!gap-0 !pl-0 !list-none">
+          <ol className="!gap-3 !pl-0 !list-none">
             {rankedList.map(([name, why, score], i) => (
-              <li
-                key={name}
-                className="flex items-baseline gap-4 border-b border-rule py-3 last:border-b-0"
-              >
-                <span className="w-6 shrink-0 font-mono text-sm text-accent">{i + 1}</span>
-                <span className="flex-1">
-                  <strong>{name}</strong>{" "}
-                  <span className="text-muted-foreground">— {why}</span>
-                </span>
-                <span className="font-display text-base font-semibold tabular-nums">{score}</span>
+              <li key={name} data-reveal className="!m-0">
+                <div className="card-surface card-lift flex items-center gap-4 p-4">
+                  <span className="grid size-9 shrink-0 place-items-center rounded-xl bg-[image:var(--gradient-blue)] font-mono text-sm font-bold text-primary-foreground">
+                    {i + 1}
+                  </span>
+                  <span className="flex-1 text-[0.95rem]">
+                    <strong>{name}</strong>{" "}
+                    <span className="text-muted-foreground">— {why}</span>
+                  </span>
+                  <span className="gradient-text font-display text-lg font-extrabold tabular-nums">
+                    {score}
+                  </span>
+                </div>
               </li>
             ))}
           </ol>
@@ -737,7 +854,7 @@ function Article() {
             fee, GST, EMI interest, refund window and deferral policy in writing before paying.
           </p>
 
-          <figure className="my-8 -mx-4 overflow-x-auto px-4 sm:mx-0 sm:px-0">
+          <figure data-reveal className="card-surface card-lift my-9 overflow-x-auto p-3 sm:p-4">
             <table className="data-table min-w-[52rem]">
               <caption>Table 2 — The eight-pillar scorecard</caption>
               <thead>
@@ -761,11 +878,11 @@ function Article() {
                     ))}
                   </tr>
                 ))}
-                <tr className="bg-secondary/80">
+                <tr className="bg-primary/8">
                   <td className="font-display font-bold">Weighted total (/10)</td>
                   {["8.90", "8.05", "7.60", "7.55", "7.05", "6.38", "6.30", "6.18", "6.13", "5.70"].map(
                     (v) => (
-                      <td key={v} className="font-display font-bold tabular-nums text-accent">
+                      <td key={v} className="font-display font-bold tabular-nums text-primary">
                         {v}
                       </td>
                     ),
@@ -1087,7 +1204,7 @@ function Article() {
           <p className="!mb-12">
             <a
               href="#"
-              className="inline-flex items-center gap-2 rounded-md bg-accent px-5 py-3 font-sans text-sm font-bold text-accent-foreground no-underline transition-colors hover:bg-ink"
+              className="inline-flex items-center gap-2 rounded-xl bg-[image:var(--gradient-blue)] px-6 py-3.5 font-sans text-sm font-bold text-primary-foreground no-underline shadow-[var(--shadow-card)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[var(--shadow-lift)]"
             >
               Explore the LogicMojo AI &amp; ML Course — curriculum PDF, batch schedule and project list
               →
@@ -1366,7 +1483,7 @@ function Article() {
           </Callout>
         </article>
 
-        <footer className="mt-16 border-t border-rule pt-6 font-mono text-[0.68rem] uppercase tracking-[0.1em] text-muted-foreground">
+        <footer data-reveal className="card-surface mt-16 p-6 font-mono text-[0.68rem] uppercase tracking-[0.1em] text-muted-foreground">
           Published by LogicMojo · Last updated 28 August 2026 · Next scheduled review November 2026
         </footer>
       </div>
@@ -1376,8 +1493,8 @@ function Article() {
 
 function ProsCons({ pros, cons }: { pros: string[]; cons: string[] }) {
   return (
-    <div className="my-8 grid gap-4 sm:grid-cols-2">
-      <div className="rounded-md border border-border bg-card p-5">
+    <div data-reveal className="my-9 grid gap-4 sm:grid-cols-2">
+      <div className="card-surface card-lift p-5">
         <h4 className="!mt-0 !mb-3 font-mono !text-xs uppercase tracking-[0.1em] !font-normal text-primary">
           Pros
         </h4>
@@ -1387,7 +1504,7 @@ function ProsCons({ pros, cons }: { pros: string[]; cons: string[] }) {
           ))}
         </ul>
       </div>
-      <div className="rounded-md border border-border bg-card p-5">
+      <div className="card-surface card-lift p-5">
         <h4 className="!mt-0 !mb-3 font-mono !text-xs uppercase tracking-[0.1em] !font-normal text-destructive">
           Cons
         </h4>
