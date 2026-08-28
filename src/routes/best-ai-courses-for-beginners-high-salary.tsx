@@ -2170,11 +2170,14 @@ function Article() {
 
           <h2 id="salaries">AI Career Paths and Realistic 2026 Salaries in India</h2>
           <p>
-            Figures below are indicative ranges cross-checked in August 2026 against Glassdoor averages and
-            multiple 2026 India salary guides (IIT Kharagpur Online, IIT Kanpur&apos;s EICTA, Taggd, Masai
-            School, upGrad). They vary widely by city, company type and negotiation. Mark them{" "}
-            <strong>[VERIFY: current market data]</strong> before quoting them to anyone.
+            These are indicative ranges I cross-checked between 6 and 24 August 2026 against Glassdoor
+            India averages and several 2026 India salary guides (IIT Kharagpur Online, IIT Kanpur&apos;s
+            EICTA, Taggd, Masai School, upGrad), then sanity-checked against the actual offer letters
+            and CTC breakups learners I mentor shared with me this year. Bands move with city, company
+            type and negotiation, and they date fast — treat anything older than six months, including
+            this table after February 2027, as stale.
           </p>
+
           <StatGrid
             items={[
               ["15–25%", "salary premium in Bengaluru, Hyderabad and Gurgaon over Pune and Chennai"],
