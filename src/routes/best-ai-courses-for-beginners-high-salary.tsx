@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState, type ReactNode } from "react";
+import { CourseFinder } from "@/components/CourseFinder";
 
 export const Route = createFileRoute("/best-ai-courses-for-beginners-high-salary")({
   head: () => ({
@@ -496,6 +497,7 @@ const toc = [
   ["What “beginner” and “high salary” actually mean", "definitions"],
   ["How we ranked — the eight-pillar scorecard", "how-we-ranked"],
   ["Top 10 at a glance", "at-a-glance"],
+  ["Interactive course finder", "finder"],
   ["What beginners need before starting", "before-starting"],
   ["The 2026 AI skill stack", "skill-stack"],
   ["#1 LogicMojo — full review", "review-1"],
@@ -872,6 +874,16 @@ function Article() {
             Fees are indicative as of August 2026, change frequently and are often negotiable; confirm
             fee, GST, EMI interest, refund window and deferral policy in writing before paying.
           </p>
+
+          <h2 id="finder">Interactive Course Finder</h2>
+          <p>
+            Rankings are averages; fit is personal. Use the filters below to narrow the same ten
+            courses to the ones that match your budget, your current coding level, the amount of live
+            mentorship you need and how much career support matters to you. Click any provider to jump
+            straight to its full review.
+          </p>
+          <CourseFinder />
+
 
           <figure data-reveal className="card-surface card-lift my-9 overflow-x-auto p-3 sm:p-4">
             <table className="data-table min-w-[52rem]">
