@@ -884,6 +884,17 @@ function Article() {
           </p>
           <CourseFinder />
 
+          <h2 id="quiz">Find Your Best-Fit AI Course — 60-Second Quiz</h2>
+          <p>
+            Nine questions on your experience level, background, goal, target salary, budget, placement
+            needs, learning mode, weekly hours and whether you need Python from scratch. Your answers are
+            scored against the same eight-pillar framework used in this article, and the recommendation
+            opens in a pop-up with the course name, why it fits you, the AI skills it covers, placement
+            information, salary evidence and a link to the provider.
+          </p>
+          <CourseQuiz />
+
+
 
           <figure data-reveal className="card-surface card-lift my-9 overflow-x-auto p-3 sm:p-4">
             <table className="data-table min-w-[52rem]">
