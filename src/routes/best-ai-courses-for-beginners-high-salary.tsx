@@ -1828,3 +1828,136 @@ function Timeline() {
     </ol>
   );
 }
+
+function NumberedGrid({
+  items,
+  tone = "primary",
+}: {
+  items: string[];
+  tone?: "primary" | "danger";
+}) {
+  return (
+    <div data-reveal className="my-8 grid gap-3 sm:grid-cols-2">
+      {items.map((item, i) => (
+        <div key={item} className="card-surface card-lift flex gap-3 p-4">
+          <span
+            className={`grid size-7 shrink-0 place-items-center rounded-lg font-mono text-[0.7rem] font-bold ${
+              tone === "danger"
+                ? "bg-destructive/10 text-destructive"
+                : "bg-[image:var(--gradient-blue)] text-primary-foreground"
+            }`}
+          >
+            {i + 1}
+          </span>
+          <span className="text-[0.88rem] leading-relaxed text-muted-foreground">{item}</span>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function ScenarioCard({
+  tag,
+  title,
+  verdict,
+  positive,
+  children,
+}: {
+  tag: string;
+  title: string;
+  verdict: string;
+  positive: boolean;
+  children: ReactNode;
+}) {
+  return (
+    <div data-reveal className="card-surface card-lift my-5 p-6">
+      <div className="flex flex-wrap items-center gap-3">
+        <span className="label-chip">{tag}</span>
+        <span
+          className={`font-mono text-[0.62rem] uppercase tracking-[0.12em] ${
+            positive ? "text-primary" : "text-destructive"
+          }`}
+        >
+          {verdict}
+        </span>
+      </div>
+      <h4 className="!mt-3 !mb-2 !text-[1.02rem]">{title}</h4>
+      <p className="!my-0 text-[0.9rem] leading-relaxed text-muted-foreground">{children}</p>
+    </div>
+  );
+}
+
+function CtaBanner() {
+  return (
+    <div
+      data-reveal
+      className="relative isolate my-12 overflow-hidden rounded-2xl border border-border p-7 shadow-[var(--shadow-card)] sm:p-9"
+    >
+      <div
+        aria-hidden
+        className="absolute inset-0 -z-10 bg-[image:var(--gradient-blue)] opacity-[0.07]"
+      />
+      <div
+        aria-hidden
+        className="float-orb absolute -right-16 -top-16 -z-10 size-56 rounded-full bg-[image:var(--gradient-blue)] opacity-20 blur-3xl"
+      />
+      <span className="label-chip">Primary next step</span>
+      <h3 className="!mt-4 !mb-2 !text-[1.45rem] leading-tight">
+        Explore <span className="gradient-text">LogicMojo&apos;s AI &amp; ML Course</span>
+      </h3>
+      <p className="!my-0 max-w-xl text-[0.95rem] leading-relaxed text-muted-foreground">
+        Full curriculum, weekend live IST batches and the project portfolio — audit the syllabus
+        against the seven-layer stack before you pay anyone, including us.
+      </p>
+      <a
+        href="https://logicmojo.com/artificial-intelligence-course/"
+        className="mt-6 inline-flex items-center gap-2 rounded-xl bg-[image:var(--gradient-blue)] px-5 py-3 font-display text-[0.92rem] font-bold text-primary-foreground no-underline shadow-[var(--shadow-card)] transition-transform duration-200 hover:-translate-y-0.5"
+      >
+        View the AI &amp; ML curriculum
+        <span aria-hidden>→</span>
+      </a>
+    </div>
+  );
+}
+
+function SiteFooter() {
+  const cols: [string, string[]][] = [
+    ["Courses", ["AI & ML Course", "GenAI Course", "Data Science Course", "DSA & System Design"]],
+    ["Resources", ["Curriculum PDF", "Batch Schedule", "Project Portfolio", "Blog", "FAQs"]],
+    ["Contact", ["Email", "Phone", "WhatsApp"]],
+    ["Social", ["LinkedIn", "YouTube", "Instagram", "X", "GitHub"]],
+  ];
+  return (
+    <footer data-reveal className="mt-16 border-t border-border pt-10">
+      <div className="card-surface p-6 sm:p-8">
+        <div className="font-display text-xl font-extrabold">
+          Logic<span className="gradient-text">Mojo</span>
+        </div>
+        <p className="mt-2 max-w-lg text-[0.85rem] leading-relaxed text-muted-foreground">
+          Practical AI, ML and GenAI training for working professionals and beginners, taught live.
+        </p>
+        <div className="mt-8 grid gap-6 sm:grid-cols-4">
+          {cols.map(([heading, links]) => (
+            <div key={heading}>
+              <div className="font-mono text-[0.62rem] uppercase tracking-[0.14em] text-primary">
+                {heading}
+              </div>
+              <ul className="mt-3 space-y-1.5 text-[0.82rem] text-muted-foreground">
+                {links.map((l) => (
+                  <li key={l}>{l}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+        <div className="mt-8 flex flex-wrap items-center gap-x-4 gap-y-2 border-t border-border pt-5 font-mono text-[0.62rem] uppercase tracking-[0.1em] text-muted-foreground">
+          <span>Privacy Policy</span>
+          <span>Terms</span>
+          <span>Refund Policy</span>
+          <span>© 2026 LogicMojo</span>
+          <span>Last updated 28 Aug 2026 · Next review Nov 2026</span>
+        </div>
+      </div>
+    </footer>
+  );
+}
