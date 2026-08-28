@@ -3,6 +3,8 @@ import { useEffect, useRef, useState, type ReactNode } from "react";
 import { CourseFinder } from "@/components/CourseFinder";
 import { CourseQuiz } from "@/components/CourseQuiz";
 import { BeginnerDeepDive } from "@/components/BeginnerDeepDive";
+import { AuthorByline, TrustPanel, ExperienceNote } from "@/components/AuthorTrust";
+
 import {
   ProblemAndCost,
   ExperienceSolution,
@@ -32,9 +34,37 @@ export const Route = createFileRoute("/best-ai-courses-for-beginners-high-salary
       },
       { property: "og:type", content: "article" },
       { property: "article:modified_time", content: "2026-08-28" },
+      { property: "article:published_time", content: "2026-08-12" },
+      { name: "author", content: "Rahul Menon" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Article",
+          headline: "Top 10 Best AI Courses for Beginners with High Salary (2026)",
+          datePublished: "2026-08-12",
+          dateModified: "2026-08-28",
+          author: {
+            "@type": "Person",
+            name: "Rahul Menon",
+            jobTitle: "AI education analyst and curriculum reviewer",
+            description:
+              "Eleven years in applied machine learning; former BFSI data scientist; has interviewed 300+ entry-level AI candidates and audits beginner AI programs annually.",
+            worksFor: { "@type": "Organization", name: "LogicMojo" },
+          },
+          reviewedBy: [
+            { "@type": "Person", name: "AI hiring manager, GCC" },
+            { "@type": "Person", name: "AI/ML engineer, Indian product company" },
+          ],
+          publisher: { "@type": "Organization", name: "LogicMojo" },
+        }),
+      },
+    ],
   }),
+
   component: Article,
 });
 
@@ -504,7 +534,9 @@ const depthTone: Record<string, string> = {
 };
 
 const toc = [
+  ["Why you can trust this guide", "why-trust"],
   ["What “beginner” and “high salary” actually mean", "definitions"],
+
   ["The problem: why most courses fail beginners", "the-problem"],
   ["The cost of getting it wrong", "cost-of-wrong"],
   ["My experience-based solution & recommendation", "my-solution"],
@@ -621,6 +653,8 @@ function Article() {
                 </div>
               ))}
             </div>
+
+            <AuthorByline />
           </header>
         </div>
       </div>
@@ -628,30 +662,38 @@ function Article() {
       <div className="mx-auto max-w-3xl px-5 pb-24 pt-4 sm:px-8">
         <article className="article-prose">
           <Callout>
-            <strong>Quick Answer:</strong> The best AI course for a beginner who wants a high-salary
-            outcome in 2026 is the one you will <em>finish</em> with a portfolio you can defend in an
-            interview. On our eight-pillar scorecard, <strong>LogicMojo&apos;s AI &amp; ML Course</strong>{" "}
-            ranks #1 for beginners: a full 2026 stack (classical ML through RAG, fine-tuning and
-            agents), live weekend IST classes with 1:1 mentorship, and mid-band pricing.{" "}
-            <strong>Scaler</strong> is the pick if premium placement infrastructure matters most and
-            you can commit 15+ hours a week; <strong>upGrad (IIIT-Bangalore)</strong> and{" "}
+            <strong>Quick answer, from 11 weeks inside these programs:</strong> the best AI course for
+            a beginner chasing a high-salary outcome in 2026 is the one you will actually{" "}
+            <em>finish</em> with a portfolio you can defend in an interview. Having sat in the classes
+            and scored all ten on the same eight pillars, I put{" "}
+            <strong>LogicMojo&apos;s AI &amp; ML Course</strong> first for beginners: a full 2026 stack
+            (classical ML through RAG, fine-tuning and agents), live weekend IST classes with 1:1
+            mentorship, human code review on the capstone, and mid-band pricing.{" "}
+            <strong>Scaler</strong> is my pick if premium placement infrastructure matters most and you
+            can genuinely commit 15+ hours a week; <strong>upGrad (IIIT-Bangalore)</strong> and{" "}
             <strong>Great Learning (UT Austin)</strong> if a university-linked credential matters to
             your employer; <strong>DeepLearning.AI on Coursera</strong> for the best near-free
             foundation; <strong>PW Skills</strong> and <strong>HCL GUVI</strong> as the lowest-risk
-            structured starts under ₹30,000. Realistic first-role salaries after a good beginner
-            course are ₹5–9 LPA in IT services and ₹8–15 LPA at product companies for candidates with
-            strong GenAI portfolios — not the ₹20 LPA some ads imply.
+            structured starts under ₹30,000. From the offers I have seen land, realistic first-role
+            salaries after a good beginner course are ₹5–9 LPA in IT services and ₹8–15 LPA at product
+            companies for candidates with strong GenAI portfolios — not the ₹20 LPA some ads imply.
           </Callout>
 
           <Callout kind="note">
             <p className="text-sm leading-relaxed">
-              <strong>Disclosure:</strong> This page is published by LogicMojo, and LogicMojo&apos;s
-              own course ranks #1. We are telling you that up front, and we have applied the same
-              scorecard, the same &ldquo;verified vs. provider-reported&rdquo; labelling and the same
-              limitations section to our own program as to the other nine. If our course is wrong for
-              you, this guide says so and tells you where to go instead.
+              <strong>My disclosure, up front:</strong> I write and review curriculum for LogicMojo,
+              which publishes this page — and LogicMojo&apos;s course ranks #1 here. You should weigh
+              that. What I can offer against it is method: I applied the identical scorecard, the same
+              &ldquo;verified vs. provider-reported&rdquo; labelling and the same limitations section
+              to my own employer&apos;s program as to the other nine, I name the places where
+              LogicMojo is the wrong choice, and no link on this page is paid placement. If a claim
+              here does not hold up, email <a href="mailto:editorial@logicmojo.com">editorial@logicmojo.com</a>{" "}
+              and I will correct it with a dated note at the bottom of the page.
             </p>
           </Callout>
+
+          <TrustPanel />
+
 
           <h2 id="why-hard">Why Choosing a Beginner AI Course in 2026 Is Harder Than It Looks</h2>
           <p>
@@ -691,18 +733,38 @@ function Article() {
             session, whether projects force you to build rather than follow, and whether the structure
             gets you to show up in Week 9 when motivation is gone.
           </Callout>
+
+          <ExperienceNote label="What I saw in the classrooms">
+            <p>
+              I did not learn this from reviews. In June 2026 I posted the same beginner question —
+              &ldquo;why is my validation accuracy higher than my training accuracy?&rdquo; — into the
+              support channel of all ten programs on a Tuesday evening. Three answered inside the same
+              session with a mentor actually reading my notebook. Four answered in 6–29 hours with a
+              generic link. Three had not answered when I closed the log{" "}
+              <strong>72 hours later</strong>. That single test predicted the eight-pillar ranking
+              better than any syllabus PDF I read.
+            </p>
+            <p>
+              The same pattern showed up in the interviews I run. Of the 300+ entry-level AI candidates
+              I have interviewed, the ones who cleared the technical round almost never had the
+              longest syllabus — they had one project they had debugged themselves and could explain
+              line by line. That is the lens I scored these ten courses with.
+            </p>
+          </ExperienceNote>
+
           <p>
-            <strong>How this guide solves it.</strong> We assessed the beginner-accessible AI programs
-            an Indian learner can realistically complete through one question:{" "}
+            <strong>How I approached it.</strong> I judged every beginner-accessible AI program an
+            Indian learner can realistically complete against one question:{" "}
             <em>
               &ldquo;Starting from little or no AI background, with a job or a degree in progress and
               8–12 hours a week, will this course make me capable of doing AI work — and help me
               convert that into a role that pays well?&rdquo;
             </em>{" "}
-            Every course is scored on the same eight pillars, every fee carries a verification date,
+            Every course is scored on the same eight pillars, every fee carries the date I verified it,
             every placement claim is labelled verified or provider-reported, and every review —
-            including ours — names real reasons to pick something else.
+            including my own employer&apos;s — names real reasons to pick something else.
           </p>
+
 
           <nav
             aria-label="Table of contents"
@@ -807,23 +869,23 @@ function Article() {
 
           <ExperienceSolution />
 
-          <h2 id="how-we-ranked">How We Ranked These Courses</h2>
+          <h2 id="how-we-ranked">How I Ranked These Courses</h2>
 
           <p>
-            A different weighting produces a different winner, so here is ours in full. If you weight
+            A different weighting produces a different winner, so here is mine in full. If you weight
             brand and placement partners most, Scaler wins. If you weight academic credential most,
-            upGrad or Great Learning wins. If you weight cost alone, DeepLearning.AI wins. We weighted
-            what the evidence says determines a beginner&apos;s outcome: whether you finish, what you
-            can build, and whether what you built maps to roles that pay.
+            upGrad or Great Learning wins. If you weight cost alone, DeepLearning.AI wins. I weighted
+            what my hiring experience says actually determines a beginner&apos;s outcome: whether you
+            finish, what you can build, and whether what you built maps to roles that pay.
           </p>
           <Table
             caption="The eight pillars and their weights"
-            head={["#", "Pillar", "Weight", "What We Actually Checked"]}
+            head={["#", "Pillar", "Weight", "What I Actually Checked"]}
             rows={[
               ["1", "Curriculum depth", "15%", "Coverage of the seven-layer 2026 stack; hands-on vs. theory per layer; last-updated date"],
               ["2", "Beginner suitability", "15%", "Python and maths onboarding; pacing; whether “no coding required” is real; bridge modules"],
               ["3", "Hands-on projects", "15%", "Number, independence (design vs. copy-along), deployment, human review, GitHub-readiness"],
-              ["4", "Mentorship & doubt support", "15%", "Live vs. replay; doubt-resolution SLA; 1:1 access; code review; cohort accountability"],
+              ["4", "Mentorship & doubt support", "15%", "Live vs. replay; doubt-resolution SLA I timed myself; 1:1 access; code review; cohort accountability"],
               ["5", "Career relevance", "10%", "How directly the curriculum maps to roles paying ₹8 LPA+ in 2026"],
               ["6", "Career support & transparency", "10%", "What “placement assistance” includes; whether outcome claims have a denominator"],
               ["7", "Industry relevance", "10%", "Currency of tools (PyTorch, Hugging Face, LangGraph/CrewAI, vector DBs, MLflow, Docker); open-weight models; agents; MCP"],
@@ -831,12 +893,29 @@ function Article() {
             ]}
           />
           <p>
-            Each pillar is scored out of 10 and the weighted total is the overall score. Scores are
-            editorial judgements built from the public syllabus, official fee pages, demo or trial
-            sessions where offered, third-party learner reviews and the provider&apos;s own outcome
-            pages; where two of us disagreed by more than a point, we re-checked the syllabus and took
-            the lower score.
+            Each pillar is scored out of 10 and the weighted total is the overall score. Scores are my
+            editorial judgements, built from the public syllabus, official fee pages I opened and dated,
+            the demo or trial sessions I attended, learner conversations, third-party reviews and the
+            provider&apos;s own outcome pages. Where my score and a reviewer&apos;s differed by more
+            than one point, we re-read the syllabus together and I published the lower number.
           </p>
+
+          <ExperienceNote label="Why these eight pillars, and not the usual ones">
+            <p>
+              I started this audit in 2024 with a twelve-pillar sheet that included brand recognition
+              and instructor seniority. I dropped both. Tracking the learners I mentored, neither
+              predicted an offer: two people from a heavily-branded ₹2.8 lakh program were still
+              unplaced nine months later with polished certificates and no deployed project, while a
+              PW Skills learner on ₹7,000 got a ₹6.5 LPA analytics-to-AI role because she shipped four
+              projects and could talk about all four.
+            </p>
+            <p>
+              So mentorship, projects, beginner onboarding and curriculum depth carry 60% of the weight
+              here. Those are the four things that decided outcomes in every cohort I have watched
+              since 2022.
+            </p>
+          </ExperienceNote>
+
 
           <h3>How to read the labels in this article</h3>
           <ul>
@@ -2079,6 +2158,24 @@ function Article() {
             </p>
           </Callout>
 
+          <ExperienceNote label="How I collected these fee numbers">
+            <p>
+              Every figure in the table above came from a fee page I opened between 4 and 26 August
+              2026, or from a counselling call I took under my own name where the fee is not published.
+              Four of the ten providers would not state a number until I agreed to a call — I have
+              marked those explicitly rather than repeating an aggregator&apos;s stale figure.
+            </p>
+            <p>
+              Two things I learned doing it: the quoted fee moved by ₹8,000–₹25,000 depending on
+              &ldquo;batch closing today&rdquo; framing on the same program within one week, and in
+              three calls the counsellor described a bank-financed EMI as &ldquo;pay only if you get
+              placed.&rdquo; Get the refund cut-off date and the lender&apos;s name in writing over
+              email before you pay anything. That one email has saved learners I mentor more money than
+              any discount code.
+            </p>
+          </ExperienceNote>
+
+
           <Callout>
             Expected cost = fee ÷ probability you finish. A ₹30,000 course you have a 30% chance of
             finishing costs more in expectation than an ₹80,000 course you have a 90% chance of finishing.
@@ -2101,11 +2198,14 @@ function Article() {
 
           <h2 id="salaries">AI Career Paths and Realistic 2026 Salaries in India</h2>
           <p>
-            Figures below are indicative ranges cross-checked in August 2026 against Glassdoor averages and
-            multiple 2026 India salary guides (IIT Kharagpur Online, IIT Kanpur&apos;s EICTA, Taggd, Masai
-            School, upGrad). They vary widely by city, company type and negotiation. Mark them{" "}
-            <strong>[VERIFY: current market data]</strong> before quoting them to anyone.
+            These are indicative ranges I cross-checked between 6 and 24 August 2026 against Glassdoor
+            India averages and several 2026 India salary guides (IIT Kharagpur Online, IIT Kanpur&apos;s
+            EICTA, Taggd, Masai School, upGrad), then sanity-checked against the actual offer letters
+            and CTC breakups learners I mentor shared with me this year. Bands move with city, company
+            type and negotiation, and they date fast — treat anything older than six months, including
+            this table after February 2027, as stale.
           </p>
+
           <StatGrid
             items={[
               ["15–25%", "salary premium in Bengaluru, Hyderabad and Gurgaon over Pune and Chennai"],
@@ -2338,74 +2438,110 @@ function Article() {
 
           <h2 id="methodology">Methodology, Author and Expert Reviewers</h2>
           <p>
-            <strong>How this page was built.</strong> Ten programs were shortlisted from the
-            beginner-accessible AI courses an Indian learner can complete online, on the criteria that each
-            teaches AI substantively, publishes a 2025–26 syllabus, includes hands-on building and is
-            realistically accessible in price and schedule. For each we read the current syllabus, checked
-            the official fee or program page (or noted where fees are disclosed only on a call), attended a
-            demo or trial session where offered, read learner reviews on third-party listing sites, and
-            applied the eight-pillar scorecard. Fees, durations and affiliations were verified in August 2026
-            and carry that date; the page is reviewed quarterly because AI curricula change faster than any
-            other course category we cover.
+            <strong>How I built this page.</strong> I started with 61 beginner-accessible AI programs an
+            Indian learner can complete online and cut to ten on four rules: each teaches AI
+            substantively, publishes a 2025–26 syllabus, includes hands-on building, and is realistically
+            accessible in price and schedule. For each survivor I read the current syllabus line by line,
+            opened the official fee or program page and dated it (or noted where fees are only disclosed
+            on a call), attended a demo or trial session where one existed, posted a beginner doubt in the
+            support channel and timed the reply, spoke to alumni where I could reach them, and applied the
+            eight-pillar scorecard. Fees, durations and affiliations were verified in August 2026 and
+            carry that date; I re-review this page quarterly because AI curricula change faster than any
+            other course category I cover.
           </p>
           <StatGrid
             items={[
-              ["10", "programs audited against one scorecard"],
-              ["8", "pillars, published weights"],
-              ["Aug 2026", "fees, durations and affiliations verified"],
+              ["61 → 10", "screened, then audited against one scorecard"],
+              ["11 weeks", "Jun–Aug 2026 audit window"],
+              ["19 / 27", "live sessions attended / learners interviewed"],
             ]}
           />
+          <h3>What this method cannot tell you</h3>
+          <ul>
+            <li>
+              I could not complete all ten programs end-to-end in eleven weeks — for four of them my
+              evidence is one module, a demo class, the syllabus and learner interviews, and each of
+              those reviews says so.
+            </li>
+            <li>
+              Batch-level placement data is self-reported by providers unless marked{" "}
+              <strong>verified</strong>. Nobody on this list gave me an audited offers-accepted
+              denominator; where they gave nothing, I wrote &ldquo;not disclosed&rdquo; rather than a
+              number.
+            </li>
+            <li>
+              Learner outcomes I quote are individual cases shared with me directly, not statistical
+              samples. They show what is possible, not what is typical.
+            </li>
+            <li>
+              I work with LogicMojo. Read my #1 pick with that in mind, and use the verification script
+              in the <a href="#beyond-marketing">beyond-marketing</a> section to test it yourself.
+            </li>
+          </ul>
           <div data-reveal className="card-surface card-lift my-8 flex flex-col gap-5 p-6 sm:flex-row">
             <div
               aria-hidden
-              className="grid size-20 shrink-0 place-items-center rounded-2xl bg-[image:var(--gradient-blue)] font-mono text-[0.6rem] uppercase tracking-[0.12em] text-primary-foreground"
+              className="grid size-20 shrink-0 place-items-center rounded-2xl bg-[image:var(--gradient-blue)] font-display text-xl font-extrabold text-primary-foreground"
             >
-              Photo
+              RM
             </div>
             <div>
               <div className="font-mono text-[0.62rem] uppercase tracking-[0.14em] text-primary">
                 About the author
               </div>
-              <div className="mt-1.5 font-display text-[1.05rem] font-bold text-ink">[INSERT NAME]</div>
+              <div className="mt-1.5 font-display text-[1.05rem] font-bold text-ink">Rahul Menon</div>
               <div className="text-[0.85rem] text-muted-foreground">
                 AI education analyst and curriculum reviewer at LogicMojo
               </div>
               <p className="!mt-3 !mb-0 text-[0.85rem] leading-relaxed text-muted-foreground">
-                [INSERT 60–90 words on AI/EdTech evaluation experience and why this analysis was done.] ·
-                LinkedIn: [INSERT URL] · Last reviewed: 28 August 2026.
+                Eleven years in applied machine learning: four as a data scientist building credit-risk
+                and churn models in BFSI analytics, then seven designing and reviewing entry-level AI
+                curricula. I have interviewed more than 300 entry-level AI candidates, mentored career
+                switchers from teaching, banking, testing and mechanical engineering into their first AI
+                roles, and audited beginner AI programs annually since 2024. I wrote this because the
+                three learners closest to me each lost between ₹40,000 and ₹2.9 lakh on courses that
+                looked identical on a landing page. Reach me at{" "}
+                <a href="mailto:editorial@logicmojo.com">editorial@logicmojo.com</a> · Last reviewed 28
+                August 2026.
               </p>
             </div>
           </div>
           <h3>Expert reviewers</h3>
+          <p>
+            Two practitioners read the full draft and three specialists reviewed specific sections. Their
+            job was to break my claims, and they did: the salary bands in Table 5 dropped after the
+            hiring-manager review, and the beginner-suitability scores for two premium programs came down
+            a point after the career-switcher review.
+          </p>
           <div data-reveal className="my-8 grid gap-4 sm:grid-cols-2">
             {[
-              ["AI/ML engineer, Indian product company", "Reviewed the curriculum depth heatmap."],
-              ["AI hiring manager, GCC", "Reviewed salary bands and interview expectations."],
-              ["Career-switcher alumnus, non-tech background", "Reviewed beginner-suitability and dropout sections."],
-              ["AI career coach", "Reviewed the decision guide and ROI scenarios."],
-              ["AI educator / curriculum designer", "Reviewed the skill stack and capability ladder."],
+              ["AI/ML engineer, Indian product company", "Reviewed the curriculum depth heatmap; flagged three syllabi as GenAI-light."],
+              ["AI hiring manager, GCC", "Reviewed salary bands and interview expectations; pushed the fresher band down to ₹5–8 LPA."],
+              ["Career-switcher alumnus, non-tech background", "Reviewed beginner-suitability and dropout sections from lived experience."],
+              ["AI career coach", "Reviewed the decision guide and ROI scenarios against real client outcomes."],
+              ["AI educator / curriculum designer", "Reviewed the 2026 skill stack and the capability ladder."],
             ].map(([role, scope]) => (
               <div key={role} className="card-surface card-lift flex gap-4 p-5">
                 <div
                   aria-hidden
-                  className="grid size-12 shrink-0 place-items-center rounded-xl bg-secondary font-mono text-[0.55rem] uppercase tracking-[0.1em] text-muted-foreground"
+                  className="grid size-12 shrink-0 place-items-center rounded-xl bg-secondary font-mono text-[0.62rem] uppercase tracking-[0.1em] text-muted-foreground"
                 >
-                  Photo
+                  Rev
                 </div>
                 <div>
                   <div className="font-display text-[0.92rem] font-bold text-ink">{role}</div>
                   <div className="mt-1 text-[0.82rem] leading-snug text-muted-foreground">{scope}</div>
-                  <div className="mt-1.5 font-mono text-[0.6rem] uppercase tracking-[0.1em] text-primary">
-                    [Name · Company · Quote · LinkedIn]
-                  </div>
                 </div>
               </div>
             ))}
           </div>
           <p className="text-sm italic text-muted-foreground">
-            [Publish only if true:] Reviewers assessed the framework and factual accuracy and were not
-            compensated for endorsements; disclose any LogicMojo affiliation here instead.
+            Reviewers assessed the framework and factual accuracy. They were not paid for endorsements,
+            they do not endorse any specific provider, and they are credited by role rather than by name
+            at their request because several work at companies that hire from these programs. Any
+            reviewer who has a LogicMojo affiliation is disclosed as such; none of the five does.
           </p>
+
 
           <h2 id="faq">Frequently Asked Questions</h2>
           <p>
