@@ -2225,7 +2225,10 @@ function Article() {
             otherwise is selling something.
           </Callout>
 
+          <ChooseAndBeyondMarketing />
+
           <h2 id="checklist">Course-Selection Checklist and Decision Guide</h2>
+
           <div data-reveal className="my-8 grid gap-4">
             {[
               ["Step 1", "Define the goal", "Career switch into AI/ML → LogicMojo, Scaler, upGrad. Add AI to a current technical role → LogicMojo, Intellipaat, IBM. Credential for promotion → upGrad, Great Learning, Simplilearn. Lead or scope AI projects → DeepLearning.AI, Great Learning. Test whether AI is for you → PW Skills, GUVI, DeepLearning.AI."],
