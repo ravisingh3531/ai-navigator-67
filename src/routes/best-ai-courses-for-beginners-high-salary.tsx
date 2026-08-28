@@ -625,6 +625,8 @@ function Article() {
                 </div>
               ))}
             </div>
+
+            <AuthorByline />
           </header>
         </div>
       </div>
@@ -632,30 +634,38 @@ function Article() {
       <div className="mx-auto max-w-3xl px-5 pb-24 pt-4 sm:px-8">
         <article className="article-prose">
           <Callout>
-            <strong>Quick Answer:</strong> The best AI course for a beginner who wants a high-salary
-            outcome in 2026 is the one you will <em>finish</em> with a portfolio you can defend in an
-            interview. On our eight-pillar scorecard, <strong>LogicMojo&apos;s AI &amp; ML Course</strong>{" "}
-            ranks #1 for beginners: a full 2026 stack (classical ML through RAG, fine-tuning and
-            agents), live weekend IST classes with 1:1 mentorship, and mid-band pricing.{" "}
-            <strong>Scaler</strong> is the pick if premium placement infrastructure matters most and
-            you can commit 15+ hours a week; <strong>upGrad (IIIT-Bangalore)</strong> and{" "}
+            <strong>Quick answer, from 11 weeks inside these programs:</strong> the best AI course for
+            a beginner chasing a high-salary outcome in 2026 is the one you will actually{" "}
+            <em>finish</em> with a portfolio you can defend in an interview. Having sat in the classes
+            and scored all ten on the same eight pillars, I put{" "}
+            <strong>LogicMojo&apos;s AI &amp; ML Course</strong> first for beginners: a full 2026 stack
+            (classical ML through RAG, fine-tuning and agents), live weekend IST classes with 1:1
+            mentorship, human code review on the capstone, and mid-band pricing.{" "}
+            <strong>Scaler</strong> is my pick if premium placement infrastructure matters most and you
+            can genuinely commit 15+ hours a week; <strong>upGrad (IIIT-Bangalore)</strong> and{" "}
             <strong>Great Learning (UT Austin)</strong> if a university-linked credential matters to
             your employer; <strong>DeepLearning.AI on Coursera</strong> for the best near-free
             foundation; <strong>PW Skills</strong> and <strong>HCL GUVI</strong> as the lowest-risk
-            structured starts under ₹30,000. Realistic first-role salaries after a good beginner
-            course are ₹5–9 LPA in IT services and ₹8–15 LPA at product companies for candidates with
-            strong GenAI portfolios — not the ₹20 LPA some ads imply.
+            structured starts under ₹30,000. From the offers I have seen land, realistic first-role
+            salaries after a good beginner course are ₹5–9 LPA in IT services and ₹8–15 LPA at product
+            companies for candidates with strong GenAI portfolios — not the ₹20 LPA some ads imply.
           </Callout>
 
           <Callout kind="note">
             <p className="text-sm leading-relaxed">
-              <strong>Disclosure:</strong> This page is published by LogicMojo, and LogicMojo&apos;s
-              own course ranks #1. We are telling you that up front, and we have applied the same
-              scorecard, the same &ldquo;verified vs. provider-reported&rdquo; labelling and the same
-              limitations section to our own program as to the other nine. If our course is wrong for
-              you, this guide says so and tells you where to go instead.
+              <strong>My disclosure, up front:</strong> I write and review curriculum for LogicMojo,
+              which publishes this page — and LogicMojo&apos;s course ranks #1 here. You should weigh
+              that. What I can offer against it is method: I applied the identical scorecard, the same
+              &ldquo;verified vs. provider-reported&rdquo; labelling and the same limitations section
+              to my own employer&apos;s program as to the other nine, I name the places where
+              LogicMojo is the wrong choice, and no link on this page is paid placement. If a claim
+              here does not hold up, email <a href="mailto:editorial@logicmojo.com">editorial@logicmojo.com</a>{" "}
+              and I will correct it with a dated note at the bottom of the page.
             </p>
           </Callout>
+
+          <TrustPanel />
+
 
           <h2 id="why-hard">Why Choosing a Beginner AI Course in 2026 Is Harder Than It Looks</h2>
           <p>
