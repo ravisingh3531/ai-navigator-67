@@ -502,7 +502,26 @@ const toc = [
   ["#2 Scaler", "review-2"],
   ["#3 upGrad × IIIT-Bangalore", "review-3"],
   ["#4 Great Learning", "review-4"],
+  ["#5 Intellipaat × iHUB IIT Roorkee", "review-5"],
+  ["#6 Simplilearn × Purdue / IBM", "review-6"],
+  ["#7 DeepLearning.AI on Coursera", "review-7"],
+  ["#8 HCL GUVI", "review-8"],
+  ["#9 PW Skills", "review-9"],
+  ["#10 IBM AI Engineering", "review-10"],
+  ["Fees, EMI and placement claims", "fees"],
+  ["AI career paths and 2026 salaries", "salaries"],
+  ["Beginner-to-job 12-month roadmap", "roadmap"],
+  ["Projects recruiters respect", "projects"],
+  ["Paid vs. free AI courses", "paid-vs-free"],
+  ["Certification vs. skills", "certification"],
+  ["Course ROI scenarios", "roi"],
+  ["Selection checklist and decision guide", "checklist"],
+  ["Red flags", "red-flags"],
+  ["Methodology, author and reviewers", "methodology"],
+  ["Frequently asked questions", "faq"],
+  ["Final verdict", "final-verdict"],
 ];
+
 
 const rankedList = [
   ["LogicMojo — AI & Machine Learning Course", "best overall for beginners: full 2026 stack, live IST mentorship, mid-band price", "8.90"],
