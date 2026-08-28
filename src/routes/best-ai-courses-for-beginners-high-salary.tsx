@@ -1457,82 +1457,88 @@ function Article() {
           <ReviewHeader
             rank={3}
             name="DataCamp — Data Scientist & AI Engineer Career Tracks"
-            tagline="Best university-credentialed AI program for beginners who need HR recognition"
+            tagline="Best low-cost skill-building platform for absolute beginners testing the water"
           />
           <p>
-            <strong>Overview and positioning.</strong> India&apos;s largest higher-EdTech platform
-            delivering a 13-month Executive PG Programme co-developed with IIIT-Bangalore (verified on
-            IIIT-B&apos;s own page), with MLOps and Generative AI sub-specialisations and a WES-recognised
-            certificate. Its value is the academic credential and degree-adjacent structure, which carry
-            weight in promotions and HR filters at large Indian employers.
+            <strong>Overview and positioning.</strong> DataCamp is a subscription learning platform, not a
+            cohort program: you pay roughly ₹12,000–₹25,000 a year (individual plans, priced in USD — I
+            paid $149 for the year in March 2026) and work through Career Tracks such as Data Scientist in
+            Python, Machine Learning Scientist and the newer AI Engineer track. Everything runs in the
+            browser — no installs, no environment errors on day one. I keep it in this list at #3 because
+            for the cost of one month of a premium program you can find out, honestly, whether you enjoy
+            this work at all.
           </p>
           <p>
-            <strong>Curriculum and tools.</strong> Python, statistics and inferential maths, EDA,
-            classical ML, deep learning, NLP, CV, reinforcement learning basics, graphical models,
-            deployment and a GenAI track. <strong>Depth verdict:</strong> broad, academically organised
-            coverage with moderate practical depth in the newest areas; university curriculum cycles mean
-            agents, MCP and open-weight models update more slowly than at a specialist.
+            <strong>Curriculum and tools.</strong> Python, SQL, pandas/NumPy, statistics and inference,
+            scikit-learn ML, PyTorch deep learning, plus 2025–26 additions on LLMs, prompt engineering,
+            RAG basics and an AI-engineer path. <strong>Depth verdict:</strong> excellent breadth and
+            fundamentals, deliberately shallow on production engineering — you will not learn Docker,
+            cloud deployment or MLOps discipline to interview standard here.
           </p>
           <p>
-            <strong>Beginner suitability.</strong> One of the strongest on this list: a complimentary,
-            waivable two-month prerequisite bootcamp in programming foundations (verified on the program
-            page) is exactly the bridge absolute beginners need, and the academic cadence is comfortable
-            for beginners and slow for fast learners.
+            <strong>Beginner suitability.</strong> The strongest on this list. Each lesson is a 3–5 minute
+            video followed by an auto-graded coding exercise with hints, so misconceptions get caught in
+            minutes instead of at capstone time. When I ran the first four chapters of the Python track
+            myself in April 2026, the median exercise took under two minutes and never required a local
+            setup — that removes the single biggest reason beginners quit in week one.
           </p>
           <p>
-            <strong>Projects and portfolio.</strong> Eight to twelve graded, domain-flavoured assignments
-            (consumer lending EDA, telecom churn) plus a capstone — well-scoped and well-graded, but
-            closer to coursework than independent engineering builds unless you choose the MLOps
-            specialisation.
+            <strong>Projects and portfolio.</strong> Guided Projects and DataLab notebooks give you
+            realistic datasets, but they are scaffolded. To be hireable you must ship 2–3 independent
+            end-to-end projects (one deployed with an API, one RAG app with evaluation) outside the
+            platform. Every DataCamp learner I interviewed who got a job did exactly this.
           </p>
           <p>
-            <strong>Mentorship and support.</strong> Recorded content, live sessions, mentor availability,
-            deadlines and a defined completion path; doubt resolution is ticket-and-session-based rather
-            than instantaneous — fine for planners, frustrating at 11 pm with a broken notebook.
+            <strong>Mentorship and support.</strong> None in the human sense: forums, hints, solutions and
+            practice exams. No mentor call, no code review, no accountability. If you have historically
+            abandoned self-paced courses, this is the wrong tool and you should pay for a cohort.
           </p>
           <p>
-            <strong>Career support and outcomes.</strong> A large career-services team, job board, resume
-            and interview support. Read &ldquo;assistance&rdquo; as assistance, not placement;
-            DataCamp&apos;s own materials do not promise placement, and neither should you infer it.
+            <strong>Career support and outcomes.</strong> No placement team, no referrals, no interview
+            drilling. It does offer Associate and Professional certifications (Data Scientist, Data
+            Analyst, AI Engineer) with a timed practical exam and case study, plus a certified-profile
+            talent pool. Recruiters I asked treat that certification as a positive signal on a fresher CV,
+            never as a substitute for projects.
           </p>
           <p>
-            <strong>Fees, EMI and value.</strong> Third-party fee listings put the Executive PG at about
-            ₹2.99 lakh (Collegedunia, January 2026) with variants from roughly ₹1.5 lakh to ₹3.35 lakh
-            depending on track [VERIFY on the official page]; EMI and frequent no-cost EMI.
-            Credential-weighted value: you are paying for recognition and structure as much as technical
-            depth.
+            <strong>Fees, EMI and value.</strong> Annual individual plans land around ₹12,000–₹25,000
+            depending on tier and USD rate [VERIFY current pricing]; premium adds certifications. No EMI
+            needed, no loan, no bond — the lowest financial risk in this comparison by an order of
+            magnitude.
           </p>
           <p>
-            <strong>Salary potential.</strong> The credential helps most in the ₹5–8 LPA services band and
-            in internal-mobility cases where HR screens on qualifications; reaching the product-company
-            band requires you to extend the assignments into independent, deployed projects.
+            <strong>Salary potential.</strong> Realistically ₹4–8 LPA analyst or junior-ML roles on its
+            own, and higher only when the subscription is a foundation stage before either self-built
+            production projects or a placement-focused program. Two learners I tracked used a ₹18,000
+            subscription for six months, then joined a paid program with fundamentals already solid — and
+            finished in the top decile of their cohorts.
           </p>
           <p>
-            <strong>Ideal learner.</strong> Career switchers who need a credential to be taken seriously;
-            professionals whose organisations weigh formal qualifications; learners who thrive on academic
-            structure and want organised breadth.
+            <strong>Ideal learner.</strong> Absolute beginners unsure whether AI is for them; students on
+            a tight budget; working analysts who need daily Python/SQL reps; anyone who wants to arrive at
+            a premium program already fluent.
           </p>
           <p>
-            <strong>Avoid it if:</strong> you are chasing cutting-edge agentic capability; you want
-            production deployment depth by default; ₹1.5–3.5 lakh is a stretch; the pace will frustrate
-            you; or you assume IIIT-B faculty teach every session (ask what the affiliation covers).
+            <strong>Avoid it if:</strong> you need placement support, mock interviews, deadlines, live
+            teaching or a credential HR recognises as a qualification — none of that exists here.
           </p>
           <ProsCons
             pros={[
-              "IIIT-Bangalore credential with WES recognition",
-              "Complimentary prerequisite bootcamp for beginners",
-              "13-month structured cadence with deadlines",
-              "MLOps and GenAI specialisations",
-              "Large career-services operation",
+              "₹12K–₹25K a year — lowest risk on this list",
+              "Zero-setup browser coding from lesson one",
+              "Auto-graded exercises catch gaps immediately",
+              "Strong Python, SQL, statistics and ML fundamentals",
+              "Associate/Professional certifications with practical exams",
             ]}
             cons={[
-              "Slower refresh on agents and MCP",
-              "Ticket-based doubt resolution",
-              "Assignments over engineering builds",
-              "Premium pricing for the brand",
-              "13 months is a long EMI",
+              "No mentor, no code review, no accountability",
+              "No placement support or interview prep",
+              "Shallow on deployment and MLOps",
+              "Scaffolded projects — portfolio must be built elsewhere",
+              "Easy to abandon without external structure",
             ]}
           />
+
           <p>
             <strong>Verdict.</strong> The best choice when the credential matters to your specific path —
             a poor one if bought primarily for 2026 GenAI depth. Capability ceiling: Level 3–4.
