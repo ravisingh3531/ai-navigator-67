@@ -2801,7 +2801,7 @@ function CtaBanner() {
       </p>
       <a
         href="https://logicmojo.com/artificial-intelligence-course/"
-        className="mt-6 inline-flex items-center gap-2 rounded-xl bg-[image:var(--gradient-blue)] px-5 py-3 font-display text-[0.92rem] font-bold text-primary-foreground no-underline shadow-[var(--shadow-card)] transition-transform duration-200 hover:-translate-y-0.5"
+        className="mt-6 inline-flex items-center gap-2 rounded-xl bg-[image:var(--gradient-blue)] px-5 py-3 font-display text-[0.92rem] font-bold !text-primary-foreground !no-underline [background-image:var(--gradient-blue)] shadow-[var(--shadow-card)] transition-transform duration-200 hover:-translate-y-0.5"
       >
         View the AI &amp; ML curriculum
         <span aria-hidden>→</span>
