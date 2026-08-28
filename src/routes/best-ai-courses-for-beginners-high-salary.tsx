@@ -822,18 +822,21 @@ function Article() {
             a &ldquo;Best For&rdquo; column and every review an &ldquo;Avoid if&rdquo; list.
           </p>
 
-          <ol className="!gap-0 !pl-0 !list-none">
+          <ol className="!gap-3 !pl-0 !list-none">
             {rankedList.map(([name, why, score], i) => (
-              <li
-                key={name}
-                className="flex items-baseline gap-4 border-b border-rule py-3 last:border-b-0"
-              >
-                <span className="w-6 shrink-0 font-mono text-sm text-accent">{i + 1}</span>
-                <span className="flex-1">
-                  <strong>{name}</strong>{" "}
-                  <span className="text-muted-foreground">— {why}</span>
-                </span>
-                <span className="font-display text-base font-semibold tabular-nums">{score}</span>
+              <li key={name} data-reveal className="!m-0">
+                <div className="card-surface card-lift flex items-center gap-4 p-4">
+                  <span className="grid size-9 shrink-0 place-items-center rounded-xl bg-[image:var(--gradient-blue)] font-mono text-sm font-bold text-primary-foreground">
+                    {i + 1}
+                  </span>
+                  <span className="flex-1 text-[0.95rem]">
+                    <strong>{name}</strong>{" "}
+                    <span className="text-muted-foreground">— {why}</span>
+                  </span>
+                  <span className="gradient-text font-display text-lg font-extrabold tabular-nums">
+                    {score}
+                  </span>
+                </div>
               </li>
             ))}
           </ol>
@@ -848,7 +851,7 @@ function Article() {
             fee, GST, EMI interest, refund window and deferral policy in writing before paying.
           </p>
 
-          <figure className="my-8 -mx-4 overflow-x-auto px-4 sm:mx-0 sm:px-0">
+          <figure data-reveal className="card-surface card-lift my-9 overflow-x-auto p-3 sm:p-4">
             <table className="data-table min-w-[52rem]">
               <caption>Table 2 — The eight-pillar scorecard</caption>
               <thead>
@@ -872,11 +875,11 @@ function Article() {
                     ))}
                   </tr>
                 ))}
-                <tr className="bg-secondary/80">
+                <tr className="bg-primary/8">
                   <td className="font-display font-bold">Weighted total (/10)</td>
                   {["8.90", "8.05", "7.60", "7.55", "7.05", "6.38", "6.30", "6.18", "6.13", "5.70"].map(
                     (v) => (
-                      <td key={v} className="font-display font-bold tabular-nums text-accent">
+                      <td key={v} className="font-display font-bold tabular-nums text-primary">
                         {v}
                       </td>
                     ),
@@ -1198,7 +1201,7 @@ function Article() {
           <p className="!mb-12">
             <a
               href="#"
-              className="inline-flex items-center gap-2 rounded-md bg-accent px-5 py-3 font-sans text-sm font-bold text-accent-foreground no-underline transition-colors hover:bg-ink"
+              className="inline-flex items-center gap-2 rounded-xl bg-[image:var(--gradient-blue)] px-6 py-3.5 font-sans text-sm font-bold text-primary-foreground no-underline shadow-[var(--shadow-card)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[var(--shadow-lift)]"
             >
               Explore the LogicMojo AI &amp; ML Course — curriculum PDF, batch schedule and project list
               →
