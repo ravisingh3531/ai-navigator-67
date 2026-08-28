@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import type { ReactNode } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 
 export const Route = createFileRoute("/best-ai-courses-for-beginners-high-salary")({
   head: () => ({
@@ -33,15 +33,83 @@ function Chip({ children }: { children: ReactNode }) {
   return <span className="label-chip">{children}</span>;
 }
 
+/** Reading-progress bar pinned to the top of the viewport. */
+function ProgressBar() {
+  const [progress, setProgress] = useState(0);
+
+  useEffect(() => {
+    const onScroll = () => {
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      setProgress(max > 0 ? Math.min(1, window.scrollY / max) : 0);
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+    };
+  }, []);
+
+  return (
+    <div className="fixed inset-x-0 top-0 z-50 h-[3px] bg-transparent">
+      <div
+        className="h-full origin-left bg-[image:var(--gradient-blue)] transition-[width] duration-150 ease-out"
+        style={{ width: `${progress * 100}%` }}
+      />
+    </div>
+  );
+}
+
+/** Adds a fade-and-rise reveal to marked blocks once they enter the viewport. */
+function useReveal<T extends HTMLElement>() {
+  const ref = useRef<T | null>(null);
+
+  useEffect(() => {
+    const root = ref.current;
+    if (!root) return;
+    root.classList.add("anim-ready");
+    const targets = Array.from(root.querySelectorAll<HTMLElement>("[data-reveal]"));
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            io.unobserve(entry.target);
+          }
+        });
+      },
+      { rootMargin: "0px 0px -8% 0px", threshold: 0.05 },
+    );
+    targets.forEach((t) => io.observe(t));
+    return () => io.disconnect();
+  }, []);
+
+  return ref;
+}
+
 function Callout({ children, kind = "quote" }: { children: ReactNode; kind?: "quote" | "note" }) {
   if (kind === "note") {
     return (
-      <aside className="my-8 rounded-md border border-border bg-card p-5">
+      <aside data-reveal className="card-surface card-lift my-8 p-6">
+        <div className="mb-3 flex items-center gap-2">
+          <span className="grid size-6 place-items-center rounded-md bg-[image:var(--gradient-blue)] font-mono text-[0.7rem] font-bold text-primary-foreground">
+            i
+          </span>
+          <span className="font-mono text-[0.66rem] uppercase tracking-[0.14em] text-primary">
+            Note
+          </span>
+        </div>
         {children}
       </aside>
     );
   }
-  return <blockquote className="pull-quote">{children}</blockquote>;
+  return (
+    <blockquote data-reveal className="pull-quote">
+      <span aria-hidden className="pull-quote-bar" />
+      {children}
+    </blockquote>
+  );
 }
 
 function Table({
@@ -56,33 +124,35 @@ function Table({
   firstColStrong?: boolean;
 }) {
   return (
-    <figure className="my-8 -mx-4 overflow-x-auto px-4 sm:mx-0 sm:px-0">
-      <table className="data-table min-w-[42rem]">
-        {caption ? <caption>{caption}</caption> : null}
-        <thead>
-          <tr>
-            {head.map((h) => (
-              <th key={h} scope="col">
-                {h}
-              </th>
-            ))}
-          </tr>
-        </thead>
-        <tbody>
-          {rows.map((row, i) => (
-            <tr key={i}>
-              {row.map((cell, j) => (
-                <td
-                  key={j}
-                  className={j === 0 && firstColStrong ? "font-bold text-ink" : undefined}
-                >
-                  {cell}
-                </td>
+    <figure data-reveal className="my-9 -mx-4 sm:mx-0">
+      <div className="card-surface card-lift overflow-x-auto p-3 sm:p-4">
+        <table className="data-table min-w-[42rem]">
+          {caption ? <caption>{caption}</caption> : null}
+          <thead>
+            <tr>
+              {head.map((h) => (
+                <th key={h} scope="col">
+                  {h}
+                </th>
               ))}
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {rows.map((row, i) => (
+              <tr key={i}>
+                {row.map((cell, j) => (
+                  <td
+                    key={j}
+                    className={j === 0 && firstColStrong ? "font-bold text-ink" : undefined}
+                  >
+                    {cell}
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </figure>
   );
 }
@@ -99,33 +169,33 @@ function ScoreRow({ scores, total }: { scores: number[]; total: string }) {
     "Value",
   ];
   return (
-    <div className="my-8 rounded-md border border-border bg-card p-5">
-      <div className="grid grid-cols-2 gap-x-6 gap-y-3 sm:grid-cols-4">
+    <div data-reveal className="card-surface card-lift my-9 p-6">
+      <div className="grid grid-cols-2 gap-x-6 gap-y-4 sm:grid-cols-4">
         {labels.map((l, i) => {
           const v = scores[i] ?? 0;
           return (
-          <div key={l}>
-            <div className="font-mono text-[0.62rem] uppercase tracking-[0.09em] text-muted-foreground">
-              {l}
+            <div key={l}>
+              <div className="font-mono text-[0.6rem] uppercase tracking-[0.1em] text-muted-foreground">
+                {l}
+              </div>
+              <div className="mt-1.5 flex items-center gap-2">
+                <span className="font-display text-lg font-bold text-primary">{v.toFixed(1)}</span>
+                <span className="h-1.5 flex-1 overflow-hidden rounded-full bg-secondary">
+                  <span
+                    className="block h-full rounded-full bg-[image:var(--gradient-blue)] transition-[width] duration-700 ease-out"
+                    style={{ width: `${v * 10}%` }}
+                  />
+                </span>
+              </div>
             </div>
-            <div className="mt-1 flex items-center gap-2">
-              <span className="font-display text-lg font-semibold">{v.toFixed(1)}</span>
-              <span className="h-1 flex-1 rounded-full bg-secondary">
-                <span
-                  className="block h-1 rounded-full bg-accent"
-                  style={{ width: `${v * 10}%` }}
-                />
-              </span>
-            </div>
-          </div>
           );
         })}
       </div>
-      <div className="mt-5 flex items-baseline justify-between border-t border-border pt-4">
-        <span className="font-mono text-[0.68rem] uppercase tracking-[0.09em] text-muted-foreground">
+      <div className="mt-6 flex items-baseline justify-between rounded-lg bg-[color-mix(in_oklab,var(--primary)_6%,white)] px-4 py-3">
+        <span className="font-mono text-[0.66rem] uppercase tracking-[0.12em] text-muted-foreground">
           Weighted overall
         </span>
-        <span className="font-display text-3xl font-bold text-accent">{total}</span>
+        <span className="gradient-text font-display text-3xl font-extrabold">{total}</span>
       </div>
     </div>
   );
@@ -141,16 +211,16 @@ function ReviewHeader({
   tagline: string;
 }) {
   return (
-    <header className="mt-14 border-t-2 border-ink pt-6">
-      <div className="flex items-start gap-4">
-        <span className="font-display text-5xl font-bold leading-none text-accent">
+    <header data-reveal className="card-surface card-lift mt-16 overflow-hidden p-6 sm:p-7">
+      <div className="flex items-start gap-5">
+        <span className="grid size-16 shrink-0 place-items-center rounded-2xl bg-[image:var(--gradient-blue)] font-display text-2xl font-extrabold text-primary-foreground shadow-[var(--shadow-card)]">
           {String(rank).padStart(2, "0")}
         </span>
         <div>
-          <h3 id={`review-${rank}`} className="!mt-0 text-[1.55rem] leading-tight">
+          <h3 id={`review-${rank}`} className="!mt-0 text-[1.5rem] leading-tight">
             {name}
           </h3>
-          <p className="mt-1 font-display text-base italic text-muted-foreground">{tagline}</p>
+          <p className="mt-1.5 text-[0.95rem] leading-snug text-muted-foreground">{tagline}</p>
         </div>
       </div>
     </header>
@@ -410,9 +480,9 @@ const heatmap: string[][] = [
 ];
 
 const depthTone: Record<string, string> = {
-  Deep: "bg-accent/15 font-semibold text-accent",
-  Good: "bg-accent/10",
-  Moderate: "bg-highlight/50",
+  Deep: "bg-primary/15 font-bold text-primary",
+  Good: "bg-primary/8 font-semibold text-primary",
+  Moderate: "bg-primary/4",
   Basic: "bg-transparent",
   Limited: "text-muted-foreground",
   "Not covered": "text-muted-foreground italic",
@@ -1376,8 +1446,8 @@ function Article() {
 
 function ProsCons({ pros, cons }: { pros: string[]; cons: string[] }) {
   return (
-    <div className="my-8 grid gap-4 sm:grid-cols-2">
-      <div className="rounded-md border border-border bg-card p-5">
+    <div data-reveal className="my-9 grid gap-4 sm:grid-cols-2">
+      <div className="card-surface card-lift p-5">
         <h4 className="!mt-0 !mb-3 font-mono !text-xs uppercase tracking-[0.1em] !font-normal text-primary">
           Pros
         </h4>
@@ -1387,7 +1457,7 @@ function ProsCons({ pros, cons }: { pros: string[]; cons: string[] }) {
           ))}
         </ul>
       </div>
-      <div className="rounded-md border border-border bg-card p-5">
+      <div className="card-surface card-lift p-5">
         <h4 className="!mt-0 !mb-3 font-mono !text-xs uppercase tracking-[0.1em] !font-normal text-destructive">
           Cons
         </h4>
