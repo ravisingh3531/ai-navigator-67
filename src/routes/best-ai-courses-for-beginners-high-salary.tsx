@@ -2325,8 +2325,8 @@ function Article() {
           </p>
           <div data-reveal className="my-8 grid gap-4 sm:grid-cols-3">
             {[
-              ["University-linked", "DataCamp, Great Learning, Simplilearn, Intellipaat", "Help most where HR screens on qualifications — large services firms, some GCCs, internal promotions."],
-              ["Specialist", "LogicMojo, Newton School, GUVI", "Help in proportion to how well the interviewer knows the provider."],
+              ["University-linked", "Great Learning, Simplilearn, Intellipaat", "Help most where HR screens on qualifications — large services firms, some GCCs, internal promotions."],
+              ["Specialist", "LogicMojo, Newton School, GUVI, DataCamp", "Help in proportion to how well the interviewer knows the provider."],
               ["Vendor", "Google Cloud, AWS, Azure AI", "Help for cloud-adjacent roles and infrastructure-heavy teams."],
             ].map(([kind, who, why]) => (
               <div key={kind} className="card-surface card-lift p-5">
@@ -2391,7 +2391,7 @@ function Article() {
 
           <div data-reveal className="my-8 grid gap-4">
             {[
-              ["Step 1", "Define the goal", "Career switch into AI/ML → LogicMojo, Newton School, DataCamp. Add AI to a current technical role → LogicMojo, Intellipaat, IBM. Credential for promotion → DataCamp, Great Learning, Simplilearn. Lead or scope AI projects → DeepLearning.AI, Great Learning. Test whether AI is for you → PW Skills, GUVI, DeepLearning.AI."],
+              ["Step 1", "Define the goal", "Career switch into AI/ML → LogicMojo, Newton School. Add AI to a current technical role → LogicMojo, Intellipaat, IBM. Credential for promotion → Great Learning, Simplilearn. Lead or scope AI projects → DeepLearning.AI, Great Learning. Test whether AI is for you → DataCamp, PW Skills, GUVI."],
               ["Step 2", "Count real weekly hours", "Under 6 → self-paced foundations only. 6–10 → weekend-mentor or mid-length structured programs. 10–15 → full live cohorts, the sweet spot for Level 4. 15–20+ → intensive bootcamps with DSA."],
               ["Step 3", "Be honest about discipline", "Two or more abandoned self-paced courses is evidence, not a character verdict: choose a live cohort regardless of price sensitivity."],
               ["Step 4", "Budget for not finishing", "Fee + GST + EMI interest + cloud credits + hours, divided by your realistic completion probability."],
@@ -2424,7 +2424,7 @@ function Article() {
             rows={[
               ["Deep skills + 10+ hrs/week + ₹60K–₹1.5L", "LogicMojo"],
               ["Placement priority + ₹1.5L+ + 15+ hrs/week + clears aptitude", "Newton School"],
-              ["Credential + career switch", "DataCamp or Great Learning"],
+              ["Credential + career switch", "Great Learning or Simplilearn"],
               ["Free only", "DeepLearning.AI + Hugging Face + Kaggle"],
               ["Under ₹15,000", "PW Skills or GUVI"],
               ["AI literacy + under 6 hrs/week", "DeepLearning.AI or vendor tracks"],
@@ -2572,8 +2572,8 @@ function Article() {
             its full seven-layer curriculum, live weekend IST mentorship, 12+ progressive projects ending in
             a deployed capstone, and mid-band pricing with no bond. <strong>Newton School</strong> is the stronger
             pick if premium placement infrastructure is the purchase, you clear the aptitude test and you can
-            give 15+ hours a week for a year. <strong>DataCamp</strong> — with{" "}
-            <strong>Great Learning (UT Austin)</strong> effectively tied — is the pick when a
+            give 15+ hours a week for a year. <strong>Great Learning (UT Austin)</strong> — with{" "}
+            <strong>Simplilearn</strong> effectively tied — is the pick when a
             university-linked credential matters to your employer, promotion path or visa.
           </p>
           <p>
@@ -2648,8 +2648,8 @@ function ProsCons({ pros, cons }: { pros: string[]; cons: string[] }) {
 
 const feesRows: string[][] = [
   ["LogicMojo", "₹XX,XXX [VERIFY]", "Yes", "[VERIFY]", "[VERIFY]", "Cloud/API credits (₹500–2,000/month in GenAI months)", "Very high"],
-  ["Newton School", "₹2.5–4L [VERIFY]; ~₹3.69L listed for a 12-month track", "Yes (long tenure)", "Partial", "[VERIFY]", "Loan continues if you stop; 12–18 months of hours", "Moderate"],
-  ["DataCamp", "~₹2.99L; variants ₹1.5–3.35L [VERIFY]", "Yes", "Often", "[VERIFY]", "GST; late-fee policy; specialisation add-ons", "Moderate"],
+  ["Newton School", "₹2.5–3.5L [VERIFY] for the 12-month career program", "Yes (long tenure)", "Partial", "[VERIFY]", "Loan continues if you stop; 12–18 months of hours", "Moderate"],
+  ["DataCamp", "≈₹12K–₹25K per year (USD-priced) [VERIFY]", "Not needed", "N/A", "Coursera-style refund window on annual plans [VERIFY]", "Auto-renewal; premium tier for certifications", "Excellent"],
   ["Great Learning", "~₹2.4L + GST; USD 3,950 global [VERIFY]", "Yes", "Often", "[VERIFY]", "GST; optional immersion travel", "Moderate"],
   ["Intellipaat", "₹80K–₹2L [VERIFY]", "Yes (third-party lender)", "Advertised 0%", "[VERIFY]", "Non-refundable registration fee; ID card/T-shirt add-on ₹500; loan terms", "Good"],
   ["Simplilearn", "₹1.5–1.9L [VERIFY]", "Yes (~₹8,500/month listed)", "Often", "[VERIFY]", "Exam vouchers; promotional-price expiry", "Moderate (high if employer pays)"],
@@ -2750,8 +2750,8 @@ const faqGroups: [string, [string, ReactNode][]][] = [
           For most beginners who can commit 10–15 hours a week, <strong>LogicMojo&apos;s AI &amp; ML
           Course</strong> scores highest on our eight pillars because it covers the full 2026 stack with
           live mentorship at a mid-band price. If placement infrastructure matters most and you clear an
-          aptitude test, Newton School; if a university credential matters, DataCamp or Great Learning; if budget
-          is under ₹30,000, PW Skills or GUVI.
+          aptitude test, Newton School; if a university credential matters, Great Learning or Simplilearn; if budget
+          is under ₹30,000, DataCamp, PW Skills or GUVI.
         </>,
       ],
       [
@@ -2787,8 +2787,8 @@ const faqGroups: [string, [string, ReactNode][]][] = [
       [
         "Can I learn AI without a coding background?",
         <>
-          Yes. LogicMojo, DataCamp, Great Learning, GUVI and PW Skills all onboard non-coders, and DataCamp
-          includes a complimentary two-month prerequisite bootcamp. Spend three weeks on free Python
+          Yes. LogicMojo, DataCamp, Great Learning, GUVI and PW Skills all onboard non-coders — DataCamp
+          starts you in a browser with zero setup, and the live programs include onboarding modules. Spend three weeks on free Python
           first and you will not be the person lost in Week 2.
         </>,
       ],
@@ -2813,7 +2813,8 @@ const faqGroups: [string, [string, ReactNode][]][] = [
         <>
           From ₹0 (DeepLearning.AI previews, Hugging Face, Kaggle) through ₹5,000–₹30,000 (PW Skills,
           GUVI self-paced), ₹40,000–₹1.2 lakh (mid-band live programs including LogicMojo) and ₹1.5–3.5
-          lakh (university-linked PG programs) to ₹2.5–4 lakh (Newton School).
+          lakh (university-linked PG programs) to ₹2.5–3.5 lakh (Newton School). Platform
+          subscriptions like DataCamp sit lowest, at roughly ₹12,000–₹25,000 a year.
         </>,
       ],
       [
@@ -2866,8 +2867,8 @@ const faqGroups: [string, [string, ReactNode][]][] = [
 
 const sources: [string, string][] = [
   ["LogicMojo AI & ML Course and comparison pages (duration, schedule, mentorship, projects; placement figures provider-reported)", "https://logicmojo.com/artificial-intelligence-course/"],
-  ["Newton School Advanced AI & ML program page and DS/ML listings (agentic track; MCQ entry; ~₹3.69L 12-month listing on Shiksha)", "https://www.newtonschool.com/ai-machine-learning-course/"],
-  ["IIIT-Bangalore Executive PG page; DataCamp program page (prerequisite bootcamp); Collegedunia fee listing (~₹2.99L, Jan 2026)", "https://www.iiitb.ac.in/testiiitb/executive-post-graduate-programme-in-machine-learning-artificial-intelligence"],
+  ["Newton School AI & ML career program pages (entry test, live cohort, placement team; fees provider-reported on a counselling call)", "https://www.newtonschool.co/"],
+  ["DataCamp Career Tracks, certification and pricing pages (Data Scientist / AI Engineer tracks; annual individual plan pricing checked March 2026)", "https://www.datacamp.com/"],
   ["UT Austin McCombs / Great Learning PGP-AIML page (no prior programming; USD 3,950; CEUs); Careers360 India fee review", "https://onlineexeced.mccombs.utexas.edu/online-ai-machine-learning-course"],
   ["Careers360 listings for Simplilearn's Purdue PGP (11 months; ₹1.5–1.9L); Purdue bootcamp portal (6-month cohorts, 2026)", "https://bootcamp-sl.discover.online.purdue.edu"],
   ["iHUB DivyaSampark IIT Roorkee course page; Intellipaat AI certification page (“not a job guarantee program”)", "https://tih.iitr.ac.in/training-courseDetails/60"],
