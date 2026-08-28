@@ -272,7 +272,6 @@ function pick(a: Partial<Record<Key, string>>): { course: Course; runnerUp: Cour
     reasons.push("Your goal is a job, so placement pipeline and interview prep were weighted above brand.");
   }
   if (a.goal === "Upskill for a promotion") {
-    add("upgrad", 2.5);
     add("greatlearning", 2);
     add("simplilearn", 2);
   }
@@ -287,11 +286,13 @@ function pick(a: Partial<Record<Key, string>>): { course: Course; runnerUp: Cour
     add("newtonschool", 2);
     add("pwskills", -2);
     add("guvi", -1.5);
+    add("datacamp", -2);
     reasons.push("Your target band requires deployment, RAG, fine-tuning and agent work — not an intro certificate.");
   }
   if (a.salary === "₹3–6 LPA") {
     add("pwskills", 2);
     add("guvi", 2);
+    add("datacamp", 2);
     add("deeplearningai", 1);
   }
 
@@ -301,7 +302,7 @@ function pick(a: Partial<Record<Key, string>>): { course: Course; runnerUp: Cour
     add("guvi", 1);
     add("logicmojo", -1.5);
     add("newtonschool", -6);
-    add("upgrad", -6);
+    add("datacamp", 4);
     add("greatlearning", -6);
     add("simplilearn", -4);
     reasons.push("Budget under ₹15K rules out every premium program; the honest options are low-cost and self-driven.");
@@ -311,18 +312,18 @@ function pick(a: Partial<Record<Key, string>>): { course: Course; runnerUp: Cour
     add("pwskills", 2);
     add("logicmojo", 1);
     add("newtonschool", -5);
-    add("upgrad", -5);
+    add("datacamp", 3);
     add("greatlearning", -4);
   }
   if (a.budget === "₹50,000–₹1 lakh") {
     add("logicmojo", 3);
     add("intellipaat", 2.5);
     add("newtonschool", -3);
-    add("upgrad", -3);
+    add("datacamp", -1);
   }
   if (a.budget === "₹1 lakh+") {
     add("newtonschool", 2);
-    add("upgrad", 2);
+    add("datacamp", -3);
     add("greatlearning", 2);
     add("simplilearn", 1.5);
     add("logicmojo", 1.5);
@@ -334,11 +335,13 @@ function pick(a: Partial<Record<Key, string>>): { course: Course; runnerUp: Cour
     add("intellipaat", 1);
     add("deeplearningai", -5);
     add("ibm", -5);
+    add("datacamp", -5);
     reasons.push("Placement support is a must-have for you, so self-paced MOOCs with no career team were excluded.");
   }
   if (a.placement === "Not important") {
     add("deeplearningai", 2);
     add("ibm", 1.5);
+    add("datacamp", 2);
   }
 
   if (a.mode === "Live online") {
@@ -347,9 +350,11 @@ function pick(a: Partial<Record<Key, string>>): { course: Course; runnerUp: Cour
     add("guvi", 1.5);
     add("deeplearningai", -3);
     add("ibm", -3);
+    add("datacamp", -3);
   }
   if (a.mode === "Self-paced") {
     add("deeplearningai", 3);
+    add("datacamp", 3);
     add("ibm", 2);
     add("pwskills", 1);
   }
