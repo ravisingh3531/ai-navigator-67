@@ -388,7 +388,7 @@ export function CourseFinder() {
             <tbody>
               {results.map((c) => (
                 <tr key={c.anchor} className="transition-colors hover:bg-primary/5">
-                  <th scope="row" className="align-top">
+                  <th scope="row" className="align-top !bg-card">
                     <a
                       href={`#${c.anchor}`}
                       className="font-semibold text-primary no-underline hover:underline"
