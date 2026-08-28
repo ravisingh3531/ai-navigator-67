@@ -3,6 +3,8 @@ import { useEffect, useRef, useState, type ReactNode } from "react";
 import { CourseFinder } from "@/components/CourseFinder";
 import { CourseQuiz } from "@/components/CourseQuiz";
 import { BeginnerDeepDive } from "@/components/BeginnerDeepDive";
+import { AuthorByline, TrustPanel, ExperienceNote } from "@/components/AuthorTrust";
+
 import {
   ProblemAndCost,
   ExperienceSolution,
