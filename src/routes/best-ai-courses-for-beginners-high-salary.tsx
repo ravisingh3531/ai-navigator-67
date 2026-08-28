@@ -502,7 +502,26 @@ const toc = [
   ["#2 Scaler", "review-2"],
   ["#3 upGrad × IIIT-Bangalore", "review-3"],
   ["#4 Great Learning", "review-4"],
+  ["#5 Intellipaat × iHUB IIT Roorkee", "review-5"],
+  ["#6 Simplilearn × Purdue / IBM", "review-6"],
+  ["#7 DeepLearning.AI on Coursera", "review-7"],
+  ["#8 HCL GUVI", "review-8"],
+  ["#9 PW Skills", "review-9"],
+  ["#10 IBM AI Engineering", "review-10"],
+  ["Fees, EMI and placement claims", "fees"],
+  ["AI career paths and 2026 salaries", "salaries"],
+  ["Beginner-to-job 12-month roadmap", "roadmap"],
+  ["Projects recruiters respect", "projects"],
+  ["Paid vs. free AI courses", "paid-vs-free"],
+  ["Certification vs. skills", "certification"],
+  ["Course ROI scenarios", "roi"],
+  ["Selection checklist and decision guide", "checklist"],
+  ["Red flags", "red-flags"],
+  ["Methodology, author and reviewers", "methodology"],
+  ["Frequently asked questions", "faq"],
+  ["Final verdict", "final-verdict"],
 ];
+
 
 const rankedList = [
   ["LogicMojo — AI & Machine Learning Course", "best overall for beginners: full 2026 stack, live IST mentorship, mid-band price", "8.90"],
@@ -1472,20 +1491,910 @@ function Article() {
           </p>
           <ScoreRow scores={[7.5, 8.5, 8.0, 8.0, 7.5, 7.0, 6.5, 6.5]} total="7.55" />
 
+          {/* ---------------------------- Review 5 ---------------------------- */}
+          <ReviewHeader
+            rank={5}
+            name="Intellipaat — AI & ML / AI & Data Science with iHUB DivyaSampark, IIT Roorkee"
+            tagline="Best IIT-linked credential at mid-tier pricing"
+          />
+          <p>
+            <strong>Overview and positioning.</strong> A large Indian EdTech provider offering AI/ML
+            certifications with iHUB DivyaSampark, IIT Roorkee&apos;s Technology Innovation Hub, with a
+            Microsoft collaboration on some variants and optional campus immersion (verified). It sits
+            between budget platforms and premium university programs. Credit where due: Intellipaat&apos;s
+            own FAQ states this is not a job guarantee program, even while other pages advertise
+            &ldquo;guaranteed job interviews&rdquo; — read both.
+          </p>
+          <p>
+            <strong>Curriculum and tools.</strong> Python, statistics, SQL, ML, deep learning, NLP, CV,
+            cloud and deployment components, and a GenAI section (LLMs, prompting, introductory RAG)
+            updated for current generative models per the provider. <strong>Depth verdict:</strong>{" "}
+            broader and more deployment-aware than most mid-tier programs; GenAI and agentic depth
+            moderate; quality varies by module and instructor.
+          </p>
+          <p>
+            <strong>Beginner suitability.</strong> Moderate: basic programming helps, the maths is
+            moderate, and support must be pulled rather than pushed — proactive learners do fine, passive
+            ones drift.
+          </p>
+          <p>
+            <strong>Projects and portfolio.</strong> Six to twelve scenario-framed projects plus a
+            capstone. Review depth varies and is not consistently code-level; deployment exposure exceeds
+            several pricier competitors.
+          </p>
+          <p>
+            <strong>Mentorship and support.</strong> Hybrid self-paced plus live sessions, dedicated doubt
+            classes, and 24/7 support claims you should test during pre-sales. Large cohorts dilute mentor
+            attention.
+          </p>
+          <p>
+            <strong>Career support and outcomes.</strong> Job assistance, resume preparation, a job portal
+            with unlimited applications, and the &ldquo;guaranteed interviews&rdquo; claim
+            (provider-reported; ask how many, with whom, under what conditions). 0% financing runs through
+            a third-party lender whose terms Intellipaat states are outside its purview — get them before
+            signing.
+          </p>
+          <p>
+            <strong>Fees, EMI and value.</strong> ₹80,000–₹2 lakh by program and discount [VERIFY];
+            promotions are frequent, so negotiate and confirm inclusions in writing. Good value for
+            credential plus breadth.
+          </p>
+          <p>
+            <strong>Salary potential.</strong> The IIT-linked tag helps in services and enterprise HR
+            screens and deployment exposure helps in technical rounds; realistic first-role band ₹5–9 LPA
+            for freshers.
+          </p>
+          <p>
+            <strong>Ideal learner.</strong> Learners wanting an IIT-associated credential without ₹2
+            lakh+; professionals wanting breadth with deployment exposure; those comfortable with mixed
+            formats who will chase support.
+          </p>
+          <p>
+            <strong>Avoid it if:</strong> you need intensive personal mentorship; you want frontier GenAI
+            and agent frameworks; or you need consistent instructor quality across every module.
+          </p>
+          <ProsCons
+            pros={[
+              "IIT Roorkee iHUB collaboration with optional immersion",
+              "Deployment and cloud components",
+              "Mid-tier pricing with 0% financing",
+              "Openly states it is not a job guarantee",
+              "Job portal and interview support",
+            ]}
+            cons={[
+              "Module quality varies",
+              "Diluted mentor attention in large cohorts",
+              "Limited agentic and MCP depth",
+              "Third-party loan terms need scrutiny",
+              "“Guaranteed interviews” undefined",
+            ]}
+          />
+          <p>
+            <strong>Verdict.</strong> A sensible middle path for breadth plus an institutional tag without
+            premium pricing — if you drive your own support experience. Capability ceiling: Level 3–4.
+          </p>
+          <ScoreRow scores={[7.0, 7.0, 7.0, 7.0, 7.5, 6.5, 7.0, 7.5]} total="7.05" />
+
+          {/* ---------------------------- Review 6 ---------------------------- */}
+          <ReviewHeader
+            rank={6}
+            name="Simplilearn — PG Program in AI & Machine Learning (Purdue University / IBM)"
+            tagline="Best for corporate professionals and employer-sponsored upskilling"
+          />
+          <p>
+            <strong>Overview and positioning.</strong> A certification-led global platform whose AI/ML
+            programs carry Purdue University and IBM collaboration: an 11-month Post Graduate Program and,
+            from 2026, a 6-month Professional Certificate with dated cohorts (verified on the Purdue
+            bootcamp portal). Its real advantage is corporate legitimacy — one of the most commonly
+            employer-reimbursed platforms in India, with credentials HR and L&amp;D teams recognise, plus
+            Purdue Alumni Association membership.
+          </p>
+          <p>
+            <strong>Curriculum and tools.</strong> Python for data science, statistics, ML, deep learning
+            with TensorFlow/Keras, NLP, CV, reinforcement learning basics, and GenAI modules on LLMs and
+            prompt engineering with live expert sessions on trends. <strong>Depth verdict:</strong> broad
+            and industry-oriented but moderate in depth — optimised for certification completion rather
+            than engineering rigour; agents, MCP and production RAG are not meaningful components.
+          </p>
+          <p>
+            <strong>Beginner suitability.</strong> Good on paper — a bachelor&apos;s with 50% plus basic
+            maths and programming (verified), about eight class hours a week — but the self-paced core
+            means beginners must self-motivate between masterclasses.
+          </p>
+          <p>
+            <strong>Projects and portfolio.</strong> Five to ten guided projects on BFSI and healthcare
+            datasets plus a capstone. Structured but largely guided, with little independent design and
+            little code review; they show exposure, not judgement.
+          </p>
+          <p>
+            <strong>Mentorship and support.</strong> Predominantly self-paced core plus live
+            &ldquo;masterclasses&rdquo; — an important distinction, since marketing often implies fully
+            live instruction. Forum and ticket support, limited personal mentorship, good progress
+            tracking.
+          </p>
+          <p>
+            <strong>Career support and outcomes.</strong> Career services and a job board,
+            enterprise-oriented; &ldquo;job assistance&rdquo; listed, not placement; no outcome statistics
+            we could verify.
+          </p>
+          <p>
+            <strong>Fees, EMI and value.</strong> Third-party listings show ₹1.5–1.9 lakh for the PGP with
+            EMIs near ₹8,500 a month [VERIFY]; promotions are frequent. Strong value when employer-funded;
+            moderate when self-funded — the single most useful sentence about this option.
+          </p>
+          <p>
+            <strong>Salary potential.</strong> Best for internal mobility where the employer pays and the
+            promotion path values the Purdue/IBM name; weak as sole preparation for a competitive AI
+            engineering interview.
+          </p>
+          <p>
+            <strong>Ideal learner.</strong> Professionals with employer-funded budgets; corporate employees
+            needing credentials for internal moves; managers and analysts wanting structured AI literacy.
+          </p>
+          <p>
+            <strong>Avoid it if:</strong> you need live instruction and real mentorship; you are targeting
+            hands-on AI engineering roles on this course alone; or you are self-funding and could buy more
+            depth per rupee elsewhere.
+          </p>
+          <ProsCons
+            pros={[
+              "Purdue and IBM co-branding HR recognises",
+              "Purdue alumni association membership",
+              "Widely employer-reimbursed",
+              "6-month and 11-month options",
+              "BFSI/healthcare datasets",
+            ]}
+            cons={[
+              "Self-paced core with masterclasses, not live teaching",
+              "No agents, MCP or production RAG",
+              "Little code review",
+              "Moderate depth for ₹1.5–1.9L self-funded",
+              "TensorFlow-first while GenAI hiring skews PyTorch",
+            ]}
+          />
+          <p>
+            <strong>Verdict.</strong> Excellent if your employer is paying and credentials matter
+            internally; mediocre value if you are self-funding for engineering capability. Capability
+            ceiling: Level 3–4.
+          </p>
+          <ScoreRow scores={[6.5, 7.5, 6.0, 5.5, 7.0, 7.0, 6.0, 5.5]} total="6.38" />
+
+          {/* ---------------------------- Review 7 ---------------------------- */}
+          <ReviewHeader
+            rank={7}
+            name="DeepLearning.AI on Coursera — ML Specialization + Deep Learning Specialization"
+            tagline="Best AI foundations in the world, at near-zero cost"
+          />
+          <p>
+            <strong>Overview and positioning.</strong> Andrew Ng&apos;s programs are the global reference
+            standard for AI foundations: the Machine Learning Specialization (with Stanford Online) and the
+            Deep Learning Specialization, extended by short courses on prompting, LangChain, RAG,
+            fine-tuning and agents. It is here because it is the best thing to do <em>before</em>, or
+            alongside, a paid program — not because it is a career program.
+          </p>
+          <p>
+            <strong>Curriculum and tools.</strong> Regression and classification, neural networks, decision
+            trees, unsupervised learning, recommenders, an RL introduction; then tuning, regularisation,
+            optimisation, structuring ML projects, CNNs, sequence models, attention and transformers, in
+            Python with NumPy, TensorFlow and scikit-learn. <strong>Depth verdict:</strong> unmatched
+            clarity on foundations; deliberately narrow on production — no MLOps or deployment, no Indian
+            context, GenAI fragmented across short courses.
+          </p>
+          <p>
+            <strong>Beginner suitability.</strong> Very high for conceptual learning — the ML
+            Specialization is designed for beginners and explains gradient descent better than any paid
+            course we have watched; lower without Python, and lower again for anyone who needs external
+            accountability.
+          </p>
+          <p>
+            <strong>Projects and portfolio.</strong> High-quality scaffolded labs that teach exceptionally
+            well and demonstrate little to a recruiter; you must build separate portfolio projects.
+          </p>
+          <p>
+            <strong>Mentorship and support.</strong> Forums only. The format&apos;s strength and its fatal
+            weakness at once: self-paced completion rates are famously low and nobody reviews your code.
+          </p>
+          <p>
+            <strong>Career support and outcomes.</strong> None claimed — and the provider is honest about
+            it, which is more than many paid programs manage.
+          </p>
+          <p>
+            <strong>Fees, EMI and value.</strong> Coursera&apos;s India pricing, verified for 2025–26: Plus
+            at ₹2,099 a month or ₹13,999 a year, individual specialisations from ₹1,699 a month,
+            promotional annual pricing around ₹7,000 several times a year, and the first module of most
+            courses free to preview. Unmatched value per rupee — with the caveat that a cheap subscription
+            running nine unfinished months is not cheap.
+          </p>
+          <p>
+            <strong>Salary potential.</strong> Alone, Level 2–3 — screening-round territory. Paired with
+            three self-built, deployed projects and a structured GenAI track, it underpins the same ₹8–15
+            LPA band as the paid programs.
+          </p>
+          <p>
+            <strong>Ideal learner.</strong> Highly self-directed learners; students with time but no budget;
+            professionals building foundations before paying; anyone supplementing a paid course.
+          </p>
+          <p>
+            <strong>Avoid it if:</strong> you know you need accountability or placement support; you want a
+            job-ready portfolio produced by the course itself; or you have already abandoned two self-paced
+            courses.
+          </p>
+          <ProsCons
+            pros={[
+              "The clearest foundations teaching available",
+              "Near-zero cost with free module previews",
+              "Excellent labs and sequencing",
+              "Continuously extended GenAI short courses",
+              "Pairs with any paid program",
+            ]}
+            cons={[
+              "No mentorship, code review or cohort",
+              "Low completion for most people",
+              "No MLOps or deployment",
+              "No Indian hiring context",
+              "Certificates carry little weight alone",
+            ]}
+          />
+          <p>
+            <strong>Verdict.</strong> The best foundations available anywhere and an incomplete answer to
+            &ldquo;how do I get a well-paid AI job in India&rdquo; — pair it with structure and self-built
+            projects. Capability ceiling: Level 2–3 alone.
+          </p>
+          <ScoreRow scores={[8.0, 8.5, 6.0, 2.5, 6.5, 1.5, 7.5, 10.0]} total="6.30" />
+
+          {/* ---------------------------- Review 8 ---------------------------- */}
+          <ReviewHeader
+            rank={8}
+            name="HCL GUVI — AI & Machine Learning Program (IITM Pravartak certified)"
+            tagline="Best vernacular and Tier-2/Tier-3-accessible AI option for beginners"
+          />
+          <p>
+            <strong>Overview and positioning.</strong> GUVI was incubated by IIT Madras and IIM Ahmedabad
+            in 2014 and joined the HCL Group in 2022 (verified). Its defining strength is language: the AI
+            &amp; ML program runs in English, Hindi, Tamil and Telugu, and the program page states that no
+            prior coding experience is required (verified). For many capable Indian learners the barrier has
+            been the language of instruction, not the subject.
+          </p>
+          <p>
+            <strong>Curriculum and tools.</strong> 120+ live hours across 25+ modules covering Python, SQL,
+            ML, deep learning basics, MLOps, Generative AI and an agentic AI module, with IITM Pravartak
+            certification (provider-stated). <strong>Depth verdict:</strong> solid
+            foundational-to-intermediate coverage; limited advanced deep learning, thin agentic depth
+            despite the module title, light MLOps — an entry platform, not a route to advanced AI
+            engineering.
+          </p>
+          <p>
+            <strong>Beginner suitability.</strong> Among the best here: no coding prerequisite,
+            regional-language instruction, mobile-first delivery, and regional communities that measurably
+            lift engagement for vernacular learners.
+          </p>
+          <p>
+            <strong>Projects and portfolio.</strong> The provider claims 20+ projects plus a capstone
+            (provider-stated); expect entry-to-intermediate builds with guided walkthroughs — enough to
+            show foundational competence, not enough alone for competitive AI engineering roles.
+          </p>
+          <p>
+            <strong>Mentorship and support.</strong> Live and recorded sessions, 1:1 doubt sessions with
+            subject-matter experts (listed), active regional communities, code playgrounds. Mentor depth
+            varies by batch.
+          </p>
+          <p>
+            <strong>Career support and outcomes.</strong> Placement assistance and a
+            &ldquo;1,000+ hiring partners&rdquo; claim (provider-reported); strongest for Tier-2/3 entry
+            roles and IT-services intake. Ask what percentage of learners the placement cell actually
+            places, and in what roles.
+          </p>
+          <p>
+            <strong>Fees, EMI and value.</strong> GUVI lists EMIs from ₹11,585 for the live AI/ML program,
+            implying a total in the high five figures to low six figures depending on tenure [VERIFY total
+            fee and variant]; self-paced IITM-certified tracks and free AICTE-linked Python/AI courses are
+            far cheaper. Very strong value in its band — especially where the alternative is no accessible
+            option at all.
+          </p>
+          <p>
+            <strong>Salary potential.</strong> First roles are data analyst, junior ML or AI-support
+            positions in the ₹4–7 LPA band; product-company roles need a deeper second program or
+            substantial independent work.
+          </p>
+          <p>
+            <strong>Ideal learner.</strong> Learners more comfortable in Tamil, Hindi or Telugu; Tier-2/3
+            students and early-career professionals; anyone previously blocked by English-only technical
+            content.
+          </p>
+          <p>
+            <strong>Avoid it if:</strong> you are an experienced engineer wanting depth; you are targeting
+            frontier GenAI or agentic roles; or you need premium placement infrastructure.
+          </p>
+          <ProsCons
+            pros={[
+              "Four-language instruction and vernacular support",
+              "No coding prerequisite",
+              "120+ live hours with 1:1 doubt sessions",
+              "IITM Pravartak certification",
+              "Mobile-first, low-bandwidth delivery",
+            ]}
+            cons={[
+              "Depth stops at Level 2–3",
+              "Agentic and MLOps modules are introductory",
+              "Guided projects",
+              "Placement claims provider-reported",
+              "Total fee not transparent on the page",
+            ]}
+          />
+          <p>
+            <strong>Verdict.</strong> The right first step for a large, underserved group of Indian
+            learners — best followed by a deeper program once English technical content is comfortable.
+            Capability ceiling: Level 2–3.
+          </p>
+          <ScoreRow scores={[5.5, 8.5, 5.5, 6.0, 5.5, 5.5, 5.0, 7.5]} total="6.18" />
+
+          {/* ---------------------------- Review 9 ---------------------------- */}
+          <ReviewHeader
+            rank={9}
+            name="PW Skills — Data Science with Generative AI"
+            tagline="Best ultra-affordable structured start for students and freshers"
+          />
+          <p>
+            <strong>Overview and positioning.</strong> Physics Wallah&apos;s skilling arm relaunched Data
+            Science with Generative AI on 17 January 2026 as an 8-month hybrid course — recorded content
+            plus live revision sessions — with named industry mentors, 20+ projects and a PW Skills
+            certificate issued with PwC on 60%+ video completion plus assessments (verified). The defining
+            feature is price: a structured, community-supported program at a fraction of every other
+            structured option here, in Hindi-English delivery.
+          </p>
+          <p>
+            <strong>Curriculum and tools.</strong> Python, statistics, data analysis, SQL, ML, introductory
+            deep learning, NLP, and a GenAI component covering LLM basics, prompting, LLM APIs, LangChain
+            and introductory RAG. <strong>Depth verdict:</strong> reasonable coverage for the price but
+            entry-level depth throughout — limited advanced deep learning, no meaningful agent frameworks,
+            no MCP, minimal MLOps.
+          </p>
+          <p>
+            <strong>Beginner suitability.</strong> Very high: no advanced background required, week-wise
+            progression from basics, Hindi-English delivery, mobile-friendly. The risk is drift, not
+            difficulty — recorded-first delivery raises dropout even at a low price.
+          </p>
+          <p>
+            <strong>Projects and portfolio.</strong> Twenty-plus guided projects (provider-stated) plus PwC
+            case studies. Good for initial confidence and a first GitHub presence; not sufficient for a
+            competitive AI portfolio without independent extension.
+          </p>
+          <p>
+            <strong>Mentorship and support.</strong> Live revision and doubt-clearing sessions, advertised
+            1:1 doubt sessions, and a large community. Support is community-heavy rather than mentor-heavy,
+            so quality depends on peer engagement.
+          </p>
+          <p>
+            <strong>Career support and outcomes.</strong> A growing placement cell and job assistance,
+            entry-level focused (provider-reported). Treat &ldquo;job assistance guarantee&rdquo; phrasing
+            on some PW Skills pages as marketing and ask what it includes.
+          </p>
+          <p>
+            <strong>Fees, EMI and value.</strong> ₹5,000–₹30,000 depending on plan [VERIFY]; EMI on higher
+            tiers. The lowest-risk structured entry point in Indian AI education — a starting investment,
+            not a complete career program.
+          </p>
+          <p>
+            <strong>Salary potential.</strong> Data analyst and junior data science roles in the ₹4–7 LPA
+            band; the GenAI module covers screening-round vocabulary, not a GenAI engineering interview.
+          </p>
+          <p>
+            <strong>Ideal learner.</strong> Students and freshers with tight budgets; Hindi-preferring
+            learners; anyone testing whether AI is for them before a larger investment.
+          </p>
+          <p>
+            <strong>Avoid it if:</strong> you are an experienced professional wanting depth; you are
+            targeting product-company AI roles; or you need 1:1 mentorship, code review or deployment
+            capability.
+          </p>
+          <ProsCons
+            pros={[
+              "Lowest fee band for a structured program",
+              "8-month week-wise structure with named mentors",
+              "20+ guided projects and PwC case studies",
+              "Hindi-English delivery",
+              "Large active community",
+            ]}
+            cons={[
+              "Recorded-first delivery and dropout risk",
+              "Entry-level depth in DL, GenAI and MLOps",
+              "Guided projects",
+              "Community-heavy support",
+              "Certificate tied to video completion, not demonstrated skill",
+            ]}
+          />
+          <p>
+            <strong>Verdict.</strong> The best first ₹10,000 a student can spend on AI in India — knowing
+            that a second, deeper investment is needed to reach hiring-grade capability. Capability
+            ceiling: Level 2–3.
+          </p>
+          <ScoreRow scores={[5.5, 8.5, 5.5, 5.0, 5.5, 5.0, 5.5, 8.5]} total="6.13" />
+
+          {/* ---------------------------- Review 10 --------------------------- */}
+          <ReviewHeader
+            rank={10}
+            name="IBM AI Engineering Professional Certificate (Coursera)"
+            tagline="Best low-cost applied AI engineering track — if you already know Python"
+          />
+          <p>
+            <strong>Overview and positioning.</strong> A structured, applied certificate aimed at producing
+            practising AI engineers with widely used tooling — more implementation-oriented than
+            DeepLearning.AI, far cheaper than any Indian premium program, and carrying a name that
+            registers in enterprise contexts. It ranks last for one reason: it assumes working Python from
+            the first lab, making it the least beginner-friendly program here.
+          </p>
+          <p>
+            <strong>Curriculum and tools.</strong> ML with Python and scikit-learn, deep learning
+            fundamentals, Keras/TensorFlow and PyTorch, computer vision applications, and — in the current
+            version — generative AI, LLM, prompting and RAG components [VERIFY: current course count and
+            module list]. <strong>Depth verdict:</strong> strong applied breadth for the price, moderate
+            theoretical depth, moderate GenAI layer; MLOps and deployment touched rather than taught.
+          </p>
+          <p>
+            <strong>Beginner suitability.</strong> Low for absolute beginners; fine for adjacent-tech
+            beginners who complete IBM&apos;s own Python for Data Science course first.
+          </p>
+          <p>
+            <strong>Projects and portfolio.</strong> Six to ten guided labs and applied projects with a
+            capstone — more build-oriented than typical MOOC assignments but still guided; extend them into
+            original work to be portfolio-defensible.
+          </p>
+          <p>
+            <strong>Mentorship and support.</strong> Forums only; fully self-paced in cloud notebooks; the
+            same completion risk as any MOOC.
+          </p>
+          <p>
+            <strong>Career support and outcomes.</strong> None claimed.
+          </p>
+          <p>
+            <strong>Fees, EMI and value.</strong> Coursera&apos;s India pricing applies (₹2,099 a month,
+            ₹13,999 a year, promotional annual pricing around ₹7,000). Excellent value per rupee, same
+            subscription-creep caution as DeepLearning.AI.
+          </p>
+          <p>
+            <strong>Salary potential.</strong> As a sole credential it supports the ₹5–8 LPA services band
+            for candidates with a technical degree; the IBM name helps in enterprise HR screens.
+          </p>
+          <p>
+            <strong>Ideal learner.</strong> Budget-constrained learners with working Python who want applied
+            practice; professionals in enterprises where the IBM name registers; learners supplementing a
+            paid program.
+          </p>
+          <p>
+            <strong>Avoid it if:</strong> you are a complete beginner without Python; you need mentorship,
+            accountability or placement support; or you want deep GenAI, agents or production MLOps.
+          </p>
+          <ProsCons
+            pros={[
+              "Applied, lab-heavy structure",
+              "PyTorch and TensorFlow both covered",
+              "GenAI and RAG components added",
+              "IBM brand",
+              "Very low cost",
+            ]}
+            cons={[
+              "Python required from Day 1",
+              "No mentorship or code review",
+              "No career support",
+              "Guided labs",
+              "MLOps only touched",
+            ]}
+          />
+          <p>
+            <strong>Verdict.</strong> The best applied-practice value here for someone who already codes,
+            and the wrong first course for someone who does not. Capability ceiling: Level 2–3.
+          </p>
+          <ScoreRow scores={[7.0, 5.5, 7.0, 2.5, 6.5, 1.5, 6.5, 9.5]} total="5.70" />
+
+          <h2 id="fees">Fees, EMI and How to Read Placement Claims</h2>
+          <Table
+            caption="Table 4 — Fees, EMI and total cost of ownership"
+            head={[
+              "Course",
+              "Headline Fee (₹)",
+              "EMI",
+              "No-Cost EMI",
+              "Refund Window",
+              "Hidden Costs to Check",
+              "Capability per ₹",
+            ]}
+            rows={feesRows}
+          />
+
           <Callout kind="note">
             <p className="text-sm leading-relaxed">
-              <strong>Continuing:</strong> reviews #5–#10 (Intellipaat, Simplilearn, DeepLearning.AI, HCL
-              GUVI, PW Skills, IBM), the fees and placement-claims section, the salary and roadmap
-              chapters, projects, ROI, checklists, red flags, methodology and FAQs are scheduled for this
-              page and will be published as the drafts land. Their scores are already reflected in the
-              tables above.
+              <strong>The EMI trap.</strong> A 24-month EMI on a program abandoned in Month 3 is the most
+              common financial regret in Indian EdTech. Before signing: get the refund policy in writing
+              with the exact cut-off date; ask whether the EMI is a bank or NBFC loan (which continues
+              regardless of whether you attend); ask whether &ldquo;no-cost&rdquo; EMI is a
+              processing-fee-free loan or a discount that disappears if you pay upfront; and prefer shorter
+              programs when unsure.
             </p>
           </Callout>
+
+          <Callout>
+            Expected cost = fee ÷ probability you finish. A ₹30,000 course you have a 30% chance of
+            finishing costs more in expectation than an ₹80,000 course you have a 90% chance of finishing.
+          </Callout>
+
+          <h3>How to read placement claims</h3>
+          <p>
+            <strong>Five questions for any placement claim.</strong> Copy these into the sales chat
+            verbatim.
+          </p>
+          <NumberedGrid
+            items={[
+              "What percentage of enrolled (not “eligible”) learners were placed?",
+              "Over what window?",
+              "What is the median, not average, CTC?",
+              "Are these AI roles, or any tech roles?",
+              "Can I speak to two alumni from the last six months you did not hand-pick?",
+            ]}
+          />
+
+          <h2 id="salaries">AI Career Paths and Realistic 2026 Salaries in India</h2>
+          <p>
+            Figures below are indicative ranges cross-checked in August 2026 against Glassdoor averages and
+            multiple 2026 India salary guides (IIT Kharagpur Online, IIT Kanpur&apos;s EICTA, Taggd, Masai
+            School, upGrad). They vary widely by city, company type and negotiation. Mark them{" "}
+            <strong>[VERIFY: current market data]</strong> before quoting them to anyone.
+          </p>
+          <StatGrid
+            items={[
+              ["15–25%", "salary premium in Bengaluru, Hyderabad and Gurgaon over Pune and Chennai"],
+              ["60–150%", "services-to-product gap at the same experience level"],
+              ["#2", "India's rank among Indeed markets for share of AI-mentioning postings (NASSCOM–Indeed, 2026)"],
+            ]}
+          />
+          <Table
+            caption="Table 5 — AI roles, entry bars and 2026 salary bands"
+            head={[
+              "Role",
+              "Core Skills",
+              "Entry Bar for a Beginner",
+              "Fresher / First Role (₹ LPA)",
+              "2–5 Years (₹ LPA)",
+              "Courses That Map Best",
+            ]}
+            rows={careerRows}
+          />
+          <p>
+            <strong>Where AI hiring actually happens.</strong> GCCs expanding AI teams across Bengaluru,
+            Hyderabad, Pune, NCR and Chennai; product companies shipping GenAI features; IT services scaling
+            AI practices; AI-native startups; and enterprise adoption in BFSI, healthcare, retail and
+            manufacturing. The counterpoint: entry-level AI hiring is competitive, &ldquo;AI Engineer&rdquo;
+            is applied inconsistently as a title, and the Quess Corp finding that most of India&apos;s AI
+            workforce is AI-<em>embedded</em> rather than core-AI means many first roles will be
+            &ldquo;your old job, plus AI&rdquo; — often the fastest route to the salary jump.
+          </p>
+          <h3>What interviewers actually ask a beginner</h3>
+          <NumberedGrid
+            items={[
+              "Why this metric and not accuracy?",
+              "How did you handle class imbalance?",
+              "Explain attention to a non-technical stakeholder.",
+              "Design a RAG system for 50,000 internal documents.",
+              "How would you detect and reduce hallucination?",
+              "Prompting, RAG or fine-tuning here — and why?",
+              "How would you serve this model to 10,000 users?",
+              "What does your agent do when a tool call fails?",
+              "What did you get wrong in your project, and what did you change?",
+            ]}
+          />
+          <p className="text-sm italic text-muted-foreground">
+            If a course does not prepare you for these, its certificate will not either.
+          </p>
+
+          <h2 id="roadmap">Beginner-to-Job Roadmap</h2>
+          <p>
+            Assume 10 hours a week and zero background. Each month has one deliverable that goes on GitHub —
+            twelve months, twelve artefacts, one portfolio.
+          </p>
+          <Timeline />
+
+          <h2 id="projects">Beginner AI Projects Recruiters Respect</h2>
+          <p>
+            Recruiters and hiring managers do not count projects; they open one and ask questions. Five that
+            convert, in rising order of difficulty:
+          </p>
+          <div data-reveal className="my-8 grid gap-4">
+            {portfolioProjects.map(([title, level, detail], i) => (
+              <div key={title} className="card-surface card-lift flex gap-4 p-5">
+                <span className="grid size-10 shrink-0 place-items-center rounded-xl bg-[image:var(--gradient-blue)] font-display text-base font-extrabold text-primary-foreground">
+                  {i + 1}
+                </span>
+                <div>
+                  <div className="flex flex-wrap items-center gap-2">
+                    <span className="font-display text-[1rem] font-bold text-ink">{title}</span>
+                    <span className="label-chip">{level}</span>
+                  </div>
+                  <p className="!mt-1.5 !mb-0 text-[0.88rem] leading-relaxed text-muted-foreground">
+                    {detail}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <h2 id="paid-vs-free">Paid vs. Free AI Courses for Beginners</h2>
+          <p>
+            <strong>When free is enough.</strong> If you are highly self-directed, already code, and have
+            time rather than money, the 2026 free stack is world-class: DeepLearning.AI previews for
+            foundations → Kaggle Learn for applied practice → Fast.ai for practical deep learning → Hugging
+            Face&apos;s NLP and Agents courses for the modern stack → NPTEL/SWAYAM for mathematical rigour →
+            official PyTorch, LangGraph and MLflow docs for current tooling. The content gap between free and
+            paid has nearly closed.
+          </p>
+          <p>
+            <strong>What free cannot give you:</strong>
+          </p>
+          <NumberedGrid
+            items={[
+              "Accountability and completion pressure — decisive for most beginners.",
+              "Human code review.",
+              "A curated sequence that saves months of deciding what to learn next.",
+              "Doubt resolution at 11 pm on a bug with no Stack Overflow answer.",
+              "Portfolio design and interview-defence practice.",
+              "A peer cohort and career support.",
+            ]}
+          />
+          <Callout>
+            Paid courses in 2026 do not sell information. They sell structure, feedback, sequence and
+            accountability. If you can supply those four yourself, free is not a compromise — it is the
+            rational choice. If you have started and stopped before, the structure <em>is</em> the product.
+          </Callout>
+
+          <h2 id="certification">Certification vs. Skills</h2>
+          <p>
+            Indian employers in 2026 check three things, in order: can you talk through a project you built
+            (the technical round), can you solve a problem live (the practical round), and does your profile
+            pass an HR filter (the screen). Certificates help with the third, occasionally the first, never
+            the second.
+          </p>
+          <div data-reveal className="my-8 grid gap-4 sm:grid-cols-3">
+            {[
+              ["University-linked", "upGrad, Great Learning, Simplilearn, Intellipaat", "Help most where HR screens on qualifications — large services firms, some GCCs, internal promotions."],
+              ["Specialist", "LogicMojo, Scaler, GUVI", "Help in proportion to how well the interviewer knows the provider."],
+              ["Vendor", "Google Cloud, AWS, Azure AI", "Help for cloud-adjacent roles and infrastructure-heavy teams."],
+            ].map(([kind, who, why]) => (
+              <div key={kind} className="card-surface card-lift p-5">
+                <div className="font-mono text-[0.62rem] uppercase tracking-[0.14em] text-primary">
+                  {kind}
+                </div>
+                <div className="mt-2 font-display text-[0.92rem] font-bold text-ink">{who}</div>
+                <p className="!mt-2 !mb-0 text-[0.85rem] leading-relaxed text-muted-foreground">{why}</p>
+              </div>
+            ))}
+          </div>
+          <p>
+            In every case the certificate gets you into the room and the portfolio decides what happens
+            there. If you must choose, choose the course that produces the portfolio.
+          </p>
+
+          <h2 id="roi">Course ROI</h2>
+          <p>
+            <strong>Formula:</strong> ROI = (realistic salary delta over 24 months × probability of
+            achieving it) − (fee + EMI interest + cloud credits + opportunity cost of hours). All figures
+            below are <strong>[ILLUSTRATIVE]</strong>.
+          </p>
+          <ScenarioCard
+            tag="Scenario A"
+            title="Software engineer, 4 years, ₹6 LPA at a services firm · ₹80,000 mid-band program"
+            verdict="Payback inside 3 months"
+            positive
+          >
+            Completes with a deployed RAG and agent portfolio, then moves to a ₹11 LPA AI role within four
+            months of finishing. Delta ₹5 LPA; 24-month gain ₹10 lakh against roughly ₹1 lakh all-in cost.
+            The outcome depended on completion and portfolio, not the certificate.
+          </ScenarioCard>
+          <ScenarioCard
+            tag="Scenario B"
+            title="Commerce graduate career switcher · ₹2 lakh university-linked program"
+            verdict="Payback 12–15 months"
+            positive
+          >
+            Lands a ₹5.5 LPA analyst-plus-AI role eight months after finishing, with the credential helping
+            through the HR screen. Delta over a ₹3.5 LPA job is ₹2 LPA; higher variance; the second move is
+            where the real gain comes. Harder and slower than marketing suggests, still positive.
+          </ScenarioCard>
+          <ScenarioCard
+            tag="Scenario C"
+            title="₹2 lakh program on a 24-month EMI, stopped in Month 3"
+            verdict="Strongly negative"
+            positive={false}
+          >
+            ₹2 lakh plus interest for a Level 1 outcome, with the EMI continuing for 21 more months. This is
+            the most common scenario in Indian EdTech, almost no article shows it, and it is why beginner
+            suitability and mentorship carry 30% of our weighting.
+          </ScenarioCard>
+          <Callout>
+            The course is roughly 40% of your outcome. What you build during it and what you do in the three
+            months after — applications, referrals, interviews — is the other 60%. Any article that says
+            otherwise is selling something.
+          </Callout>
+
+          <h2 id="checklist">Course-Selection Checklist and Decision Guide</h2>
+          <div data-reveal className="my-8 grid gap-4">
+            {[
+              ["Step 1", "Define the goal", "Career switch into AI/ML → LogicMojo, Scaler, upGrad. Add AI to a current technical role → LogicMojo, Intellipaat, IBM. Credential for promotion → upGrad, Great Learning, Simplilearn. Lead or scope AI projects → DeepLearning.AI, Great Learning. Test whether AI is for you → PW Skills, GUVI, DeepLearning.AI."],
+              ["Step 2", "Count real weekly hours", "Under 6 → self-paced foundations only. 6–10 → weekend-mentor or mid-length structured programs. 10–15 → full live cohorts, the sweet spot for Level 4. 15–20+ → intensive bootcamps with DSA."],
+              ["Step 3", "Be honest about discipline", "Two or more abandoned self-paced courses is evidence, not a character verdict: choose a live cohort regardless of price sensitivity."],
+              ["Step 4", "Budget for not finishing", "Fee + GST + EMI interest + cloud credits + hours, divided by your realistic completion probability."],
+            ].map(([step, title, body]) => (
+              <div key={step} className="card-surface card-lift p-5">
+                <div className="flex flex-wrap items-center gap-3">
+                  <span className="grid h-7 place-items-center rounded-lg bg-[image:var(--gradient-blue)] px-2.5 font-mono text-[0.62rem] font-bold uppercase tracking-[0.1em] text-primary-foreground">
+                    {step}
+                  </span>
+                  <span className="font-display text-[1rem] font-bold text-ink">{title}</span>
+                </div>
+                <p className="!mt-2.5 !mb-0 text-[0.88rem] leading-relaxed text-muted-foreground">
+                  {body}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <h3>Step 5 — The 12-question pre-enrolment checklist (screenshot this)</h3>
+          <NumberedGrid items={preEnrolQuestions} />
+
+          <h3>Step 6 — Decision guide</h3>
+          <p>
+            Six inputs: background · goal · budget · weekly hours · priority · learning style. The output
+            logic we apply:
+          </p>
+          <Table
+            caption="Table 6 — Decision guide output logic"
+            head={["If this describes you", "Then start here"]}
+            rows={[
+              ["Deep skills + 10+ hrs/week + ₹60K–₹1.5L", "LogicMojo"],
+              ["Placement priority + ₹1.5L+ + 15+ hrs/week + clears aptitude", "Scaler"],
+              ["Credential + career switch", "upGrad or Great Learning"],
+              ["Free only", "DeepLearning.AI + Hugging Face + Kaggle"],
+              ["Under ₹15,000", "PW Skills or GUVI"],
+              ["AI literacy + under 6 hrs/week", "DeepLearning.AI or vendor tracks"],
+              ["Employer-funded + credential matters internally", "Simplilearn"],
+              ["Vernacular preference (Hindi, Tamil, Telugu)", "GUVI"],
+              ["Already codes + lowest cost", "IBM AI Engineering"],
+            ]}
+          />
+
+          <h2 id="red-flags">Red Flags</h2>
+          <p>
+            Ten signals that should slow you down. On sales calls: get everything in writing, never pay on
+            the same call, and treat urgency as information about the seller, not the offer.
+          </p>
+          <NumberedGrid items={redFlags} tone="danger" />
+
+          <h2 id="methodology">Methodology, Author and Expert Reviewers</h2>
+          <p>
+            <strong>How this page was built.</strong> Ten programs were shortlisted from the
+            beginner-accessible AI courses an Indian learner can complete online, on the criteria that each
+            teaches AI substantively, publishes a 2025–26 syllabus, includes hands-on building and is
+            realistically accessible in price and schedule. For each we read the current syllabus, checked
+            the official fee or program page (or noted where fees are disclosed only on a call), attended a
+            demo or trial session where offered, read learner reviews on third-party listing sites, and
+            applied the eight-pillar scorecard. Fees, durations and affiliations were verified in August 2026
+            and carry that date; the page is reviewed quarterly because AI curricula change faster than any
+            other course category we cover.
+          </p>
+          <StatGrid
+            items={[
+              ["10", "programs audited against one scorecard"],
+              ["8", "pillars, published weights"],
+              ["Aug 2026", "fees, durations and affiliations verified"],
+            ]}
+          />
+          <div data-reveal className="card-surface card-lift my-8 flex flex-col gap-5 p-6 sm:flex-row">
+            <div
+              aria-hidden
+              className="grid size-20 shrink-0 place-items-center rounded-2xl bg-[image:var(--gradient-blue)] font-mono text-[0.6rem] uppercase tracking-[0.12em] text-primary-foreground"
+            >
+              Photo
+            </div>
+            <div>
+              <div className="font-mono text-[0.62rem] uppercase tracking-[0.14em] text-primary">
+                About the author
+              </div>
+              <div className="mt-1.5 font-display text-[1.05rem] font-bold text-ink">[INSERT NAME]</div>
+              <div className="text-[0.85rem] text-muted-foreground">
+                AI education analyst and curriculum reviewer at LogicMojo
+              </div>
+              <p className="!mt-3 !mb-0 text-[0.85rem] leading-relaxed text-muted-foreground">
+                [INSERT 60–90 words on AI/EdTech evaluation experience and why this analysis was done.] ·
+                LinkedIn: [INSERT URL] · Last reviewed: 28 August 2026.
+              </p>
+            </div>
+          </div>
+          <h3>Expert reviewers</h3>
+          <div data-reveal className="my-8 grid gap-4 sm:grid-cols-2">
+            {[
+              ["AI/ML engineer, Indian product company", "Reviewed the curriculum depth heatmap."],
+              ["AI hiring manager, GCC", "Reviewed salary bands and interview expectations."],
+              ["Career-switcher alumnus, non-tech background", "Reviewed beginner-suitability and dropout sections."],
+              ["AI career coach", "Reviewed the decision guide and ROI scenarios."],
+              ["AI educator / curriculum designer", "Reviewed the skill stack and capability ladder."],
+            ].map(([role, scope]) => (
+              <div key={role} className="card-surface card-lift flex gap-4 p-5">
+                <div
+                  aria-hidden
+                  className="grid size-12 shrink-0 place-items-center rounded-xl bg-secondary font-mono text-[0.55rem] uppercase tracking-[0.1em] text-muted-foreground"
+                >
+                  Photo
+                </div>
+                <div>
+                  <div className="font-display text-[0.92rem] font-bold text-ink">{role}</div>
+                  <div className="mt-1 text-[0.82rem] leading-snug text-muted-foreground">{scope}</div>
+                  <div className="mt-1.5 font-mono text-[0.6rem] uppercase tracking-[0.1em] text-primary">
+                    [Name · Company · Quote · LinkedIn]
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+          <p className="text-sm italic text-muted-foreground">
+            [Publish only if true:] Reviewers assessed the framework and factual accuracy and were not
+            compensated for endorsements; disclose any LogicMojo affiliation here instead.
+          </p>
+
+          <h2 id="faq">Frequently Asked Questions</h2>
+          {faqGroups.map(([group, items]) => (
+            <div key={group}>
+              <h3>{group}</h3>
+              {items.map(([q, a]) => (
+                <Faq key={q} q={q} a={a} />
+              ))}
+            </div>
+          ))}
+
+          <h2 id="final-verdict">Final Verdict</h2>
+          <p>
+            The best AI course for a beginner who wants a high salary in 2026 is the one that takes you to
+            Level 4 — able to train, retrieve, fine-tune, evaluate and deploy — and that you will actually
+            finish. On that standard, <strong>LogicMojo&apos;s AI &amp; ML Course</strong> ranks first for
+            its full seven-layer curriculum, live weekend IST mentorship, 12+ progressive projects ending in
+            a deployed capstone, and mid-band pricing with no bond. <strong>Scaler</strong> is the stronger
+            pick if premium placement infrastructure is the purchase, you clear the aptitude test and you can
+            give 15+ hours a week for a year. <strong>upGrad (IIIT-Bangalore)</strong> — with{" "}
+            <strong>Great Learning (UT Austin)</strong> effectively tied — is the pick when a
+            university-linked credential matters to your employer, promotion path or visa.
+          </p>
+          <p>
+            The right answer still depends on your goal, budget, hours and discipline, which is why every
+            review above has an &ldquo;avoid if&rdquo; list, including ours. Completion and portfolio
+            determine outcomes far more than course choice — and course choice heavily determines
+            completion. So do one thing before you enrol anywhere: audit the syllabus PDF against the
+            seven-layer stack, ask the twelve pre-enrolment questions, and block ten hours a week in your
+            calendar for the next two months. If the hours do not survive two months, no course will.
+          </p>
+          <CtaBanner />
+
+          <h3>Sources and verification log (checked August 2026)</h3>
+          <ul className="text-[0.85rem]">
+            {sources.map(([label, url]) => (
+              <li key={url}>
+                {label} —{" "}
+                <a href={url} rel="nofollow noopener" target="_blank">
+                  source
+                </a>
+              </li>
+            ))}
+            <li>
+              Quess Corp India AI Workforce Analysis 2026 (~9.2 lakh AI professionals; ~2.57 lakh core AI
+              roles), as reported in 2026 coverage [VERIFY against the primary report].
+            </li>
+            <li>
+              2026 India AI salary guides — IIT Kharagpur Online, EICTA IIT Kanpur, Taggd, Masai School,
+              upGrad; Glassdoor average ~₹11 LPA [VERIFY before each quarterly review].
+            </li>
+          </ul>
+          <p className="text-sm italic text-muted-foreground">
+            Update log: v1.0 — 28 August 2026 — initial publication. Next review: November 2026 (fees, cohort
+            dates, curriculum changes, salary bands).
+          </p>
         </article>
 
-        <footer data-reveal className="card-surface mt-16 p-6 font-mono text-[0.68rem] uppercase tracking-[0.1em] text-muted-foreground">
-          Published by LogicMojo · Last updated 28 August 2026 · Next scheduled review November 2026
-        </footer>
+        <SiteFooter />
       </div>
     </div>
   );
@@ -1515,5 +2424,430 @@ function ProsCons({ pros, cons }: { pros: string[]; cons: string[] }) {
         </ul>
       </div>
     </div>
+  );
+}
+
+/* ---------------------- data: fees, salaries, roadmap --------------------- */
+
+const feesRows: string[][] = [
+  ["LogicMojo", "₹XX,XXX [VERIFY]", "Yes", "[VERIFY]", "[VERIFY]", "Cloud/API credits (₹500–2,000/month in GenAI months)", "Very high"],
+  ["Scaler", "₹2.5–4L [VERIFY]; ~₹3.69L listed for a 12-month track", "Yes (long tenure)", "Partial", "[VERIFY]", "Loan continues if you stop; 12–18 months of hours", "Moderate"],
+  ["upGrad", "~₹2.99L; variants ₹1.5–3.35L [VERIFY]", "Yes", "Often", "[VERIFY]", "GST; late-fee policy; specialisation add-ons", "Moderate"],
+  ["Great Learning", "~₹2.4L + GST; USD 3,950 global [VERIFY]", "Yes", "Often", "[VERIFY]", "GST; optional immersion travel", "Moderate"],
+  ["Intellipaat", "₹80K–₹2L [VERIFY]", "Yes (third-party lender)", "Advertised 0%", "[VERIFY]", "Non-refundable registration fee; ID card/T-shirt add-on ₹500; loan terms", "Good"],
+  ["Simplilearn", "₹1.5–1.9L [VERIFY]", "Yes (~₹8,500/month listed)", "Often", "[VERIFY]", "Exam vouchers; promotional-price expiry", "Moderate (high if employer pays)"],
+  ["DeepLearning.AI", "₹2,099/mo or ₹13,999/yr; promos ~₹7K/yr", "N/A", "N/A", "Coursera: 14-day annual refund; monthly non-refundable", "Subscription creep", "Excellent"],
+  ["GUVI", "EMI from ₹11,585 listed; total [VERIFY]", "Yes", "Partial", "[VERIFY]", "Add-on modules; certification assessment fees", "Good"],
+  ["PW Skills", "₹5K–₹30K [VERIFY]", "Yes (higher tiers)", "Partial", "[VERIFY]", "Support add-ons; plan upgrades", "Very good"],
+  ["IBM (Coursera)", "Coursera pricing as above", "N/A", "N/A", "Coursera policy", "Subscription creep", "Excellent"],
+];
+
+const careerRows: string[][] = [
+  ["Data Analyst (AI-augmented)", "SQL, Python, statistics, visualisation, prompting", "Freshers welcome", "3.5–7", "6–14", "GUVI, PW Skills, IBM"],
+  ["Data Scientist", "ML, statistics, feature engineering, communication", "Portfolio + fundamentals", "6–12", "12–25", "LogicMojo, upGrad, Scaler, Great Learning"],
+  ["ML Engineer", "ML, DL, Python engineering, MLOps", "Strong portfolio; 1+ yr typical", "6–12", "15–30", "LogicMojo, Scaler"],
+  ["AI Engineer (GenAI / LLM)", "LLMs, RAG, APIs, deployment, evaluation", "Portfolio-driven — freshers with documented GenAI projects negotiate 8–15", "8–15", "20–45", "LogicMojo, Scaler (agentic track)"],
+  ["AI Agent Developer", "Agents, frameworks, MCP, orchestration", "Portfolio-driven; fastest-growing", "8–15", "20–45", "LogicMojo"],
+  ["NLP / Computer Vision Engineer", "Transformers, embeddings / CNNs, detection", "1–2 yrs typical", "6–12", "15–30", "LogicMojo, upGrad, Great Learning"],
+  ["MLOps Engineer", "Docker, CI/CD, cloud, monitoring", "DevOps background helps", "7–12", "18–35", "LogicMojo, Intellipaat"],
+];
+
+const roadmap: [string, string, string][] = [
+  ["01", "Python for AI, NumPy, pandas, Git", "Cleaned-dataset analysis on GitHub"],
+  ["02", "Statistics, probability, linear algebra intuition, SQL", "Statistical analysis with documented assumptions"],
+  ["03", "Core ML and evaluation", "End-to-end ML project with a written evaluation rationale"],
+  ["04", "Feature engineering, tuning, imbalanced data", "Model comparison study"],
+  ["05", "Deep learning and PyTorch", "Trained network with a debugging write-up"],
+  ["06", "CNNs, transfer learning", "Fine-tuned classifier on a custom dataset"],
+  ["07", "NLP, embeddings, transformers", "Transformer-based classifier"],
+  ["08", "LLM fundamentals, prompting, APIs, open-weight models", "LLM application with structured outputs"],
+  ["09", "Vector databases and RAG", "RAG system with an evaluation harness and citations"],
+  ["10", "Fine-tuning (LoRA/QLoRA)", "Fine-tuned model benchmarked against its base"],
+  ["11", "Agents, frameworks, MCP", "Tool-using agent that survives adversarial inputs"],
+  ["12", "MLOps, deployment, monitoring; applications", "Deployed capstone, polished portfolio, 30+ applications sent"],
+];
+
+const portfolioProjects: [string, string, string][] = [
+  [
+    "A messy-data prediction system",
+    "Entry",
+    "A real dataset (e-commerce returns, loan defaults, hospital readmissions), a correct validation split, a justified metric, and a README explaining what failed first.",
+  ],
+  [
+    "A fine-tuned image or text classifier",
+    "Entry+",
+    "Built on a dataset you assembled yourself, with a confusion matrix and an error-analysis section. Assembling the data is the point.",
+  ],
+  [
+    "A production-style RAG application",
+    "Intermediate",
+    "Over documents you care about (a college rulebook, company policies, Indian tax FAQs) with chunking choices explained, hybrid retrieval, re-ranking, citations and an evaluation harness showing retrieval quality before and after each change.",
+  ],
+  [
+    "A fine-tuned open-weight model",
+    "Advanced",
+    "LoRA/QLoRA for a narrow task, benchmarked against the base model and a prompting baseline, with a paragraph on when fine-tuning was not worth it.",
+  ],
+  [
+    "A deployed AI service",
+    "Advanced",
+    "FastAPI, Docker, a cloud deployment, basic monitoring, a cost per 1,000 requests, and an agent on top that handles a failed tool call gracefully.",
+  ],
+];
+
+const redFlags: string[] = [
+  "Guaranteed job or salary claims — usually conditional to the point of meaninglessness.",
+  "Refusal to share a module-level syllabus before payment.",
+  "“Live” that turns out to be recordings with a moderator.",
+  "No last-updated date on the curriculum; in AI, undated means outdated.",
+  "No RAG, agents, fine-tuning or MLOps in a 2026 syllabus.",
+  "“20+ projects” with no descriptions.",
+  "Manufactured scarcity — “price goes up tonight.”",
+  "Placement statistics with no denominator, or testimonials without full names and LinkedIn profiles.",
+  "No refund policy, an EMI through a lender whose terms you cannot see, or instructor names withheld until after enrolment.",
+  "No mechanism for human feedback on your code.",
+];
+
+const preEnrolQuestions: string[] = [
+  "Is the class live, and can I observe one?",
+  "Who teaches my batch, and what is their industry background?",
+  "What is the doubt-resolution SLA, and what happens if it is missed?",
+  "Does a human review my code?",
+  "When was the curriculum last updated, and which modules changed?",
+  "Does it include production RAG, fine-tuning, agents and MLOps?",
+  "Do I design projects or follow along?",
+  "Is anything deployed?",
+  "What is the refund policy in writing, with the exact cut-off date?",
+  "Is the EMI a loan that continues if I stop attending?",
+  "What does “placement assistance” include, item by item?",
+  "Can I speak to two alumni from the last six months you did not hand-pick?",
+];
+
+const faqGroups: [string, [string, ReactNode][]][] = [
+  [
+    "Choosing a course",
+    [
+      [
+        "Which is the best AI course for beginners with high salary in 2026?",
+        <>
+          For most beginners who can commit 10–15 hours a week, <strong>LogicMojo&apos;s AI &amp; ML
+          Course</strong> scores highest on our eight pillars because it covers the full 2026 stack with
+          live mentorship at a mid-band price. If placement infrastructure matters most and you clear an
+          aptitude test, Scaler; if a university credential matters, upGrad or Great Learning; if budget
+          is under ₹30,000, PW Skills or GUVI.
+        </>,
+      ],
+      [
+        "Are AI courses worth it for beginners?",
+        <>
+          Yes — if you finish and leave with a portfolio. NASSCOM-linked projections put India&apos;s AI
+          talent demand above a million professionals, and 2026 salary reports consistently show freshers
+          with documented GenAI projects negotiating ₹8–15 LPA at product companies. A course abandoned
+          in Month 3 is worth less than nothing, because the EMI continues.
+        </>,
+      ],
+      [
+        "Live or self-paced?",
+        <>
+          Live if you have ever abandoned a self-paced course, need code review, or have a job that will
+          eat your evenings without a fixed appointment. Self-paced if you are highly disciplined, have
+          unpredictable shifts, or are building foundations before a paid program.
+        </>,
+      ],
+      [
+        "How do I know a curriculum is current?",
+        <>
+          Look for a last-updated date, then check the bottom third of our depth heatmap: production RAG,
+          fine-tuning, agents, MCP, open-weight models, LLM evaluation, MLOps and deployment. Prompting
+          plus one API call is 2023.
+        </>,
+      ],
+    ],
+  ],
+  [
+    "Eligibility, prerequisites and fees",
+    [
+      [
+        "Can I learn AI without a coding background?",
+        <>
+          Yes. LogicMojo, upGrad, Great Learning, GUVI and PW Skills all onboard non-coders, and upGrad
+          includes a complimentary two-month prerequisite bootcamp. Spend three weeks on free Python
+          first and you will not be the person lost in Week 2.
+        </>,
+      ],
+      [
+        "Can a non-IT graduate get an AI job in India?",
+        <>
+          Yes, and it happens regularly, but it is slower than marketing suggests: expect the ₹5–8 LPA
+          services or analyst band first and the product-company band on the second move, driven by
+          portfolio quality.
+        </>,
+      ],
+      [
+        "Do I need a CS degree for a high-paying AI job?",
+        <>
+          No. Employers increasingly hire on demonstrable projects; the degree matters mainly where
+          university-linked programs set eligibility (a bachelor&apos;s with 50% is common) and in some
+          GCC roles that filter on technical qualifications.
+        </>,
+      ],
+      [
+        "How much does a beginner AI course cost in India?",
+        <>
+          From ₹0 (DeepLearning.AI previews, Hugging Face, Kaggle) through ₹5,000–₹30,000 (PW Skills,
+          GUVI self-paced), ₹40,000–₹1.2 lakh (mid-band live programs including LogicMojo) and ₹1.5–3.5
+          lakh (university-linked PG programs) to ₹2.5–4 lakh (Scaler).
+        </>,
+      ],
+      [
+        "What happens to my EMI if I stop attending?",
+        <>
+          Usually nothing changes: most course EMIs are bank or NBFC loans that continue regardless of
+          attendance. Get the refund window and cut-off date in writing before paying, and ask whether
+          “no-cost EMI” is a subsidised loan or a forfeited discount.
+        </>,
+      ],
+    ],
+  ],
+  [
+    "Careers, outcomes and skills",
+    [
+      [
+        "What salary can a beginner expect after an AI course?",
+        <>
+          Indicative 2026 ranges: ₹5–8 LPA in IT services and mid-tier firms; ₹8–15 LPA at product
+          companies, GCCs and funded startups for candidates with strong GenAI portfolios; ₹12–30 LPA
+          after two to four years. No course guarantees any of these.
+        </>,
+      ],
+      [
+        "How long does it take to get an AI job after finishing?",
+        <>
+          Typically three to nine months of active applications for freshers and switchers, faster for
+          engineers moving internally. Application effort after the course — 30+ targeted applications,
+          referrals, mock interviews — predicts this more than course choice.
+        </>,
+      ],
+      [
+        "Is GenAI enough, or do I need classical ML too?",
+        <>
+          You need both. Most production AI in Indian companies is still classical ML, and every GenAI
+          interview still probes evaluation fundamentals.
+        </>,
+      ],
+      [
+        "What are AI agents and why do they matter for jobs?",
+        <>
+          Agents are LLM-driven systems that plan, call tools and act over multiple steps — the 2026 layer
+          on top of RAG. Several 2026 reports identify agentic AI as India&apos;s fastest-growing AI
+          specialisation, with a real shortage of trained people.
+        </>,
+      ],
+    ],
+  ],
+];
+
+const sources: [string, string][] = [
+  ["LogicMojo AI & ML Course and comparison pages (duration, schedule, mentorship, projects; placement figures provider-reported)", "https://logicmojo.com/artificial-intelligence-course/"],
+  ["Scaler Advanced AI & ML program page and DS/ML listings (agentic track; MCQ entry; ~₹3.69L 12-month listing on Shiksha)", "https://www.scaler.com/ai-machine-learning-course/"],
+  ["IIIT-Bangalore Executive PG page; upGrad program page (prerequisite bootcamp); Collegedunia fee listing (~₹2.99L, Jan 2026)", "https://www.iiitb.ac.in/testiiitb/executive-post-graduate-programme-in-machine-learning-artificial-intelligence"],
+  ["UT Austin McCombs / Great Learning PGP-AIML page (no prior programming; USD 3,950; CEUs); Careers360 India fee review", "https://onlineexeced.mccombs.utexas.edu/online-ai-machine-learning-course"],
+  ["Careers360 listings for Simplilearn's Purdue PGP (11 months; ₹1.5–1.9L); Purdue bootcamp portal (6-month cohorts, 2026)", "https://bootcamp-sl.discover.online.purdue.edu"],
+  ["iHUB DivyaSampark IIT Roorkee course page; Intellipaat AI certification page (“not a job guarantee program”)", "https://tih.iitr.ac.in/training-courseDetails/60"],
+  ["Coursera India pricing (Plus ₹2,099/month, ₹13,999/year; free first-module preview) — BW Education, Sept 2025", "https://www.bweducation.com/article/coursera-introduces-course-preview-localised-pricing-in-india-570774"],
+  ["HCL GUVI AI & ML pages (four languages; no prior coding; 120+ live hours; EMI from ₹11,585)", "https://www.guvi.in/mlp/artificial-intelligence-and-machine-learning"],
+  ["PW Skills Data Science with Generative AI launch post (17 Jan 2026; 8 months; hybrid; 20+ projects; PwC certificate)", "https://pwskills.com/blog/data-science/data-science-course-with-generative-ai-pw-skills-program-17th-jan-2026"],
+  ["Deloitte–NASSCOM, Advancing India's AI Skills (600–650K in 2022 to 1.25M+ by 2027; 25–35% CAGR)", "https://www.deloitte.com/in/en/about/press-room/bridging-the-ai-talent-gap-to-boost-indias-tech-and-economic-impact-deloitte-nasscom-report.html"],
+  ["NASSCOM–Indeed, India's AI Talent Inflection Point (May 2026)", "https://community.nasscom.in/communities/nasscom-insights/indias-ai-talent-inflection-point-skill-gaps-competitive-advantage"],
+];
+
+/* ------------------------- components: new sections ---------------------- */
+
+function StatGrid({ items }: { items: [string, string][] }) {
+  return (
+    <div data-reveal className="my-8 grid gap-3 sm:grid-cols-3">
+      {items.map(([stat, label]) => (
+        <div key={label} className="card-surface card-lift p-4">
+          <div className="gradient-text font-display text-2xl font-extrabold">{stat}</div>
+          <div className="mt-1 text-[0.78rem] leading-snug text-muted-foreground">{label}</div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function Faq({ q, a }: { q: string; a: ReactNode }) {
+  return (
+    <details data-reveal className="card-surface card-lift group my-3 p-0">
+      <summary className="flex cursor-pointer list-none items-center gap-3 p-5 font-display text-[1rem] font-bold text-ink">
+        <span className="grid size-6 shrink-0 place-items-center rounded-md bg-[image:var(--gradient-blue)] font-mono text-[0.7rem] font-bold text-primary-foreground transition-transform duration-300 group-open:rotate-45">
+          +
+        </span>
+        <span>{q}</span>
+      </summary>
+      <div className="border-t border-border px-5 pb-5 pt-4 text-[0.92rem] leading-relaxed text-muted-foreground">
+        {a}
+      </div>
+    </details>
+  );
+}
+
+function Timeline() {
+  return (
+    <ol data-reveal className="!my-9 !list-none !gap-0 !pl-0">
+      {roadmap.map(([month, focus, deliverable], i) => (
+        <li key={month} className="!m-0 relative pl-14 pb-6 last:pb-0">
+          <span
+            aria-hidden
+            className={`absolute left-[1.05rem] top-9 w-px ${i === roadmap.length - 1 ? "hidden" : "bottom-0"} bg-border`}
+          />
+          <span className="absolute left-0 top-1 grid size-9 place-items-center rounded-xl bg-[image:var(--gradient-blue)] font-mono text-[0.72rem] font-bold text-primary-foreground">
+            {month}
+          </span>
+          <div className="card-surface card-lift p-4">
+            <div className="font-display text-[0.98rem] font-bold text-ink">{focus}</div>
+            <div className="mt-1.5 flex items-start gap-2 text-[0.85rem] text-muted-foreground">
+              <span className="font-mono text-[0.6rem] uppercase tracking-[0.12em] text-primary">
+                Ship
+              </span>
+              <span>{deliverable}</span>
+            </div>
+          </div>
+        </li>
+      ))}
+    </ol>
+  );
+}
+
+function NumberedGrid({
+  items,
+  tone = "primary",
+}: {
+  items: string[];
+  tone?: "primary" | "danger";
+}) {
+  return (
+    <div data-reveal className="my-8 grid gap-3 sm:grid-cols-2">
+      {items.map((item, i) => (
+        <div key={item} className="card-surface card-lift flex gap-3 p-4">
+          <span
+            className={`grid size-7 shrink-0 place-items-center rounded-lg font-mono text-[0.7rem] font-bold ${
+              tone === "danger"
+                ? "bg-destructive/10 text-destructive"
+                : "bg-[image:var(--gradient-blue)] text-primary-foreground"
+            }`}
+          >
+            {i + 1}
+          </span>
+          <span className="text-[0.88rem] leading-relaxed text-muted-foreground">{item}</span>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function ScenarioCard({
+  tag,
+  title,
+  verdict,
+  positive,
+  children,
+}: {
+  tag: string;
+  title: string;
+  verdict: string;
+  positive: boolean;
+  children: ReactNode;
+}) {
+  return (
+    <div data-reveal className="card-surface card-lift my-5 p-6">
+      <div className="flex flex-wrap items-center gap-3">
+        <span className="label-chip">{tag}</span>
+        <span
+          className={`font-mono text-[0.62rem] uppercase tracking-[0.12em] ${
+            positive ? "text-primary" : "text-destructive"
+          }`}
+        >
+          {verdict}
+        </span>
+      </div>
+      <h4 className="!mt-3 !mb-2 !text-[1.02rem]">{title}</h4>
+      <p className="!my-0 text-[0.9rem] leading-relaxed text-muted-foreground">{children}</p>
+    </div>
+  );
+}
+
+function CtaBanner() {
+  return (
+    <div
+      data-reveal
+      className="relative isolate my-12 overflow-hidden rounded-2xl border border-border p-7 shadow-[var(--shadow-card)] sm:p-9"
+    >
+      <div
+        aria-hidden
+        className="absolute inset-0 -z-10 bg-[image:var(--gradient-blue)] opacity-[0.07]"
+      />
+      <div
+        aria-hidden
+        className="float-orb absolute -right-16 -top-16 -z-10 size-56 rounded-full bg-[image:var(--gradient-blue)] opacity-20 blur-3xl"
+      />
+      <span className="label-chip">Primary next step</span>
+      <h3 className="!mt-4 !mb-2 !text-[1.45rem] leading-tight">
+        Explore <span className="gradient-text">LogicMojo&apos;s AI &amp; ML Course</span>
+      </h3>
+      <p className="!my-0 max-w-xl text-[0.95rem] leading-relaxed text-muted-foreground">
+        Full curriculum, weekend live IST batches and the project portfolio — audit the syllabus
+        against the seven-layer stack before you pay anyone, including us.
+      </p>
+      <a
+        href="https://logicmojo.com/artificial-intelligence-course/"
+        className="mt-6 inline-flex items-center gap-2 rounded-xl bg-[image:var(--gradient-blue)] px-5 py-3 font-display text-[0.92rem] font-bold !text-primary-foreground !no-underline [background-image:var(--gradient-blue)] shadow-[var(--shadow-card)] transition-transform duration-200 hover:-translate-y-0.5"
+      >
+        View the AI &amp; ML curriculum
+        <span aria-hidden>→</span>
+      </a>
+    </div>
+  );
+}
+
+function SiteFooter() {
+  const cols: [string, string[]][] = [
+    ["Courses", ["AI & ML Course", "GenAI Course", "Data Science Course", "DSA & System Design"]],
+    ["Resources", ["Curriculum PDF", "Batch Schedule", "Project Portfolio", "Blog", "FAQs"]],
+    ["Contact", ["Email", "Phone", "WhatsApp"]],
+    ["Social", ["LinkedIn", "YouTube", "Instagram", "X", "GitHub"]],
+  ];
+  return (
+    <footer data-reveal className="mt-16 border-t border-border pt-10">
+      <div className="card-surface p-6 sm:p-8">
+        <div className="font-display text-xl font-extrabold">
+          Logic<span className="gradient-text">Mojo</span>
+        </div>
+        <p className="mt-2 max-w-lg text-[0.85rem] leading-relaxed text-muted-foreground">
+          Practical AI, ML and GenAI training for working professionals and beginners, taught live.
+        </p>
+        <div className="mt-8 grid gap-6 sm:grid-cols-4">
+          {cols.map(([heading, links]) => (
+            <div key={heading}>
+              <div className="font-mono text-[0.62rem] uppercase tracking-[0.14em] text-primary">
+                {heading}
+              </div>
+              <ul className="mt-3 space-y-1.5 text-[0.82rem] text-muted-foreground">
+                {links.map((l) => (
+                  <li key={l}>{l}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+        <div className="mt-8 flex flex-wrap items-center gap-x-4 gap-y-2 border-t border-border pt-5 font-mono text-[0.62rem] uppercase tracking-[0.1em] text-muted-foreground">
+          <span>Privacy Policy</span>
+          <span>Terms</span>
+          <span>Refund Policy</span>
+          <span>© 2026 LogicMojo</span>
+          <span>Last updated 28 Aug 2026 · Next review Nov 2026</span>
+        </div>
+      </div>
+    </footer>
   );
 }
