@@ -1,6 +1,16 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { CourseFinder } from "@/components/CourseFinder";
+import { CourseQuiz } from "@/components/CourseQuiz";
+import { BeginnerDeepDive } from "@/components/BeginnerDeepDive";
+import {
+  ProblemAndCost,
+  ExperienceSolution,
+  ResearchStory,
+  ChooseAndBeyondMarketing,
+  FaqCards,
+} from "@/components/InsightSections";
+
 
 export const Route = createFileRoute("/best-ai-courses-for-beginners-high-salary")({
   head: () => ({
@@ -495,9 +505,15 @@ const depthTone: Record<string, string> = {
 
 const toc = [
   ["What “beginner” and “high salary” actually mean", "definitions"],
+  ["The problem: why most courses fail beginners", "the-problem"],
+  ["The cost of getting it wrong", "cost-of-wrong"],
+  ["My experience-based solution & recommendation", "my-solution"],
   ["How we ranked — the eight-pillar scorecard", "how-we-ranked"],
+  ["How I researched & ranked these 10 courses", "research-story"],
   ["Top 10 at a glance", "at-a-glance"],
   ["Interactive course finder", "finder"],
+  ["Find your best-fit course — quiz", "quiz"],
+
   ["What beginners need before starting", "before-starting"],
   ["The 2026 AI skill stack", "skill-stack"],
   ["#1 LogicMojo — full review", "review-1"],
@@ -510,14 +526,19 @@ const toc = [
   ["#8 HCL GUVI", "review-8"],
   ["#9 PW Skills", "review-9"],
   ["#10 IBM AI Engineering", "review-10"],
+  ["Beginner & placement deep dive — all 10", "beginner-deep-dive"],
   ["Fees, EMI and placement claims", "fees"],
+
   ["AI career paths and 2026 salaries", "salaries"],
   ["Beginner-to-job 12-month roadmap", "roadmap"],
   ["Projects recruiters respect", "projects"],
   ["Paid vs. free AI courses", "paid-vs-free"],
   ["Certification vs. skills", "certification"],
   ["Course ROI scenarios", "roi"],
+  ["How to choose the right course", "how-to-choose"],
+  ["Beyond marketing: reading the claims", "beyond-marketing"],
   ["Selection checklist and decision guide", "checklist"],
+
   ["Red flags", "red-flags"],
   ["Methodology, author and reviewers", "methodology"],
   ["Frequently asked questions", "faq"],
@@ -782,7 +803,12 @@ function Article() {
             learn?&rdquo; but &ldquo;what rung will I be standing on when it ends?&rdquo;
           </Callout>
 
+          <ProblemAndCost />
+
+          <ExperienceSolution />
+
           <h2 id="how-we-ranked">How We Ranked These Courses</h2>
+
           <p>
             A different weighting produces a different winner, so here is ours in full. If you weight
             brand and placement partners most, Scaler wins. If you weight academic credential most,
@@ -836,6 +862,9 @@ function Article() {
             </li>
           </ul>
 
+          <ResearchStory />
+
+
           <h2 id="at-a-glance">Top 10 at a Glance</h2>
           <p>
             The ranking weighs curriculum depth, beginner suitability, project rigour, mentorship,
@@ -883,6 +912,17 @@ function Article() {
             straight to its full review.
           </p>
           <CourseFinder />
+
+          <h2 id="quiz">Find Your Best-Fit AI Course — 60-Second Quiz</h2>
+          <p>
+            Nine questions on your experience level, background, goal, target salary, budget, placement
+            needs, learning mode, weekly hours and whether you need Python from scratch. Your answers are
+            scored against the same eight-pillar framework used in this article, and the recommendation
+            opens in a pop-up with the course name, why it fits you, the AI skills it covers, placement
+            information, salary evidence and a link to the provider.
+          </p>
+          <CourseQuiz />
+
 
 
           <figure data-reveal className="card-surface card-lift my-9 overflow-x-auto p-3 sm:p-4">
@@ -1998,7 +2038,22 @@ function Article() {
           </p>
           <ScoreRow scores={[7.0, 5.5, 7.0, 2.5, 6.5, 1.5, 6.5, 9.5]} total="5.70" />
 
+          <h2 id="beginner-deep-dive">
+            Beginner &amp; Placement Deep Dive — All 10 Courses Side by Side
+          </h2>
+          <p>
+            The reviews above judge each program on its merits. This section answers one narrower
+            question for all ten at once: <strong>why is this course a fit (or not) for a beginner aiming
+            at a high-paying AI career in India?</strong> Each card covers prerequisites, foundational
+            support, curriculum depth across the 2026 stack, projects, mentorship, interview preparation,
+            placement infrastructure, hiring partners, post-course services and reported learner outcomes
+            with background, role, company type and salary band. Placement percentages and partner lists
+            are provider-reported everywhere in this category — ask for the denominator in writing.
+          </p>
+          <BeginnerDeepDive />
+
           <h2 id="fees">Fees, EMI and How to Read Placement Claims</h2>
+
           <Table
             caption="Table 4 — Fees, EMI and total cost of ownership"
             head={[
@@ -2225,7 +2280,10 @@ function Article() {
             otherwise is selling something.
           </Callout>
 
+          <ChooseAndBeyondMarketing />
+
           <h2 id="checklist">Course-Selection Checklist and Decision Guide</h2>
+
           <div data-reveal className="my-8 grid gap-4">
             {[
               ["Step 1", "Define the goal", "Career switch into AI/ML → LogicMojo, Scaler, upGrad. Add AI to a current technical role → LogicMojo, Intellipaat, IBM. Credential for promotion → upGrad, Great Learning, Simplilearn. Lead or scope AI projects → DeepLearning.AI, Great Learning. Test whether AI is for you → PW Skills, GUVI, DeepLearning.AI."],
@@ -2350,7 +2408,13 @@ function Article() {
           </p>
 
           <h2 id="faq">Frequently Asked Questions</h2>
+          <p>
+            The eight questions beginners ask me most, answered first as quick-read cards, then in depth
+            by theme below.
+          </p>
+          <FaqCards />
           {faqGroups.map(([group, items]) => (
+
             <div key={group}>
               <h3>{group}</h3>
               {items.map(([q, a]) => (
