@@ -873,6 +873,16 @@ function Article() {
             fee, GST, EMI interest, refund window and deferral policy in writing before paying.
           </p>
 
+          <h2 id="finder">Interactive Course Finder</h2>
+          <p>
+            Rankings are averages; fit is personal. Use the filters below to narrow the same ten
+            courses to the ones that match your budget, your current coding level, the amount of live
+            mentorship you need and how much career support matters to you. Click any provider to jump
+            straight to its full review.
+          </p>
+          <CourseFinder />
+
+
           <figure data-reveal className="card-surface card-lift my-9 overflow-x-auto p-3 sm:p-4">
             <table className="data-table min-w-[52rem]">
               <caption>Table 2 — The eight-pillar scorecard</caption>
