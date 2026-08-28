@@ -36,7 +36,7 @@ function Chip({ children }: { children: ReactNode }) {
 function Callout({ children, kind = "quote" }: { children: ReactNode; kind?: "quote" | "note" }) {
   if (kind === "note") {
     return (
-      <aside className="my-8 rounded-md border border-border bg-card p-5 shadow-[0_1px_0_theme(colors.border)]">
+      <aside className="my-8 rounded-md border border-border bg-card p-5">
         {children}
       </aside>
     );
@@ -101,22 +101,25 @@ function ScoreRow({ scores, total }: { scores: number[]; total: string }) {
   return (
     <div className="my-8 rounded-md border border-border bg-card p-5">
       <div className="grid grid-cols-2 gap-x-6 gap-y-3 sm:grid-cols-4">
-        {labels.map((l, i) => (
+        {labels.map((l, i) => {
+          const v = scores[i] ?? 0;
+          return (
           <div key={l}>
             <div className="font-mono text-[0.62rem] uppercase tracking-[0.09em] text-muted-foreground">
               {l}
             </div>
             <div className="mt-1 flex items-center gap-2">
-              <span className="font-display text-lg font-semibold">{scores[i].toFixed(1)}</span>
+              <span className="font-display text-lg font-semibold">{v.toFixed(1)}</span>
               <span className="h-1 flex-1 rounded-full bg-secondary">
                 <span
                   className="block h-1 rounded-full bg-accent"
-                  style={{ width: `${scores[i] * 10}%` }}
+                  style={{ width: `${v * 10}%` }}
                 />
               </span>
             </div>
           </div>
-        ))}
+          );
+        })}
       </div>
       <div className="mt-5 flex items-baseline justify-between border-t border-border pt-4">
         <span className="font-mono text-[0.68rem] uppercase tracking-[0.09em] text-muted-foreground">
