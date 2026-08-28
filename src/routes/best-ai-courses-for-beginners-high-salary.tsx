@@ -782,7 +782,12 @@ function Article() {
             learn?&rdquo; but &ldquo;what rung will I be standing on when it ends?&rdquo;
           </Callout>
 
+          <ProblemAndCost />
+
+          <ExperienceSolution />
+
           <h2 id="how-we-ranked">How We Ranked These Courses</h2>
+
           <p>
             A different weighting produces a different winner, so here is ours in full. If you weight
             brand and placement partners most, Scaler wins. If you weight academic credential most,
