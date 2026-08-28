@@ -10,33 +10,44 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as BestAiCoursesForBeginnersHighSalaryRouteImport } from './routes/best-ai-courses-for-beginners-high-salary'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BestAiCoursesForBeginnersHighSalaryRoute =
+  BestAiCoursesForBeginnersHighSalaryRouteImport.update({
+    id: '/best-ai-courses-for-beginners-high-salary',
+    path: '/best-ai-courses-for-beginners-high-salary',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/best-ai-courses-for-beginners-high-salary': typeof BestAiCoursesForBeginnersHighSalaryRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/best-ai-courses-for-beginners-high-salary': typeof BestAiCoursesForBeginnersHighSalaryRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/best-ai-courses-for-beginners-high-salary': typeof BestAiCoursesForBeginnersHighSalaryRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/best-ai-courses-for-beginners-high-salary'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/best-ai-courses-for-beginners-high-salary'
+  id: '__root__' | '/' | '/best-ai-courses-for-beginners-high-salary'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  BestAiCoursesForBeginnersHighSalaryRoute: typeof BestAiCoursesForBeginnersHighSalaryRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +59,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/best-ai-courses-for-beginners-high-salary': {
+      id: '/best-ai-courses-for-beginners-high-salary'
+      path: '/best-ai-courses-for-beginners-high-salary'
+      fullPath: '/best-ai-courses-for-beginners-high-salary'
+      preLoaderRoute: typeof BestAiCoursesForBeginnersHighSalaryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  BestAiCoursesForBeginnersHighSalaryRoute:
+    BestAiCoursesForBeginnersHighSalaryRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
