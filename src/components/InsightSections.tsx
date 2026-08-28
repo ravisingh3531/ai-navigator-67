@@ -140,7 +140,7 @@ export function ExperienceSolution() {
           targeting a high-paying AI career in 2026 in India
         </strong>
         . Not because it wins every pillar (it does not — Newton School has better placement infrastructure,
-        DataCamp has the stronger academic tag, DeepLearning.AI is cheaper), but because it is the only
+        Great Learning has the stronger academic tag, DataCamp and DeepLearning.AI are cheaper), but because it is the only
         program in this list that combines a placement-first structure, a genuinely zero-prerequisite
         on-ramp, and a curriculum that is Deep across all seven layers of the 2026 stack.
       </p>
@@ -274,7 +274,7 @@ export function ExperienceSolution() {
       <p>
         <strong>My honest caveat.</strong> LogicMojo is not the right pick for everyone. If premium
         placement infrastructure is what you are buying and you can commit 15+ hours a week, Newton School is
-        stronger. If your employer or visa process needs a university tag, choose DataCamp or
+        stronger. If your employer or visa process needs a university tag, choose Great Learning or
         Great Learning (UT Austin). If your budget is genuinely under ₹15,000, take DeepLearning.AI and
         build the portfolio yourself. Recommendation is not endorsement of every claim: fees, placement
         percentages and partner lists are provider-reported everywhere in this category — including
@@ -592,7 +592,7 @@ const faqCards: [string, string, ReactNode][] = [
       </a>{" "}
       — zero prerequisites, live weekend IST classes, weekday doubt sessions, 12+ projects ending in a
       deployed capstone, and a structured job-assistance pipeline. If a university credential matters
-      more, choose DataCamp or Great Learning (UT Austin). If budget is under ₹15,000, start with
+      more, choose Great Learning (UT Austin) or Simplilearn. If budget is under ₹15,000, start with
       DeepLearning.AI and build the portfolio yourself.
     </>,
   ],
