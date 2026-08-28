@@ -526,7 +526,9 @@ const toc = [
   ["#8 HCL GUVI", "review-8"],
   ["#9 PW Skills", "review-9"],
   ["#10 IBM AI Engineering", "review-10"],
+  ["Beginner & placement deep dive — all 10", "beginner-deep-dive"],
   ["Fees, EMI and placement claims", "fees"],
+
   ["AI career paths and 2026 salaries", "salaries"],
   ["Beginner-to-job 12-month roadmap", "roadmap"],
   ["Projects recruiters respect", "projects"],
