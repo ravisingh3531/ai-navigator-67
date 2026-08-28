@@ -533,7 +533,10 @@ const toc = [
   ["Paid vs. free AI courses", "paid-vs-free"],
   ["Certification vs. skills", "certification"],
   ["Course ROI scenarios", "roi"],
+  ["How to choose the right course", "how-to-choose"],
+  ["Beyond marketing: reading the claims", "beyond-marketing"],
   ["Selection checklist and decision guide", "checklist"],
+
   ["Red flags", "red-flags"],
   ["Methodology, author and reviewers", "methodology"],
   ["Frequently asked questions", "faq"],
