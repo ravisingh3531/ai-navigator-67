@@ -661,15 +661,19 @@ function Article() {
 
           <nav
             aria-label="Table of contents"
-            className="my-10 rounded-md border border-border bg-card p-6"
+            data-reveal
+            className="card-surface card-lift my-10 p-6"
           >
             <h2 className="!mt-0 !border-t-0 !pt-0 !text-lg font-mono !font-normal uppercase tracking-[0.12em] text-muted-foreground">
               Contents
             </h2>
             <ol className="mt-4 grid gap-2 sm:grid-cols-2">
               {toc.map(([label, id], i) => (
-                <li key={id} className="flex gap-3 text-[0.92rem]">
-                  <span className="font-mono text-xs text-accent">
+                <li
+                  key={id}
+                  className="flex gap-3 rounded-lg px-2 py-1.5 text-[0.92rem] transition-colors hover:bg-[color-mix(in_oklab,var(--primary)_7%,white)]"
+                >
+                  <span className="font-mono text-xs font-semibold text-primary">
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <a href={`#${id}`} className="no-underline hover:underline">
@@ -1473,7 +1477,7 @@ function Article() {
           </Callout>
         </article>
 
-        <footer className="mt-16 border-t border-rule pt-6 font-mono text-[0.68rem] uppercase tracking-[0.1em] text-muted-foreground">
+        <footer data-reveal className="card-surface mt-16 p-6 font-mono text-[0.68rem] uppercase tracking-[0.1em] text-muted-foreground">
           Published by LogicMojo · Last updated 28 August 2026 · Next scheduled review November 2026
         </footer>
       </div>
