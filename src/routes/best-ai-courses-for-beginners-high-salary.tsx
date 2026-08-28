@@ -68,6 +68,9 @@ function useReveal<T extends HTMLElement>() {
   useEffect(() => {
     const root = ref.current;
     if (!root) return;
+    root.querySelectorAll<HTMLElement>("article h2").forEach((h) =>
+      h.setAttribute("data-reveal", ""),
+    );
     root.classList.add("anim-ready");
     const targets = Array.from(root.querySelectorAll<HTMLElement>("[data-reveal]"));
     const io = new IntersectionObserver(
