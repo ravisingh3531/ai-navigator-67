@@ -497,6 +497,7 @@ const toc = [
   ["What “beginner” and “high salary” actually mean", "definitions"],
   ["How we ranked — the eight-pillar scorecard", "how-we-ranked"],
   ["Top 10 at a glance", "at-a-glance"],
+  ["Interactive course finder", "finder"],
   ["What beginners need before starting", "before-starting"],
   ["The 2026 AI skill stack", "skill-stack"],
   ["#1 LogicMojo — full review", "review-1"],
